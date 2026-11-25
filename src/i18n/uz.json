@@ -1,0 +1,76 @@
+{
+  "app": {
+    "name": "Tajvid",
+    "tagline": "Qur'oni Karim va uning ilmlari"
+  },
+  "firstLaunch": {
+    "language": "Til · Language",
+    "chooseLanguage": "Tilni tanlang · Choose language",
+    "nLanguages": "{{n}} til",
+    "deviceLanguage": "Qurilmangiz tili",
+    "allLanguages": "Barcha tillar",
+    "searchLanguages": "Qidirish: Oʻzbekcha, English, اردو…",
+    "rightToLeft": "oʻngdan chapga",
+    "noLanguage": "Bunday nomli til yoʻq.",
+    "colours": "Ranglar",
+    "day": "Kunduz",
+    "night": "Tun",
+    "example": "Namuna · Fotiha",
+    "start": "Boshlash",
+    "later": "Buni keyinroq Sozlamalarda oʻzgartirishingiz mumkin",
+    "draft": "Interfeys tarjimasi loyiha tomonidan qilingan. Xato topdingizmi? GitHub’da xabar bering."
+  },
+  "home": {
+    "quran": "Qur'on",
+    "recitation": "Tilovat",
+    "prayerTimes": "Namoz vaqtlari",
+    "building": "Ilova boʻlimlari tayyorlanmoqda; birinchilari tez orada shu yerda paydo boʻladi."
+  },
+  "directions": {
+    "suhuf": "Ilk sahifalar",
+    "hira": "Hiro",
+    "ghar": "Gʻor",
+    "taybah": "Tayba",
+    "uhud": "Uhud",
+    "ibil": "Tuyalarga boqing",
+    "fajr": "Tong",
+    "duha": "Zuho",
+    "ghaith": "Yomgʻir",
+    "jannatan": "Ikki bogʻ",
+    "tin": "Anjir va zaytun",
+    "kawthar": "Al-Kavsar",
+    "qamar": "Quyosh va oy",
+    "dhariyat": "Sochuvchi shamollar",
+    "zar": "Ekin",
+    "mara": "Yaylov",
+    "shajara": "Yaxshi daraxt",
+    "tayr": "Qushlar",
+    "zill": "Soya",
+    "fulk": "Kemalar",
+    "asr": "Al-Asr",
+    "mamdud": "Choʻzilgan soya",
+    "anhar": "Daryolar",
+    "ghuraf": "Baland xonalar",
+    "qutuf": "Yaqin mevalar",
+    "khiyam": "Chodirlar",
+    "nur": "Nur",
+    "mountains": "Togʻlar — zaif koʻrish va rang koʻrligi uchun"
+  },
+  "nav": {
+    "home": "Bosh sahifa",
+    "about": "Ilova haqida"
+  },
+  "about": {
+    "title": "Ilova haqida",
+    "developer": "Ishlab chiquvchi",
+    "apiVersion": "API versiyasi",
+    "sources": "Kontent manbalari",
+    "unreachable": "Hozir serverga ulanib boʻlmayapti."
+  },
+  "notFound": {
+    "title": "Bunday sahifa yoʻq."
+  },
+  "common": {
+    "close": "Yopish"
+  }
+}

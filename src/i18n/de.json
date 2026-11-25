@@ -1,0 +1,76 @@
+{
+  "app": {
+    "name": "Tadschwid",
+    "tagline": "Der edle Koran und seine Wissenschaften"
+  },
+  "firstLaunch": {
+    "language": "Sprache · Language",
+    "chooseLanguage": "Sprache wählen · Choose language",
+    "nLanguages": "{{n}} Sprachen",
+    "deviceLanguage": "Sprache deines Geräts",
+    "allLanguages": "Alle Sprachen",
+    "searchLanguages": "Suchen: Deutsch, English, اردو…",
+    "rightToLeft": "von rechts nach links",
+    "noLanguage": "Keine Sprache mit diesem Namen.",
+    "colours": "Farben",
+    "day": "Tag",
+    "night": "Nacht",
+    "example": "Beispiel · Al-Fatiha",
+    "start": "Los geht's",
+    "later": "Du kannst das später in den Einstellungen ändern",
+    "draft": "Übersetzung der Oberfläche durch das Projekt. Einen Fehler gefunden? Melde ihn auf GitHub."
+  },
+  "home": {
+    "quran": "Koran",
+    "recitation": "Rezitation",
+    "prayerTimes": "Gebetszeiten",
+    "building": "Die Bereiche der App werden gerade gebaut; die ersten erscheinen bald hier."
+  },
+  "directions": {
+    "suhuf": "Die ersten Blätter",
+    "hira": "Hira",
+    "ghar": "Die Höhle",
+    "taybah": "Taiba",
+    "uhud": "Uhud",
+    "ibil": "Seht die Kamele",
+    "fajr": "Morgendämmerung",
+    "duha": "Vormittag",
+    "ghaith": "Regen",
+    "jannatan": "Die zwei Gärten",
+    "tin": "Die Feige und die Olive",
+    "kawthar": "Al-Kauthar",
+    "qamar": "Die Sonne und der Mond",
+    "dhariyat": "Die aufwirbelnden Winde",
+    "zar": "Die Saat",
+    "mara": "Die Weide",
+    "shajara": "Der gute Baum",
+    "tayr": "Die Vögel",
+    "zill": "Der Schatten",
+    "fulk": "Die Schiffe",
+    "asr": "Al-Asr",
+    "mamdud": "Ausgedehnter Schatten",
+    "anhar": "Die Flüsse",
+    "ghuraf": "Hohe Wohnstätten",
+    "qutuf": "Nahe Früchte",
+    "khiyam": "Die Zelte",
+    "nur": "Licht",
+    "mountains": "Berge – für Sehschwäche und Farbenblindheit"
+  },
+  "nav": {
+    "home": "Startseite",
+    "about": "Über die App"
+  },
+  "about": {
+    "title": "Über die App",
+    "developer": "Entwickler",
+    "apiVersion": "API-Version",
+    "sources": "Quellen der Inhalte",
+    "unreachable": "Der Server ist gerade nicht erreichbar."
+  },
+  "notFound": {
+    "title": "Diese Seite gibt es nicht."
+  },
+  "common": {
+    "close": "Schließen"
+  }
+}

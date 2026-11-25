@@ -1,0 +1,76 @@
+{
+  "app": {
+    "name": "Tajwid",
+    "tagline": "Al-Quran Al-Karim dan Ilmu-ilmunya"
+  },
+  "firstLaunch": {
+    "language": "Bahasa · Language",
+    "chooseLanguage": "Pilih bahasa · Choose language",
+    "nLanguages": "{{n}} bahasa",
+    "deviceLanguage": "Bahasa peranti anda",
+    "allLanguages": "Semua bahasa",
+    "searchLanguages": "Cari: Melayu, Deutsch, اردو…",
+    "rightToLeft": "kanan ke kiri",
+    "noLanguage": "Tiada bahasa dengan nama itu.",
+    "colours": "Warna",
+    "day": "Siang",
+    "night": "Malam",
+    "example": "Contoh · Al-Fatihah",
+    "start": "Mula",
+    "later": "Anda boleh menukarnya kemudian dalam Tetapan",
+    "draft": "Terjemahan antara muka oleh projek. Jumpa kesilapan? Laporkan di GitHub."
+  },
+  "home": {
+    "quran": "Al-Quran",
+    "recitation": "Bacaan",
+    "prayerTimes": "Waktu solat",
+    "building": "Bahagian-bahagian aplikasi sedang dibina; yang pertama akan dipaparkan di sini tidak lama lagi."
+  },
+  "directions": {
+    "suhuf": "Lembaran pertama",
+    "hira": "Hira",
+    "ghar": "Gua",
+    "taybah": "Taibah",
+    "uhud": "Uhud",
+    "ibil": "Lihatlah unta",
+    "fajr": "Fajar",
+    "duha": "Duha",
+    "ghaith": "Hujan",
+    "jannatan": "Dua taman",
+    "tin": "Tin dan zaitun",
+    "kawthar": "Al-Kauthar",
+    "qamar": "Matahari dan bulan",
+    "dhariyat": "Angin yang menerbangkan",
+    "zar": "Tanaman",
+    "mara": "Padang ragut",
+    "shajara": "Pohon yang baik",
+    "tayr": "Burung-burung",
+    "zill": "Bayang-bayang",
+    "fulk": "Kapal-kapal",
+    "asr": "Al-'Asr",
+    "mamdud": "Naungan terbentang",
+    "anhar": "Sungai-sungai",
+    "ghuraf": "Bilik-bilik tinggi",
+    "qutuf": "Buah yang dekat",
+    "khiyam": "Khemah-khemah",
+    "nur": "Cahaya",
+    "mountains": "Gunung — untuk penglihatan lemah dan buta warna"
+  },
+  "nav": {
+    "home": "Laman utama",
+    "about": "Perihal"
+  },
+  "about": {
+    "title": "Perihal",
+    "developer": "Pembangun",
+    "apiVersion": "Versi API",
+    "sources": "Sumber kandungan",
+    "unreachable": "Pelayan tidak dapat dihubungi sekarang."
+  },
+  "notFound": {
+    "title": "Halaman ini tiada."
+  },
+  "common": {
+    "close": "Tutup"
+  }
+}

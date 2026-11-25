@@ -1,0 +1,76 @@
+{
+  "app": {
+    "name": "تجوید",
+    "tagline": "قرآن کریم او د هغه علوم"
+  },
+  "firstLaunch": {
+    "language": "ژبه · Language",
+    "chooseLanguage": "ژبه وټاکئ · Choose language",
+    "nLanguages": "{{n}} ژبې",
+    "deviceLanguage": "ستاسو د وسیلې ژبه",
+    "allLanguages": "ټولې ژبې",
+    "searchLanguages": "لټون: پښتو، English، Deutsch…",
+    "rightToLeft": "له ښي نه کیڼ ته",
+    "noLanguage": "په دې نوم کومه ژبه نشته.",
+    "colours": "رنګونه",
+    "day": "ورځ",
+    "night": "شپه",
+    "example": "بېلګه · سورة الفاتحه",
+    "start": "پیل کړئ",
+    "later": "دا وروسته په امستنو کې بدلولی شئ",
+    "draft": "د کارن مخ ژباړه د پروژې له خوا شوې ده. کومه تېروتنه مو ولیده؟ په GitHub کې یې خبر راکړئ."
+  },
+  "home": {
+    "quran": "قرآن",
+    "recitation": "تلاوت",
+    "prayerTimes": "د لمانځه وختونه",
+    "building": "د اپلیکیشن برخې جوړېږي؛ لومړنۍ به ژر دلته ښکاره شي."
+  },
+  "directions": {
+    "suhuf": "لومړنۍ پاڼې",
+    "hira": "حرا",
+    "ghar": "سمڅ",
+    "taybah": "طابه",
+    "uhud": "احد",
+    "ibil": "اوښانو ته وګورئ",
+    "fajr": "سهار",
+    "duha": "څاښت",
+    "ghaith": "باران",
+    "jannatan": "دوه باغونه",
+    "tin": "انځر او زیتون",
+    "kawthar": "الکوثر",
+    "qamar": "لمر او سپوږمۍ",
+    "dhariyat": "الذاريات",
+    "zar": "کښت",
+    "mara": "څړځای",
+    "shajara": "پاکه ونه",
+    "tayr": "مرغان",
+    "zill": "سیوری",
+    "fulk": "بېړۍ",
+    "asr": "العصر",
+    "mamdud": "غځېدلی سیوری",
+    "anhar": "سیندونه",
+    "ghuraf": "لوړې کوټې",
+    "qutuf": "نږدې مېوې",
+    "khiyam": "خېمې",
+    "nur": "نور",
+    "mountains": "غرونه — د کمزورې لید او رنګ ړوندوالي لپاره"
+  },
+  "nav": {
+    "home": "کور پاڼه",
+    "about": "د اپلیکیشن په اړه"
+  },
+  "about": {
+    "title": "د اپلیکیشن په اړه",
+    "developer": "جوړونکی",
+    "apiVersion": "د API نسخه",
+    "sources": "د منځپانګې سرچینې",
+    "unreachable": "اوس سرور ته لاسرسی نه کېږي."
+  },
+  "notFound": {
+    "title": "دا پاڼه نشته."
+  },
+  "common": {
+    "close": "بندول"
+  }
+}

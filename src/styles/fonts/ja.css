@@ -1,0 +1,8 @@
+/*
+ * Self-hosted fonts from the @fontsource packages (SIL Open Font Licence 1.1 — each package carries its LICENSE): no
+ * request to Google Fonts or any other third party (AGENTS.md §2, §10). Each face loads only when a page uses its
+ * characters (unicode-range).
+ */
+/* Loaded only when the page is in 'ja' (SettingsService adds its <link>). */
+@import '@fontsource/noto-sans-jp/400.css';
+@import '@fontsource/noto-sans-jp/700.css';

@@ -1,0 +1,84 @@
+<main class="mx-auto flex min-h-dvh w-full max-w-xl flex-col gap-3 px-4 py-5 sm:py-8">
+  <header class="flex items-center gap-3">
+    <tj-logo-mark class="size-16" />
+    <div>
+      <h1 class="font-heading text-3xl leading-tight font-bold text-ink">{{ 'app.name' | translate }}</h1>
+      <p class="text-xs text-muted">{{ 'app.tagline' | translate }}</p>
+    </div>
+  </header>
+
+  <h2 class="mt-1 flex items-center gap-1.5 text-xs font-semibold text-muted before:size-1 before:rounded-full before:bg-dot">
+    {{ 'firstLaunch.language' | translate }}
+  </h2>
+  <button
+    type="button"
+    class="flex w-full items-center gap-2.5 rounded-xl border border-text bg-surface px-3 py-2.5 text-start"
+    aria-haspopup="dialog"
+    (click)="pickerOpen.set(true)"
+  >
+    <tj-icon name="globe" />
+    <span class="text-[15px] font-bold" [attr.lang]="language().code" [style.font-family]="language().font">{{ language().nativeName }}</span>
+    <span class="ms-auto text-xs text-muted">{{ 'firstLaunch.nLanguages' | translate: { n: languageCount } }}</span>
+    <tj-icon name="down" />
+  </button>
+  @if (language().code !== 'ar') {
+    <p class="-mt-1 text-xs text-muted">{{ 'firstLaunch.draft' | translate }}</p>
+  }
+
+  <div class="mt-1 flex items-center justify-between">
+    <h2 class="flex items-center gap-1.5 text-xs font-semibold text-muted before:size-1 before:rounded-full before:bg-dot">
+      {{ 'firstLaunch.colours' | translate }}
+    </h2>
+    <button
+      type="button"
+      role="switch"
+      class="flex items-center gap-1.5 rounded-full border border-border bg-surface px-2.5 py-1 text-xs"
+      [attr.aria-checked]="settings.preferences().night"
+      (click)="toggleNight()"
+    >
+      <tj-icon name="sun" class="size-4" />
+      <span>{{ (settings.preferences().night ? 'firstLaunch.night' : 'firstLaunch.day') | translate }}</span>
+      <tj-icon name="moon" class="size-4" />
+    </button>
+  </div>
+  <div class="grid grid-cols-3 gap-2 sm:grid-cols-4">
+    @for (d of directions; track d.id) {
+      <button
+        type="button"
+        class="flex flex-col items-center gap-1 overflow-hidden rounded-xl border border-border bg-surface pb-1.5 text-center text-[11px] font-semibold aria-pressed:border-text aria-pressed:shadow-[inset_0_0_0_1px_var(--t-text)]"
+        [attr.aria-pressed]="settings.preferences().direction === d.id"
+        (click)="chooseDirection(d.id)"
+      >
+        <img [src]="landscape(d.id)" alt="" class="h-12 w-full object-cover" loading="lazy" />
+        <span class="px-1 leading-tight">{{ 'directions.' + d.id | translate }}</span>
+      </button>
+    }
+  </div>
+
+  <section class="overflow-hidden rounded-2xl border border-rule bg-surface" aria-labelledby="example-title">
+    <div id="example-title" class="border-b border-border px-3 py-2 text-xs font-bold">{{ 'firstLaunch.example' | translate }}</div>
+    @if (fatihah.data(); as surah) {
+      <p class="quran-text px-3 py-2 text-center text-ink" lang="ar" dir="rtl">
+        @for (ayah of surah.ayahs; track ayah.id) {
+          <span>{{ ayah.text }}</span>
+          <span class="ayah-number">{{ arabicNumber(ayah.number) }}</span>
+        }
+      </p>
+      <p class="px-3 pb-2 text-[10px] text-muted" dir="ltr">
+        <a [href]="surah.textSource.sourceUrl" class="underline" rel="noopener">{{ surah.textSource.name }}</a> · {{ surah.textSource.licence }}
+      </p>
+    }
+  </section>
+
+  <tj-button variant="filled" (pressed)="start()">{{ 'firstLaunch.start' | translate }}</tj-button>
+  <p class="text-center text-xs text-muted">{{ 'firstLaunch.later' | translate }}</p>
+</main>
+
+@if (pickerOpen()) {
+  <tj-language-picker
+    [current]="language().code"
+    [suggested]="suggested"
+    (chosen)="chooseLanguage($event)"
+    (closed)="pickerOpen.set(false)"
+  />
+}

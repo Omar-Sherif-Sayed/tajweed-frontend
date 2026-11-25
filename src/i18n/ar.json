@@ -1,0 +1,76 @@
+{
+  "app": {
+    "name": "تجويد",
+    "tagline": "القرآن الكريم وعلومه"
+  },
+  "firstLaunch": {
+    "language": "اللغة · Language",
+    "chooseLanguage": "اختر اللغة · Choose language",
+    "nLanguages": "{{n}} لغة",
+    "deviceLanguage": "لغة جهازك",
+    "allLanguages": "كل اللغات",
+    "searchLanguages": "ابحث: عربي، Deutsch، Urdu…",
+    "rightToLeft": "من اليمين",
+    "noLanguage": "لا توجد لغة بهذا الاسم.",
+    "colours": "الألوان",
+    "day": "نهاري",
+    "night": "ليلي",
+    "example": "مثال · سورة الفاتحة",
+    "start": "ابدأ",
+    "later": "يمكن تغيير ذلك لاحقًا من الإعدادات",
+    "draft": ""
+  },
+  "home": {
+    "quran": "القرآن",
+    "recitation": "التلاوة",
+    "prayerTimes": "مواقيت الصلاة",
+    "building": "أقسام التطبيق قيد البناء، وستظهر هنا أولها قريبًا."
+  },
+  "directions": {
+    "suhuf": "الصُّحُف",
+    "hira": "حِراء",
+    "ghar": "الغار",
+    "taybah": "طابة",
+    "uhud": "أُحُد",
+    "ibil": "أفلا ينظرون",
+    "fajr": "الفجر",
+    "duha": "الضحى",
+    "ghaith": "الغيث",
+    "jannatan": "الجنّتان",
+    "tin": "التين والزيتون",
+    "kawthar": "الكوثر",
+    "qamar": "الشمس والقمر",
+    "dhariyat": "الذاريات",
+    "zar": "الزرع",
+    "mara": "المرعى",
+    "shajara": "الشجرة الطيبة",
+    "tayr": "الطير",
+    "zill": "الظل",
+    "fulk": "الجوار المنشآت",
+    "asr": "العصر",
+    "mamdud": "ظل ممدود",
+    "anhar": "الأنهار",
+    "ghuraf": "الغرف",
+    "qutuf": "قطوفها دانية",
+    "khiyam": "الخيام",
+    "nur": "النور",
+    "mountains": "الجبال — لضعف البصر وعمى الألوان"
+  },
+  "nav": {
+    "home": "الرئيسية",
+    "about": "عن التطبيق"
+  },
+  "about": {
+    "title": "عن التطبيق",
+    "developer": "المطوّر",
+    "apiVersion": "إصدار الواجهة البرمجية",
+    "sources": "مصادر المحتوى",
+    "unreachable": "تعذّر الوصول إلى الخادم الآن."
+  },
+  "notFound": {
+    "title": "هذه الصفحة غير موجودة."
+  },
+  "common": {
+    "close": "إغلاق"
+  }
+}

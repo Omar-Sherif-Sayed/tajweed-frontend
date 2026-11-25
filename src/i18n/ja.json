@@ -1,0 +1,76 @@
+{
+  "app": {
+    "name": "タジュウィード",
+    "tagline": "聖クルアーンとその学問"
+  },
+  "firstLaunch": {
+    "language": "言語 · Language",
+    "chooseLanguage": "言語を選択 · Choose language",
+    "nLanguages": "{{n}}言語",
+    "deviceLanguage": "端末の言語",
+    "allLanguages": "すべての言語",
+    "searchLanguages": "検索: 日本語、English、اردو…",
+    "rightToLeft": "右から左",
+    "noLanguage": "その名前の言語はありません。",
+    "colours": "色",
+    "day": "昼",
+    "night": "夜",
+    "example": "例 · 開端章",
+    "start": "はじめる",
+    "later": "あとで設定から変更できます",
+    "draft": "インターフェースの翻訳はプロジェクトによるものです。誤りを見つけたら GitHub でお知らせください。"
+  },
+  "home": {
+    "quran": "クルアーン",
+    "recitation": "読誦",
+    "prayerTimes": "礼拝時刻",
+    "building": "アプリの各セクションを作成中です。最初のセクションがまもなくここに表示されます。"
+  },
+  "directions": {
+    "suhuf": "最初の書写",
+    "hira": "ヒラー",
+    "ghar": "洞窟",
+    "taybah": "タイバ",
+    "uhud": "ウフド",
+    "ibil": "ラクダを見よ",
+    "fajr": "夜明け",
+    "duha": "朝",
+    "ghaith": "雨",
+    "jannatan": "二つの園",
+    "tin": "イチジクとオリーブ",
+    "kawthar": "アル＝カウサル",
+    "qamar": "太陽と月",
+    "dhariyat": "まき散らす風",
+    "zar": "作物",
+    "mara": "牧草地",
+    "shajara": "良い木",
+    "tayr": "鳥",
+    "zill": "陰",
+    "fulk": "船",
+    "asr": "アル・アスル",
+    "mamdud": "広がる陰",
+    "anhar": "川",
+    "ghuraf": "高い住まい",
+    "qutuf": "近い果実",
+    "khiyam": "天幕",
+    "nur": "光",
+    "mountains": "山 — 弱視・色覚特性の方へ"
+  },
+  "nav": {
+    "home": "ホーム",
+    "about": "このアプリについて"
+  },
+  "about": {
+    "title": "このアプリについて",
+    "developer": "開発者",
+    "apiVersion": "API バージョン",
+    "sources": "コンテンツの出典",
+    "unreachable": "現在サーバーに接続できません。"
+  },
+  "notFound": {
+    "title": "このページは存在しません。"
+  },
+  "common": {
+    "close": "閉じる"
+  }
+}

@@ -1,0 +1,30 @@
+<h1 class="font-heading text-2xl font-bold text-ink">{{ 'about.title' | translate }}</h1>
+
+@if (info.isError() || sources.isError()) {
+  <p class="mt-4 rounded-xl bg-dotsoft p-3 text-sm" role="status">{{ 'about.unreachable' | translate }}</p>
+}
+
+@if (info.data(); as app) {
+  <dl class="mt-4 grid grid-cols-[auto_1fr] gap-x-6 gap-y-2 text-sm">
+    <dt class="text-muted">{{ 'app.name' | translate }}</dt>
+    <dd>{{ app.name }}</dd>
+    <dt class="text-muted">{{ 'about.developer' | translate }}</dt>
+    <dd>
+      <a [href]="app.author.link" class="underline" rel="noopener">{{ app.author.name }}</a>
+    </dd>
+    <dt class="text-muted">{{ 'about.apiVersion' | translate }}</dt>
+    <dd><bdi dir="ltr">{{ app.apiVersion }}</bdi></dd>
+  </dl>
+}
+
+@if (sources.data(); as content) {
+  <h2 class="mt-6 text-sm font-bold">{{ 'about.sources' | translate }} <span class="font-normal text-muted" dir="ltr">({{ content.version }})</span></h2>
+  <ul class="mt-2 divide-y divide-border rounded-xl border border-border bg-surface text-sm" dir="ltr">
+    @for (s of content.sources; track s.code) {
+      <li class="px-3 py-2">
+        <a [href]="s.sourceUrl" class="font-semibold underline" rel="noopener">{{ s.name }}</a>
+        <span class="block text-xs text-muted">{{ s.licence }} · {{ s.obtainedOn }}</span>
+      </li>
+    }
+  </ul>
+}

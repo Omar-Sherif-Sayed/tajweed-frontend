@@ -1,0 +1,15 @@
+/*
+ * Self-hosted fonts from the @fontsource packages (SIL Open Font Licence 1.1 — each package carries its LICENSE): no
+ * request to Google Fonts or any other third party (AGENTS.md §2, §10). Each face loads only when a page uses its
+ * characters (unicode-range).
+ */
+/* The fonts of every page: Arabic and Latin/Cyrillic interface, headings, the Quran's example. */
+@import '@fontsource/ibm-plex-sans-arabic/400.css';
+@import '@fontsource/ibm-plex-sans-arabic/600.css';
+@import '@fontsource/ibm-plex-sans-arabic/700.css';
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/600.css';
+@import '@fontsource/inter/700.css';
+@import '@fontsource/amiri/400.css';
+@import '@fontsource/amiri/700.css';
+@import '@fontsource/amiri-quran/400.css';

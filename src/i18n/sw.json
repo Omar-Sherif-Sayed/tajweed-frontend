@@ -1,0 +1,76 @@
+{
+  "app": {
+    "name": "Tajwidi",
+    "tagline": "Qur'ani Tukufu na Elimu Zake"
+  },
+  "firstLaunch": {
+    "language": "Lugha · Language",
+    "chooseLanguage": "Chagua lugha · Choose language",
+    "nLanguages": "lugha {{n}}",
+    "deviceLanguage": "Lugha ya kifaa chako",
+    "allLanguages": "Lugha zote",
+    "searchLanguages": "Tafuta: Kiswahili, English, اردو…",
+    "rightToLeft": "kulia kwenda kushoto",
+    "noLanguage": "Hakuna lugha yenye jina hilo.",
+    "colours": "Rangi",
+    "day": "Mchana",
+    "night": "Usiku",
+    "example": "Mfano · Al-Fatiha",
+    "start": "Anza",
+    "later": "Unaweza kubadilisha hili baadaye katika Mipangilio",
+    "draft": "Tafsiri ya kiolesura imefanywa na mradi. Umeona kosa? Liripoti kwenye GitHub."
+  },
+  "home": {
+    "quran": "Qur'ani",
+    "recitation": "Kisomo",
+    "prayerTimes": "Nyakati za swala",
+    "building": "Sehemu za programu zinajengwa; za kwanza zitaonekana hapa hivi karibuni."
+  },
+  "directions": {
+    "suhuf": "Kurasa za kwanza",
+    "hira": "Hira",
+    "ghar": "Pango",
+    "taybah": "Taiba",
+    "uhud": "Uhud",
+    "ibil": "Watazame ngamia",
+    "fajr": "Alfajiri",
+    "duha": "Dhuha",
+    "ghaith": "Mvua",
+    "jannatan": "Bustani mbili",
+    "tin": "Tini na mzeituni",
+    "kawthar": "Al-Kawthar",
+    "qamar": "Jua na mwezi",
+    "dhariyat": "Pepo zinazotawanya",
+    "zar": "Mmea",
+    "mara": "Malisho",
+    "shajara": "Mti mzuri",
+    "tayr": "Ndege",
+    "zill": "Kivuli",
+    "fulk": "Merikebu",
+    "asr": "Al-Asr",
+    "mamdud": "Kivuli kirefu",
+    "anhar": "Mito",
+    "ghuraf": "Makazi ya juu",
+    "qutuf": "Matunda ya karibu",
+    "khiyam": "Mahema",
+    "nur": "Nuru",
+    "mountains": "Milima — kwa uoni hafifu na upofu wa rangi"
+  },
+  "nav": {
+    "home": "Mwanzo",
+    "about": "Kuhusu"
+  },
+  "about": {
+    "title": "Kuhusu",
+    "developer": "Msanidi",
+    "apiVersion": "Toleo la API",
+    "sources": "Vyanzo vya maudhui",
+    "unreachable": "Seva haipatikani kwa sasa."
+  },
+  "notFound": {
+    "title": "Ukurasa huu haupo."
+  },
+  "common": {
+    "close": "Funga"
+  }
+}

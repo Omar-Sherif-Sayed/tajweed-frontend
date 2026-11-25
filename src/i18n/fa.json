@@ -1,0 +1,76 @@
+{
+  "app": {
+    "name": "تجوید",
+    "tagline": "قرآن کریم و علوم آن"
+  },
+  "firstLaunch": {
+    "language": "زبان · Language",
+    "chooseLanguage": "انتخاب زبان · Choose language",
+    "nLanguages": "{{n}} زبان",
+    "deviceLanguage": "زبان دستگاه شما",
+    "allLanguages": "همهٔ زبان‌ها",
+    "searchLanguages": "جستجو: فارسی، English، Deutsch…",
+    "rightToLeft": "راست به چپ",
+    "noLanguage": "زبانی با این نام نیست.",
+    "colours": "رنگ‌ها",
+    "day": "روز",
+    "night": "شب",
+    "example": "نمونه · سورهٔ فاتحه",
+    "start": "شروع",
+    "later": "بعداً می‌توانید این را در تنظیمات تغییر دهید",
+    "draft": "ترجمهٔ رابط کاربری از سوی پروژه است. اشتباهی دیدید؟ در GitHub گزارش دهید."
+  },
+  "home": {
+    "quran": "قرآن",
+    "recitation": "تلاوت",
+    "prayerTimes": "اوقات نماز",
+    "building": "بخش‌های برنامه در حال ساخت است؛ نخستین آن‌ها به‌زودی اینجا نمایش داده می‌شود."
+  },
+  "directions": {
+    "suhuf": "نخستین صحیفه‌ها",
+    "hira": "حرا",
+    "ghar": "غار",
+    "taybah": "طابه",
+    "uhud": "احد",
+    "ibil": "به شتران بنگرید",
+    "fajr": "فجر",
+    "duha": "چاشت",
+    "ghaith": "باران",
+    "jannatan": "دو باغ",
+    "tin": "تین و زیتون",
+    "kawthar": "کوثر",
+    "qamar": "خورشید و ماه",
+    "dhariyat": "ذاریات",
+    "zar": "کشت",
+    "mara": "چراگاه",
+    "shajara": "درخت پاک",
+    "tayr": "پرندگان",
+    "zill": "سایه",
+    "fulk": "کشتی‌ها",
+    "asr": "العصر",
+    "mamdud": "سایهٔ گسترده",
+    "anhar": "رودها",
+    "ghuraf": "غرفه‌ها",
+    "qutuf": "میوه‌های نزدیک",
+    "khiyam": "خیمه‌ها",
+    "nur": "نور",
+    "mountains": "کوه‌ها — برای کم‌بینایی و کوررنگی"
+  },
+  "nav": {
+    "home": "خانه",
+    "about": "دربارهٔ برنامه"
+  },
+  "about": {
+    "title": "دربارهٔ برنامه",
+    "developer": "توسعه‌دهنده",
+    "apiVersion": "نسخهٔ API",
+    "sources": "منابع محتوا",
+    "unreachable": "اکنون دسترسی به سرور ممکن نیست."
+  },
+  "notFound": {
+    "title": "این صفحه وجود ندارد."
+  },
+  "common": {
+    "close": "بستن"
+  }
+}

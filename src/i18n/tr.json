@@ -1,0 +1,76 @@
+{
+  "app": {
+    "name": "Tecvid",
+    "tagline": "Kur'an-ı Kerim ve İlimleri"
+  },
+  "firstLaunch": {
+    "language": "Dil · Language",
+    "chooseLanguage": "Dil seçin · Choose language",
+    "nLanguages": "{{n}} dil",
+    "deviceLanguage": "Cihazınızın dili",
+    "allLanguages": "Tüm diller",
+    "searchLanguages": "Ara: Türkçe, Deutsch, اردو…",
+    "rightToLeft": "sağdan sola",
+    "noLanguage": "Bu adda bir dil yok.",
+    "colours": "Renkler",
+    "day": "Gündüz",
+    "night": "Gece",
+    "example": "Örnek · Fâtiha",
+    "start": "Başla",
+    "later": "Bunu daha sonra Ayarlar'dan değiştirebilirsiniz",
+    "draft": "Arayüz çevirisi proje tarafından yapıldı. Bir hata mı buldunuz? GitHub'da bildirin."
+  },
+  "home": {
+    "quran": "Kur'an",
+    "recitation": "Tilavet",
+    "prayerTimes": "Namaz vakitleri",
+    "building": "Uygulamanın bölümleri hazırlanıyor; ilkleri yakında burada görünecek."
+  },
+  "directions": {
+    "suhuf": "İlk sahifeler",
+    "hira": "Hira",
+    "ghar": "Mağara",
+    "taybah": "Tayba",
+    "uhud": "Uhud",
+    "ibil": "Develere bakın",
+    "fajr": "Fecir",
+    "duha": "Kuşluk",
+    "ghaith": "Yağmur",
+    "jannatan": "İki bahçe",
+    "tin": "İncir ve zeytin",
+    "kawthar": "el-Kevser",
+    "qamar": "Güneş ve ay",
+    "dhariyat": "Savuran rüzgârlar",
+    "zar": "Ekin",
+    "mara": "Mera",
+    "shajara": "Güzel ağaç",
+    "tayr": "Kuşlar",
+    "zill": "Gölge",
+    "fulk": "Gemiler",
+    "asr": "el-Asr",
+    "mamdud": "Uzayan gölge",
+    "anhar": "Nehirler",
+    "ghuraf": "Yüksek köşkler",
+    "qutuf": "Yakın meyveler",
+    "khiyam": "Çadırlar",
+    "nur": "Nur",
+    "mountains": "Dağlar — az görme ve renk körlüğü için"
+  },
+  "nav": {
+    "home": "Ana sayfa",
+    "about": "Hakkında"
+  },
+  "about": {
+    "title": "Hakkında",
+    "developer": "Geliştirici",
+    "apiVersion": "API sürümü",
+    "sources": "İçerik kaynakları",
+    "unreachable": "Sunucuya şu anda ulaşılamıyor."
+  },
+  "notFound": {
+    "title": "Böyle bir sayfa yok."
+  },
+  "common": {
+    "close": "Kapat"
+  }
+}

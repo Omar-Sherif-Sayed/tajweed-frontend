@@ -1,0 +1,76 @@
+{
+  "app": {
+    "name": "Tajwid",
+    "tagline": "El Noble Corán y sus ciencias"
+  },
+  "firstLaunch": {
+    "language": "Idioma · Language",
+    "chooseLanguage": "Elige el idioma · Choose language",
+    "nLanguages": "{{n}} idiomas",
+    "deviceLanguage": "Idioma de tu dispositivo",
+    "allLanguages": "Todos los idiomas",
+    "searchLanguages": "Buscar: Español, Deutsch, اردو…",
+    "rightToLeft": "de derecha a izquierda",
+    "noLanguage": "No hay ningún idioma con ese nombre.",
+    "colours": "Colores",
+    "day": "Día",
+    "night": "Noche",
+    "example": "Ejemplo · Al-Fátiha",
+    "start": "Empezar",
+    "later": "Puedes cambiarlo más tarde en Ajustes",
+    "draft": "Traducción de la interfaz hecha por el proyecto. ¿Encontraste un error? Infórmalo en GitHub."
+  },
+  "home": {
+    "quran": "Corán",
+    "recitation": "Recitación",
+    "prayerTimes": "Horarios de oración",
+    "building": "Las secciones de la aplicación están en construcción; las primeras aparecerán aquí pronto."
+  },
+  "directions": {
+    "suhuf": "Las primeras hojas",
+    "hira": "Hira",
+    "ghar": "La cueva",
+    "taybah": "Taiba",
+    "uhud": "Uhud",
+    "ibil": "Mirad los camellos",
+    "fajr": "El alba",
+    "duha": "La mañana",
+    "ghaith": "La lluvia",
+    "jannatan": "Los dos jardines",
+    "tin": "El higo y el olivo",
+    "kawthar": "Al-Kawzar",
+    "qamar": "El sol y la luna",
+    "dhariyat": "Los vientos que esparcen",
+    "zar": "El sembrado",
+    "mara": "El pasto",
+    "shajara": "El árbol bueno",
+    "tayr": "Las aves",
+    "zill": "La sombra",
+    "fulk": "Las naves",
+    "asr": "Al-Asr",
+    "mamdud": "La sombra extendida",
+    "anhar": "Los ríos",
+    "ghuraf": "Las moradas altas",
+    "qutuf": "Frutos al alcance",
+    "khiyam": "Las tiendas",
+    "nur": "La luz",
+    "mountains": "Montañas — para baja visión y daltonismo"
+  },
+  "nav": {
+    "home": "Inicio",
+    "about": "Acerca de"
+  },
+  "about": {
+    "title": "Acerca de",
+    "developer": "Desarrollador",
+    "apiVersion": "Versión de la API",
+    "sources": "Fuentes del contenido",
+    "unreachable": "Ahora no se puede conectar con el servidor."
+  },
+  "notFound": {
+    "title": "Esta página no existe."
+  },
+  "common": {
+    "close": "Cerrar"
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "app": {
+    "name": "تجوید",
+    "tagline": "قرآنِ کریم اور اس کے علوم"
+  },
+  "firstLaunch": {
+    "language": "زبان · Language",
+    "chooseLanguage": "زبان منتخب کریں · Choose language",
+    "nLanguages": "{{n}} زبانیں",
+    "deviceLanguage": "آپ کے آلے کی زبان",
+    "allLanguages": "تمام زبانیں",
+    "searchLanguages": "تلاش: اردو، English، Deutsch…",
+    "rightToLeft": "دائیں سے بائیں",
+    "noLanguage": "اس نام کی کوئی زبان نہیں۔",
+    "colours": "رنگ",
+    "day": "دن",
+    "night": "رات",
+    "example": "مثال · سورۃ الفاتحہ",
+    "start": "شروع کریں",
+    "later": "آپ اسے بعد میں ترتیبات میں بدل سکتے ہیں",
+    "draft": "انٹرفیس کا ترجمہ منصوبے کی طرف سے ہے۔ کوئی غلطی ملی؟ GitHub پر بتائیں۔"
+  },
+  "home": {
+    "quran": "قرآن",
+    "recitation": "تلاوت",
+    "prayerTimes": "اوقاتِ نماز",
+    "building": "ایپ کے حصے تیار ہو رہے ہیں؛ پہلے حصے جلد یہاں نظر آئیں گے۔"
+  },
+  "directions": {
+    "suhuf": "اوّلین صحیفے",
+    "hira": "حرا",
+    "ghar": "غار",
+    "taybah": "طابہ",
+    "uhud": "اُحد",
+    "ibil": "اونٹوں کو دیکھو",
+    "fajr": "فجر",
+    "duha": "چاشت",
+    "ghaith": "بارش",
+    "jannatan": "دو باغ",
+    "tin": "التین والزیتون",
+    "kawthar": "الکوثر",
+    "qamar": "سورج اور چاند",
+    "dhariyat": "الذاریات",
+    "zar": "کھیتی",
+    "mara": "چراگاہ",
+    "shajara": "پاکیزہ درخت",
+    "tayr": "پرندے",
+    "zill": "سایہ",
+    "fulk": "جہاز",
+    "asr": "العصر",
+    "mamdud": "پھیلا ہوا سایہ",
+    "anhar": "نہریں",
+    "ghuraf": "بالاخانے",
+    "qutuf": "قریب پھل",
+    "khiyam": "خیمے",
+    "nur": "نور",
+    "mountains": "پہاڑ — کمزور نظر اور رنگ کوری کے لیے"
+  },
+  "nav": {
+    "home": "صفحۂ اول",
+    "about": "ایپ کے بارے میں"
+  },
+  "about": {
+    "title": "ایپ کے بارے میں",
+    "developer": "ڈویلپر",
+    "apiVersion": "API کا ورژن",
+    "sources": "مواد کے ماخذ",
+    "unreachable": "اس وقت سرور تک رسائی نہیں ہو رہی۔"
+  },
+  "notFound": {
+    "title": "یہ صفحہ موجود نہیں۔"
+  },
+  "common": {
+    "close": "بند کریں"
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "app": {
+    "name": "Tajwid",
+    "tagline": "Il Nobile Corano e le sue scienze"
+  },
+  "firstLaunch": {
+    "language": "Lingua · Language",
+    "chooseLanguage": "Scegli la lingua · Choose language",
+    "nLanguages": "{{n}} lingue",
+    "deviceLanguage": "Lingua del tuo dispositivo",
+    "allLanguages": "Tutte le lingue",
+    "searchLanguages": "Cerca: Italiano, Deutsch, اردو…",
+    "rightToLeft": "da destra a sinistra",
+    "noLanguage": "Nessuna lingua con questo nome.",
+    "colours": "Colori",
+    "day": "Giorno",
+    "night": "Notte",
+    "example": "Esempio · Al-Fatiha",
+    "start": "Inizia",
+    "later": "Puoi cambiarlo più tardi nelle Impostazioni",
+    "draft": "Traduzione dell'interfaccia a cura del progetto. Hai trovato un errore? Segnalalo su GitHub."
+  },
+  "home": {
+    "quran": "Corano",
+    "recitation": "Recitazione",
+    "prayerTimes": "Orari di preghiera",
+    "building": "Le sezioni dell'app sono in costruzione; le prime appariranno presto qui."
+  },
+  "directions": {
+    "suhuf": "I primi fogli",
+    "hira": "Hira",
+    "ghar": "La grotta",
+    "taybah": "Taiba",
+    "uhud": "Uhud",
+    "ibil": "Guardate i cammelli",
+    "fajr": "L'alba",
+    "duha": "Il mattino",
+    "ghaith": "La pioggia",
+    "jannatan": "I due giardini",
+    "tin": "Il fico e l'ulivo",
+    "kawthar": "Al-Kawthar",
+    "qamar": "Il sole e la luna",
+    "dhariyat": "I venti che spargono",
+    "zar": "Il seminato",
+    "mara": "Il pascolo",
+    "shajara": "L'albero buono",
+    "tayr": "Gli uccelli",
+    "zill": "L'ombra",
+    "fulk": "Le navi",
+    "asr": "Al-Asr",
+    "mamdud": "L'ombra distesa",
+    "anhar": "I fiumi",
+    "ghuraf": "Le dimore alte",
+    "qutuf": "Frutti vicini",
+    "khiyam": "Le tende",
+    "nur": "La luce",
+    "mountains": "Montagne — per ipovisione e daltonismo"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "Informazioni"
+  },
+  "about": {
+    "title": "Informazioni",
+    "developer": "Sviluppatore",
+    "apiVersion": "Versione dell'API",
+    "sources": "Fonti dei contenuti",
+    "unreachable": "Il server non è raggiungibile in questo momento."
+  },
+  "notFound": {
+    "title": "Questa pagina non esiste."
+  },
+  "common": {
+    "close": "Chiudi"
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "cli": {
+    "packageManager": "npm",
+    "schematicCollections": [
+      "angular-eslint"
+    ]
+  },
+  "newProjectRoot": "projects",
+  "projects": {
+    "tajweed-frontend": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "",
+      "sourceRoot": "src",
+      "prefix": "tj",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:application",
+          "options": {
+            "browser": "src/main.ts",
+            "tsConfig": "tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "public"
+              }
+            ],
+            "styles": [
+              "src/tailwind.css",
+              "src/styles/fonts.css",
+              "src/styles.scss",
+              {
+                "input": "src/styles/fonts/ur.css",
+                "bundleName": "font-ur",
+                "inject": false
+              },
+              {
+                "input": "src/styles/fonts/hi.css",
+                "bundleName": "font-hi",
+                "inject": false
+              },
+              {
+                "input": "src/styles/fonts/bn.css",
+                "bundleName": "font-bn",
+                "inject": false
+              },
+              {
+                "input": "src/styles/fonts/ko.css",
+                "bundleName": "font-ko",
+                "inject": false
+              },
+              {
+                "input": "src/styles/fonts/ja.css",
+                "bundleName": "font-ja",
+                "inject": false
+              },
+              {
+                "input": "src/styles/fonts/zh.css",
+                "bundleName": "font-zh",
+                "inject": false
+              },
+              {
+                "input": "src/styles/fonts/fa.css",
+                "bundleName": "font-fa",
+                "inject": false
+              },
+              {
+                "input": "src/styles/fonts/ps.css",
+                "bundleName": "font-ps",
+                "inject": false
+              }
+            ],
+            "server": "src/main.server.ts",
+            "outputMode": "server",
+            "security": {
+              "allowedHosts": []
+            },
+            "ssr": {
+              "entry": "src/server.ts"
+            },
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src"
+              ]
+            }
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "750kB",
+                  "maximumError": "1MB"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "4kB",
+                  "maximumError": "8kB"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.development.ts"
+                }
+              ]
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular/build:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "tajweed-frontend:build:production"
+            },
+            "development": {
+              "buildTarget": "tajweed-frontend:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "test": {
+          "builder": "@angular/build:unit-test"
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

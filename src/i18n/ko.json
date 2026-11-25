@@ -1,0 +1,76 @@
+{
+  "app": {
+    "name": "타즈위드",
+    "tagline": "고귀한 꾸란과 그 학문"
+  },
+  "firstLaunch": {
+    "language": "언어 · Language",
+    "chooseLanguage": "언어 선택 · Choose language",
+    "nLanguages": "{{n}}개 언어",
+    "deviceLanguage": "기기 언어",
+    "allLanguages": "모든 언어",
+    "searchLanguages": "검색: 한국어, English, اردو…",
+    "rightToLeft": "오른쪽에서 왼쪽으로",
+    "noLanguage": "그런 이름의 언어가 없습니다.",
+    "colours": "색상",
+    "day": "낮",
+    "night": "밤",
+    "example": "예시 · 알파티하",
+    "start": "시작",
+    "later": "나중에 설정에서 바꿀 수 있습니다",
+    "draft": "인터페이스 번역은 프로젝트가 했습니다. 오류를 발견하셨나요? GitHub에 알려 주세요."
+  },
+  "home": {
+    "quran": "꾸란",
+    "recitation": "낭송",
+    "prayerTimes": "예배 시간",
+    "building": "앱의 각 영역을 만드는 중입니다. 곧 첫 영역이 여기에 표시됩니다."
+  },
+  "directions": {
+    "suhuf": "첫 기록",
+    "hira": "히라",
+    "ghar": "동굴",
+    "taybah": "타이바",
+    "uhud": "우후드",
+    "ibil": "낙타를 보라",
+    "fajr": "새벽",
+    "duha": "오전",
+    "ghaith": "비",
+    "jannatan": "두 정원",
+    "tin": "무화과와 올리브",
+    "kawthar": "알카우사르",
+    "qamar": "태양과 달",
+    "dhariyat": "흩뿌리는 바람",
+    "zar": "농작물",
+    "mara": "목초지",
+    "shajara": "좋은 나무",
+    "tayr": "새들",
+    "zill": "그늘",
+    "fulk": "배들",
+    "asr": "알아스르",
+    "mamdud": "늘어난 그늘",
+    "anhar": "강들",
+    "ghuraf": "높은 거처",
+    "qutuf": "가까운 열매",
+    "khiyam": "장막들",
+    "nur": "빛",
+    "mountains": "산 — 저시력·색각 이상을 위해"
+  },
+  "nav": {
+    "home": "홈",
+    "about": "앱 정보"
+  },
+  "about": {
+    "title": "앱 정보",
+    "developer": "개발자",
+    "apiVersion": "API 버전",
+    "sources": "콘텐츠 출처",
+    "unreachable": "지금은 서버에 연결할 수 없습니다."
+  },
+  "notFound": {
+    "title": "해당 페이지가 없습니다."
+  },
+  "common": {
+    "close": "닫기"
+  }
+}

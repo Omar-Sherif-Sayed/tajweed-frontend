@@ -1,0 +1,76 @@
+{
+  "app": {
+    "name": "Tajwid",
+    "tagline": "Al-Qur'an yang Mulia dan Ilmu-ilmunya"
+  },
+  "firstLaunch": {
+    "language": "Bahasa · Language",
+    "chooseLanguage": "Pilih bahasa · Choose language",
+    "nLanguages": "{{n}} bahasa",
+    "deviceLanguage": "Bahasa perangkat Anda",
+    "allLanguages": "Semua bahasa",
+    "searchLanguages": "Cari: Indonesia, Deutsch, اردو…",
+    "rightToLeft": "kanan ke kiri",
+    "noLanguage": "Tidak ada bahasa dengan nama itu.",
+    "colours": "Warna",
+    "day": "Siang",
+    "night": "Malam",
+    "example": "Contoh · Al-Fatihah",
+    "start": "Mulai",
+    "later": "Anda bisa mengubahnya nanti di Pengaturan",
+    "draft": "Terjemahan antarmuka oleh proyek. Menemukan kesalahan? Laporkan di GitHub."
+  },
+  "home": {
+    "quran": "Al-Qur'an",
+    "recitation": "Tilawah",
+    "prayerTimes": "Jadwal salat",
+    "building": "Bagian-bagian aplikasi sedang dibangun; bagian pertama akan segera muncul di sini."
+  },
+  "directions": {
+    "suhuf": "Lembaran pertama",
+    "hira": "Hira",
+    "ghar": "Gua",
+    "taybah": "Thaibah",
+    "uhud": "Uhud",
+    "ibil": "Lihatlah unta",
+    "fajr": "Fajar",
+    "duha": "Duha",
+    "ghaith": "Hujan",
+    "jannatan": "Dua taman",
+    "tin": "Tin dan zaitun",
+    "kawthar": "Al-Kautsar",
+    "qamar": "Matahari dan bulan",
+    "dhariyat": "Angin yang menerbangkan",
+    "zar": "Tanaman",
+    "mara": "Padang rumput",
+    "shajara": "Pohon yang baik",
+    "tayr": "Burung-burung",
+    "zill": "Bayang-bayang",
+    "fulk": "Kapal-kapal",
+    "asr": "Al-'Ashr",
+    "mamdud": "Naungan terbentang",
+    "anhar": "Sungai-sungai",
+    "ghuraf": "Kamar-kamar tinggi",
+    "qutuf": "Buah yang dekat",
+    "khiyam": "Kemah-kemah",
+    "nur": "Cahaya",
+    "mountains": "Gunung — untuk penglihatan lemah dan buta warna"
+  },
+  "nav": {
+    "home": "Beranda",
+    "about": "Tentang"
+  },
+  "about": {
+    "title": "Tentang",
+    "developer": "Pengembang",
+    "apiVersion": "Versi API",
+    "sources": "Sumber konten",
+    "unreachable": "Server tidak dapat dihubungi saat ini."
+  },
+  "notFound": {
+    "title": "Halaman ini tidak ada."
+  },
+  "common": {
+    "close": "Tutup"
+  }
+}

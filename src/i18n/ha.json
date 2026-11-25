@@ -1,0 +1,76 @@
+{
+  "app": {
+    "name": "Tajwidi",
+    "tagline": "Alƙur'ani Mai Girma da Iliminsa"
+  },
+  "firstLaunch": {
+    "language": "Harshe · Language",
+    "chooseLanguage": "Zaɓi harshe · Choose language",
+    "nLanguages": "harsuna {{n}}",
+    "deviceLanguage": "Harshen na'urarka",
+    "allLanguages": "Duk harsuna",
+    "searchLanguages": "Nema: Hausa, English, اردو…",
+    "rightToLeft": "daga dama zuwa hagu",
+    "noLanguage": "Babu harshe mai wannan suna.",
+    "colours": "Launuka",
+    "day": "Rana",
+    "night": "Dare",
+    "example": "Misali · Al-Fatiha",
+    "start": "Fara",
+    "later": "Za ka iya canza wannan daga baya a Saituna",
+    "draft": "Fassarar fuskar manhaja daga aikin ne. Kun ga kuskure? Ku sanar a GitHub."
+  },
+  "home": {
+    "quran": "Alƙur'ani",
+    "recitation": "Karatu",
+    "prayerTimes": "Lokutan sallah",
+    "building": "Ana gina sassan manhajar; na farko za su bayyana a nan nan ba da jimawa ba."
+  },
+  "directions": {
+    "suhuf": "Takardun farko",
+    "hira": "Hira",
+    "ghar": "Kogo",
+    "taybah": "Taiba",
+    "uhud": "Uhudu",
+    "ibil": "Ku dubi raƙuma",
+    "fajr": "Alfijir",
+    "duha": "Walaha",
+    "ghaith": "Ruwan sama",
+    "jannatan": "Gonaki biyu",
+    "tin": "Ɓaure da zaitun",
+    "kawthar": "Al-Kausar",
+    "qamar": "Rana da wata",
+    "dhariyat": "Iskokin da ke watsawa",
+    "zar": "Shuka",
+    "mara": "Makiyaya",
+    "shajara": "Itace mai kyau",
+    "tayr": "Tsuntsaye",
+    "zill": "Inuwa",
+    "fulk": "Jiragen ruwa",
+    "asr": "Al-Asr",
+    "mamdud": "Inuwa mai faɗi",
+    "anhar": "Koguna",
+    "ghuraf": "Manyan gidaje",
+    "qutuf": "'Ya'ya na kusa",
+    "khiyam": "Tantuna",
+    "nur": "Haske",
+    "mountains": "Duwatsu — don raunin gani da makantar launi"
+  },
+  "nav": {
+    "home": "Gida",
+    "about": "Game da manhajar"
+  },
+  "about": {
+    "title": "Game da manhajar",
+    "developer": "Mai haɓakawa",
+    "apiVersion": "Sigar API",
+    "sources": "Tushen abubuwan da ke ciki",
+    "unreachable": "Ba a iya isa ga sabar a yanzu."
+  },
+  "notFound": {
+    "title": "Wannan shafi ba ya nan."
+  },
+  "common": {
+    "close": "Rufe"
+  }
+}

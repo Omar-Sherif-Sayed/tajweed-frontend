@@ -1,0 +1,70 @@
+// Global styles. Order (angular.json): Tailwind first, then this file, so Material's theme and our rules come after
+// Tailwind's base layer.
+@use '@angular/material' as mat;
+@use 'styles/directions';
+
+html {
+  height: 100%;
+  // Material 3's theme; its colours are then replaced by design 3's tokens below.
+  @include mat.theme(
+    (
+      color: (
+        primary: mat.$azure-palette,
+        tertiary: mat.$blue-palette,
+      ),
+      typography: (
+        plain-family: var(--app-font),
+        brand-family: var(--app-font),
+      ),
+      density: 0,
+    )
+  );
+  // Design 3's colours of the chosen direction (`data-direction`, `data-night` on <html>) for Material's system
+  // variables — one source of colour for Material and Tailwind.
+  --mat-sys-primary: var(--t-primary);
+  --mat-sys-on-primary: var(--t-onprimary);
+  --mat-sys-surface: var(--t-bg);
+  --mat-sys-on-surface: var(--t-text);
+  --mat-sys-on-surface-variant: var(--t-muted);
+  --mat-sys-surface-container: var(--t-surface);
+  --mat-sys-surface-container-high: var(--t-surface2);
+  --mat-sys-outline: var(--t-border);
+  --mat-sys-outline-variant: var(--t-border);
+  color-scheme: light;
+
+  &[data-night='true'] {
+    color-scheme: dark;
+  }
+}
+
+body {
+  margin: 0;
+  min-height: 100%;
+  background-color: var(--t-bg);
+  color: var(--t-text);
+  font-family: var(--app-font, 'IBM Plex Sans Arabic', system-ui, sans-serif);
+}
+
+// The Quran's text: one colour, the font made for it (AGENTS.md §8.1). The reader (`P1-W2`) brings the King Fahd
+// page fonts; the first launch's example uses Amiri Quran (SIL OFL).
+.quran-text {
+  font-family: 'Amiri Quran', serif;
+  font-size: 1.35rem;
+  line-height: 2.4;
+}
+
+// The ayah number after each ayah: a display element beside the text, never part of it.
+.ayah-number {
+  display: inline-grid;
+  place-items: center;
+  min-width: 1.6em;
+  height: 1.6em;
+  margin-inline: 0.25em;
+  border: 1.5px solid var(--t-dot);
+  border-radius: 999px;
+  color: var(--t-dot);
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+  font-size: 0.6em;
+  line-height: 1;
+  vertical-align: middle;
+}

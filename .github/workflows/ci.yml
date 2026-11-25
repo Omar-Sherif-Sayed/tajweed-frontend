@@ -1,0 +1,26 @@
+# tajweed-frontend CI: on every push and pull request to main — install, lint (0 errors, TSDoc everywhere), unit tests
+# (Vitest), and the production build with server-side rendering (strict templates).
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npx ng lint
+      - run: npx ng test --watch=false
+      - run: npx ng build

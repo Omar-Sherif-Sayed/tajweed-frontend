@@ -1,0 +1,89 @@
+{
+  "nav.home": {
+    "ar": "الرئيسية", "en": "Home", "ru": "Главная", "es": "Inicio", "de": "Startseite", "it": "Home", "fr": "Accueil",
+    "ur": "صفحۂ اول", "hi": "मुख्य पृष्ठ", "ko": "홈", "id": "Beranda", "ja": "ホーム", "zh": "首页", "tr": "Ana sayfa",
+    "bn": "হোম", "fa": "خانه", "ms": "Laman utama", "sw": "Mwanzo", "ha": "Gida", "pt": "Início", "ps": "کور پاڼه",
+    "uz": "Bosh sahifa"
+  },
+  "nav.about": {
+    "ar": "عن التطبيق", "en": "About", "ru": "О приложении", "es": "Acerca de", "de": "Über die App", "it": "Informazioni",
+    "fr": "À propos", "ur": "ایپ کے بارے میں", "hi": "ऐप के बारे में", "ko": "앱 정보", "id": "Tentang", "ja": "このアプリについて",
+    "zh": "关于", "tr": "Hakkında", "bn": "অ্যাপ সম্পর্কে", "fa": "دربارهٔ برنامه", "ms": "Perihal", "sw": "Kuhusu",
+    "ha": "Game da manhajar", "pt": "Sobre", "ps": "د اپلیکیشن په اړه", "uz": "Ilova haqida"
+  },
+  "home.building": {
+    "ar": "أقسام التطبيق قيد البناء، وستظهر هنا أولها قريبًا.",
+    "en": "The application's sections are being built; the first ones will appear here soon.",
+    "ru": "Разделы приложения создаются; первые скоро появятся здесь.",
+    "es": "Las secciones de la aplicación están en construcción; las primeras aparecerán aquí pronto.",
+    "de": "Die Bereiche der App werden gerade gebaut; die ersten erscheinen bald hier.",
+    "it": "Le sezioni dell'app sono in costruzione; le prime appariranno presto qui.",
+    "fr": "Les sections de l'application sont en construction ; les premières apparaîtront bientôt ici.",
+    "ur": "ایپ کے حصے تیار ہو رہے ہیں؛ پہلے حصے جلد یہاں نظر آئیں گے۔",
+    "hi": "ऐप के खंड बनाए जा रहे हैं; पहले खंड जल्द ही यहाँ दिखेंगे।",
+    "ko": "앱의 각 영역을 만드는 중입니다. 곧 첫 영역이 여기에 표시됩니다.",
+    "id": "Bagian-bagian aplikasi sedang dibangun; bagian pertama akan segera muncul di sini.",
+    "ja": "アプリの各セクションを作成中です。最初のセクションがまもなくここに表示されます。",
+    "zh": "应用的各个栏目正在建设中，第一批很快就会出现在这里。",
+    "tr": "Uygulamanın bölümleri hazırlanıyor; ilkleri yakında burada görünecek.",
+    "bn": "অ্যাপের বিভাগগুলো তৈরি হচ্ছে; প্রথমগুলো শিগগিরই এখানে দেখা যাবে।",
+    "fa": "بخش‌های برنامه در حال ساخت است؛ نخستین آن‌ها به‌زودی اینجا نمایش داده می‌شود.",
+    "ms": "Bahagian-bahagian aplikasi sedang dibina; yang pertama akan dipaparkan di sini tidak lama lagi.",
+    "sw": "Sehemu za programu zinajengwa; za kwanza zitaonekana hapa hivi karibuni.",
+    "ha": "Ana gina sassan manhajar; na farko za su bayyana a nan nan ba da jimawa ba.",
+    "pt": "As secções da aplicação estão em construção; as primeiras aparecerão aqui em breve.",
+    "ps": "د اپلیکیشن برخې جوړېږي؛ لومړنۍ به ژر دلته ښکاره شي.",
+    "uz": "Ilova boʻlimlari tayyorlanmoqda; birinchilari tez orada shu yerda paydo boʻladi."
+  },
+  "about.title": {
+    "ar": "عن التطبيق", "en": "About", "ru": "О приложении", "es": "Acerca de", "de": "Über die App", "it": "Informazioni",
+    "fr": "À propos", "ur": "ایپ کے بارے میں", "hi": "ऐप के बारे में", "ko": "앱 정보", "id": "Tentang", "ja": "このアプリについて",
+    "zh": "关于", "tr": "Hakkında", "bn": "অ্যাপ সম্পর্কে", "fa": "دربارهٔ برنامه", "ms": "Perihal", "sw": "Kuhusu",
+    "ha": "Game da manhajar", "pt": "Sobre", "ps": "د اپلیکیشن په اړه", "uz": "Ilova haqida"
+  },
+  "about.developer": {
+    "ar": "المطوّر", "en": "Developer", "ru": "Разработчик", "es": "Desarrollador", "de": "Entwickler", "it": "Sviluppatore",
+    "fr": "Développeur", "ur": "ڈویلپر", "hi": "डेवलपर", "ko": "개발자", "id": "Pengembang", "ja": "開発者", "zh": "开发者",
+    "tr": "Geliştirici", "bn": "ডেভেলপার", "fa": "توسعه‌دهنده", "ms": "Pembangun", "sw": "Msanidi", "ha": "Mai haɓakawa",
+    "pt": "Programador", "ps": "جوړونکی", "uz": "Ishlab chiquvchi"
+  },
+  "about.apiVersion": {
+    "ar": "إصدار الواجهة البرمجية", "en": "API version", "ru": "Версия API", "es": "Versión de la API", "de": "API-Version",
+    "it": "Versione dell'API", "fr": "Version de l'API", "ur": "API کا ورژن", "hi": "API संस्करण", "ko": "API 버전",
+    "id": "Versi API", "ja": "API バージョン", "zh": "API 版本", "tr": "API sürümü", "bn": "API সংস্করণ", "fa": "نسخهٔ API",
+    "ms": "Versi API", "sw": "Toleo la API", "ha": "Sigar API", "pt": "Versão da API", "ps": "د API نسخه", "uz": "API versiyasi"
+  },
+  "about.sources": {
+    "ar": "مصادر المحتوى", "en": "Content sources", "ru": "Источники содержания", "es": "Fuentes del contenido",
+    "de": "Quellen der Inhalte", "it": "Fonti dei contenuti", "fr": "Sources du contenu", "ur": "مواد کے ماخذ",
+    "hi": "सामग्री के स्रोत", "ko": "콘텐츠 출처", "id": "Sumber konten", "ja": "コンテンツの出典", "zh": "内容来源",
+    "tr": "İçerik kaynakları", "bn": "বিষয়বস্তুর উৎস", "fa": "منابع محتوا", "ms": "Sumber kandungan", "sw": "Vyanzo vya maudhui",
+    "ha": "Tushen abubuwan da ke ciki", "pt": "Fontes do conteúdo", "ps": "د منځپانګې سرچینې", "uz": "Kontent manbalari"
+  },
+  "about.unreachable": {
+    "ar": "تعذّر الوصول إلى الخادم الآن.", "en": "The server cannot be reached right now.",
+    "ru": "Сервер сейчас недоступен.", "es": "Ahora no se puede conectar con el servidor.",
+    "de": "Der Server ist gerade nicht erreichbar.", "it": "Il server non è raggiungibile in questo momento.",
+    "fr": "Le serveur est injoignable pour le moment.", "ur": "اس وقت سرور تک رسائی نہیں ہو رہی۔",
+    "hi": "अभी सर्वर तक नहीं पहुँचा जा सकता।", "ko": "지금은 서버에 연결할 수 없습니다.",
+    "id": "Server tidak dapat dihubungi saat ini.", "ja": "現在サーバーに接続できません。", "zh": "暂时无法连接服务器。",
+    "tr": "Sunucuya şu anda ulaşılamıyor.", "bn": "এই মুহূর্তে সার্ভারে পৌঁছানো যাচ্ছে না।",
+    "fa": "اکنون دسترسی به سرور ممکن نیست.", "ms": "Pelayan tidak dapat dihubungi sekarang.",
+    "sw": "Seva haipatikani kwa sasa.", "ha": "Ba a iya isa ga sabar a yanzu.",
+    "pt": "Não é possível ligar ao servidor neste momento.", "ps": "اوس سرور ته لاسرسی نه کېږي.",
+    "uz": "Hozir serverga ulanib boʻlmayapti."
+  },
+  "notFound.title": {
+    "ar": "هذه الصفحة غير موجودة.", "en": "This page does not exist.", "ru": "Такой страницы нет.",
+    "es": "Esta página no existe.", "de": "Diese Seite gibt es nicht.", "it": "Questa pagina non esiste.",
+    "fr": "Cette page n'existe pas.", "ur": "یہ صفحہ موجود نہیں۔", "hi": "यह पृष्ठ मौजूद नहीं है।", "ko": "해당 페이지가 없습니다.",
+    "id": "Halaman ini tidak ada.", "ja": "このページは存在しません。", "zh": "此页面不存在。", "tr": "Böyle bir sayfa yok.",
+    "bn": "এই পৃষ্ঠাটি নেই।", "fa": "این صفحه وجود ندارد.", "ms": "Halaman ini tiada.", "sw": "Ukurasa huu haupo.",
+    "ha": "Wannan shafi ba ya nan.", "pt": "Esta página não existe.", "ps": "دا پاڼه نشته.", "uz": "Bunday sahifa yoʻq."
+  },
+  "common.close": {
+    "ar": "إغلاق", "en": "Close", "ru": "Закрыть", "es": "Cerrar", "de": "Schließen", "it": "Chiudi", "fr": "Fermer",
+    "ur": "بند کریں", "hi": "बंद करें", "ko": "닫기", "id": "Tutup", "ja": "閉じる", "zh": "关闭", "tr": "Kapat", "bn": "বন্ধ করুন",
+    "fa": "بستن", "ms": "Tutup", "sw": "Funga", "ha": "Rufe", "pt": "Fechar", "ps": "بندول", "uz": "Yopish"
+  }
+}

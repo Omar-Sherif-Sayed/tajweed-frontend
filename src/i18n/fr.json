@@ -1,0 +1,76 @@
+{
+  "app": {
+    "name": "Tajwid",
+    "tagline": "Le Noble Coran et ses sciences"
+  },
+  "firstLaunch": {
+    "language": "Langue · Language",
+    "chooseLanguage": "Choisir la langue · Choose language",
+    "nLanguages": "{{n}} langues",
+    "deviceLanguage": "Langue de votre appareil",
+    "allLanguages": "Toutes les langues",
+    "searchLanguages": "Rechercher : Français, Deutsch, اردو…",
+    "rightToLeft": "de droite à gauche",
+    "noLanguage": "Aucune langue de ce nom.",
+    "colours": "Couleurs",
+    "day": "Jour",
+    "night": "Nuit",
+    "example": "Exemple · Al-Fatiha",
+    "start": "Commencer",
+    "later": "Vous pourrez le changer plus tard dans les réglages",
+    "draft": "Traduction de l'interface par le projet. Une erreur ? Signalez-la sur GitHub."
+  },
+  "home": {
+    "quran": "Coran",
+    "recitation": "Récitation",
+    "prayerTimes": "Horaires de prière",
+    "building": "Les sections de l'application sont en construction ; les premières apparaîtront bientôt ici."
+  },
+  "directions": {
+    "suhuf": "Les premières feuilles",
+    "hira": "Hira",
+    "ghar": "La grotte",
+    "taybah": "Taiba",
+    "uhud": "Uhud",
+    "ibil": "Regardez les chameaux",
+    "fajr": "L'aube",
+    "duha": "La matinée",
+    "ghaith": "La pluie",
+    "jannatan": "Les deux jardins",
+    "tin": "La figue et l'olive",
+    "kawthar": "Al-Kawthar",
+    "qamar": "Le soleil et la lune",
+    "dhariyat": "Les vents qui éparpillent",
+    "zar": "La semence",
+    "mara": "Le pâturage",
+    "shajara": "Le bon arbre",
+    "tayr": "Les oiseaux",
+    "zill": "L'ombre",
+    "fulk": "Les navires",
+    "asr": "Al-Asr",
+    "mamdud": "L'ombre étendue",
+    "anhar": "Les fleuves",
+    "ghuraf": "Les hautes demeures",
+    "qutuf": "Fruits à portée",
+    "khiyam": "Les tentes",
+    "nur": "La lumière",
+    "mountains": "Montagnes — pour la basse vision et le daltonisme"
+  },
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos"
+  },
+  "about": {
+    "title": "À propos",
+    "developer": "Développeur",
+    "apiVersion": "Version de l'API",
+    "sources": "Sources du contenu",
+    "unreachable": "Le serveur est injoignable pour le moment."
+  },
+  "notFound": {
+    "title": "Cette page n'existe pas."
+  },
+  "common": {
+    "close": "Fermer"
+  }
+}

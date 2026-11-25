@@ -1,0 +1,38 @@
+<header class="border-b border-border bg-surface">
+  <div class="mx-auto flex max-w-5xl items-center gap-3 px-4 py-2.5">
+    <a [routerLink]="['/', language().code]" class="flex items-center gap-2">
+      <tj-logo-mark class="size-9" />
+      <span class="font-heading text-xl font-bold text-ink">{{ 'app.name' | translate }}</span>
+    </a>
+    <nav class="ms-4 flex items-center gap-3 text-sm" [attr.aria-label]="'app.name' | translate">
+      <a [routerLink]="['/', language().code]" routerLinkActive="font-bold text-ink" [routerLinkActiveOptions]="{ exact: true }" class="text-muted">
+        {{ 'nav.home' | translate }}
+      </a>
+      <a [routerLink]="['/', language().code, 'about']" routerLinkActive="font-bold text-ink" class="text-muted">
+        {{ 'nav.about' | translate }}
+      </a>
+    </nav>
+    <button
+      type="button"
+      class="ms-auto flex items-center gap-1.5 rounded-full border border-border px-3 py-1 text-sm"
+      aria-haspopup="dialog"
+      (click)="pickerOpen.set(true)"
+    >
+      <tj-icon name="globe" class="size-4" />
+      <span [attr.lang]="language().code" [style.font-family]="language().font">{{ language().nativeName }}</span>
+    </button>
+  </div>
+</header>
+
+<main class="mx-auto max-w-5xl px-4 py-6">
+  <router-outlet />
+</main>
+
+@if (pickerOpen()) {
+  <tj-language-picker
+    [current]="language().code"
+    [suggested]="suggested"
+    (chosen)="chooseLanguage($event)"
+    (closed)="pickerOpen.set(false)"
+  />
+}

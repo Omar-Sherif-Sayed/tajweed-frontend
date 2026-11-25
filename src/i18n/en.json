@@ -1,0 +1,76 @@
+{
+  "app": {
+    "name": "Tajweed",
+    "tagline": "The Noble Quran and Its Sciences"
+  },
+  "firstLaunch": {
+    "language": "Language · اللغة",
+    "chooseLanguage": "Choose language · اختر اللغة",
+    "nLanguages": "{{n}} languages",
+    "deviceLanguage": "Your device's language",
+    "allLanguages": "All languages",
+    "searchLanguages": "Search: Arabic, Deutsch, اردو…",
+    "rightToLeft": "right to left",
+    "noLanguage": "No language by that name.",
+    "colours": "Colours",
+    "day": "Day",
+    "night": "Night",
+    "example": "Example · Al-Fatihah",
+    "start": "Start",
+    "later": "You can change this later in Settings",
+    "draft": "Interface translation by the project. Found a mistake? Report it on GitHub."
+  },
+  "home": {
+    "quran": "Quran",
+    "recitation": "Recitation",
+    "prayerTimes": "Prayer times",
+    "building": "The application's sections are being built; the first ones will appear here soon."
+  },
+  "directions": {
+    "suhuf": "The first sheets",
+    "hira": "Hira",
+    "ghar": "The Cave",
+    "taybah": "Taybah",
+    "uhud": "Uhud",
+    "ibil": "Look at the camels",
+    "fajr": "Dawn",
+    "duha": "Forenoon",
+    "ghaith": "Rain",
+    "jannatan": "The two gardens",
+    "tin": "The fig and the olive",
+    "kawthar": "Al-Kawthar",
+    "qamar": "The sun and the moon",
+    "dhariyat": "The scattering winds",
+    "zar": "The crop",
+    "mara": "The pasture",
+    "shajara": "The good tree",
+    "tayr": "The birds",
+    "zill": "The shade",
+    "fulk": "The ships",
+    "asr": "Al-Asr",
+    "mamdud": "Extended shade",
+    "anhar": "The rivers",
+    "ghuraf": "Lofty dwellings",
+    "qutuf": "Fruit hanging near",
+    "khiyam": "The tents",
+    "nur": "Light",
+    "mountains": "Mountains — for low vision and colour blindness"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About"
+  },
+  "about": {
+    "title": "About",
+    "developer": "Developer",
+    "apiVersion": "API version",
+    "sources": "Content sources",
+    "unreachable": "The server cannot be reached right now."
+  },
+  "notFound": {
+    "title": "This page does not exist."
+  },
+  "common": {
+    "close": "Close"
+  }
+}

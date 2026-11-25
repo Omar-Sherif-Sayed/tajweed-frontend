@@ -1,0 +1,76 @@
+{
+  "app": {
+    "name": "Tajwid",
+    "tagline": "O Nobre Alcorão e suas ciências"
+  },
+  "firstLaunch": {
+    "language": "Idioma · Language",
+    "chooseLanguage": "Escolha o idioma · Choose language",
+    "nLanguages": "{{n}} idiomas",
+    "deviceLanguage": "Idioma do seu aparelho",
+    "allLanguages": "Todos os idiomas",
+    "searchLanguages": "Pesquisar: Português, Deutsch, اردو…",
+    "rightToLeft": "da direita para a esquerda",
+    "noLanguage": "Nenhum idioma com esse nome.",
+    "colours": "Cores",
+    "day": "Dia",
+    "night": "Noite",
+    "example": "Exemplo · Al-Fátiha",
+    "start": "Começar",
+    "later": "Pode mudar isto depois nas Configurações",
+    "draft": "Tradução da interface feita pelo projeto. Encontrou um erro? Informe no GitHub."
+  },
+  "home": {
+    "quran": "Alcorão",
+    "recitation": "Recitação",
+    "prayerTimes": "Horários de oração",
+    "building": "As secções da aplicação estão em construção; as primeiras aparecerão aqui em breve."
+  },
+  "directions": {
+    "suhuf": "As primeiras folhas",
+    "hira": "Hira",
+    "ghar": "A caverna",
+    "taybah": "Taiba",
+    "uhud": "Uhud",
+    "ibil": "Olhai os camelos",
+    "fajr": "A aurora",
+    "duha": "A manhã",
+    "ghaith": "A chuva",
+    "jannatan": "Os dois jardins",
+    "tin": "O figo e a oliveira",
+    "kawthar": "Al-Kawthar",
+    "qamar": "O sol e a lua",
+    "dhariyat": "Os ventos que dispersam",
+    "zar": "A sementeira",
+    "mara": "O pasto",
+    "shajara": "A árvore boa",
+    "tayr": "As aves",
+    "zill": "A sombra",
+    "fulk": "Os navios",
+    "asr": "Al-Asr",
+    "mamdud": "A sombra estendida",
+    "anhar": "Os rios",
+    "ghuraf": "As moradas altas",
+    "qutuf": "Frutos ao alcance",
+    "khiyam": "As tendas",
+    "nur": "A luz",
+    "mountains": "Montanhas — para baixa visão e daltonismo"
+  },
+  "nav": {
+    "home": "Início",
+    "about": "Sobre"
+  },
+  "about": {
+    "title": "Sobre",
+    "developer": "Programador",
+    "apiVersion": "Versão da API",
+    "sources": "Fontes do conteúdo",
+    "unreachable": "Não é possível ligar ao servidor neste momento."
+  },
+  "notFound": {
+    "title": "Esta página não existe."
+  },
+  "common": {
+    "close": "Fechar"
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "app": {
+    "name": "泰吉威德",
+    "tagline": "尊贵的古兰经及其学科"
+  },
+  "firstLaunch": {
+    "language": "语言 · Language",
+    "chooseLanguage": "选择语言 · Choose language",
+    "nLanguages": "{{n}}种语言",
+    "deviceLanguage": "您设备的语言",
+    "allLanguages": "全部语言",
+    "searchLanguages": "搜索:中文、English、اردو…",
+    "rightToLeft": "从右到左",
+    "noLanguage": "没有这个名称的语言。",
+    "colours": "颜色",
+    "day": "白天",
+    "night": "夜间",
+    "example": "示例 · 开端章",
+    "start": "开始",
+    "later": "以后可以在设置中更改",
+    "draft": "界面翻译由本项目完成。发现错误？请在 GitHub 上告诉我们。"
+  },
+  "home": {
+    "quran": "古兰经",
+    "recitation": "诵读",
+    "prayerTimes": "礼拜时间",
+    "building": "应用的各个栏目正在建设中，第一批很快就会出现在这里。"
+  },
+  "directions": {
+    "suhuf": "最初的书页",
+    "hira": "希拉",
+    "ghar": "山洞",
+    "taybah": "塔伊巴",
+    "uhud": "吴侯德",
+    "ibil": "看看骆驼",
+    "fajr": "黎明",
+    "duha": "上午",
+    "ghaith": "雨",
+    "jannatan": "两座园圃",
+    "tin": "无花果与橄榄",
+    "kawthar": "考赛尔",
+    "qamar": "太阳与月亮",
+    "dhariyat": "播种的风",
+    "zar": "庄稼",
+    "mara": "牧场",
+    "shajara": "佳树",
+    "tayr": "鸟",
+    "zill": "阴影",
+    "fulk": "船只",
+    "asr": "阿斯尔",
+    "mamdud": "延伸的荫凉",
+    "anhar": "诸河",
+    "ghuraf": "高楼",
+    "qutuf": "低垂的果实",
+    "khiyam": "帐篷",
+    "nur": "光",
+    "mountains": "群山——为低视力和色盲者设计"
+  },
+  "nav": {
+    "home": "首页",
+    "about": "关于"
+  },
+  "about": {
+    "title": "关于",
+    "developer": "开发者",
+    "apiVersion": "API 版本",
+    "sources": "内容来源",
+    "unreachable": "暂时无法连接服务器。"
+  },
+  "notFound": {
+    "title": "此页面不存在。"
+  },
+  "common": {
+    "close": "关闭"
+  }
+}

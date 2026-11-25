@@ -1,0 +1,26 @@
+@import 'tailwindcss';
+
+/*
+ * Tailwind's colours and fonts are design 3's tokens (src/styles/_directions.scss — generated from tajweed-docs), so
+ * Tailwind and Angular Material never disagree on a colour (AGENTS.md §4.2). Only logical-direction utilities are used
+ * (ms-*, pe-*, start-*, text-start …), never ml-*, mr-*, left-*, right-*, text-left, text-right.
+ */
+@theme inline {
+  --color-bg: var(--t-bg);
+  --color-surface: var(--t-surface);
+  --color-surface2: var(--t-surface2);
+  --color-border: var(--t-border);
+  --color-rule: var(--t-rule);
+  --color-text: var(--t-text);
+  --color-muted: var(--t-muted);
+  --color-ink: var(--t-ink);
+  --color-page: var(--t-page);
+  --color-primary: var(--t-primary);
+  --color-onprimary: var(--t-onprimary);
+  --color-dot: var(--t-dot);
+  --color-dotsoft: var(--t-dotsoft);
+  --color-second: var(--t-second);
+  --color-secondsoft: var(--t-secondsoft);
+  --font-heading: 'Amiri', serif;
+  --font-quran: 'Amiri Quran', serif;
+}
