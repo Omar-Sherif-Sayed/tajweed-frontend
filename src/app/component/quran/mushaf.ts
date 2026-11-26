@@ -1,4 +1,4 @@
-import { DOCUMENT, isPlatformBrowser } from '@angular/common';
+import { DOCUMENT, isPlatformBrowser, NgTemplateOutlet } from '@angular/common';
 import {
   afterRenderEffect,
   ChangeDetectionStrategy,
@@ -20,7 +20,7 @@ import { PlayerService } from '@shared/service/audio/player.service';
 import { QuranService } from '@shared/service/integration/quran/quran.service';
 import { ReadingService } from '@shared/service/reading.service';
 import { SettingsService } from '@shared/service/settings.service';
-import { hizbLabel, layoutPage, PageLine, spreadStart } from '@shared/utils/mushaf-page';
+import { juzName, layoutPage, PageLine, quarterLabel, QuarterLabel, spreadStart } from '@shared/utils/mushaf-page';
 import { localNumber, mushafNumber, reportLink, surahName } from '@shared/utils/quran-text';
 import { AyahActionsComponent } from './ayah-actions';
 
@@ -53,7 +53,7 @@ interface OpenAyah {
  */
 @Component({
   selector: 'tj-mushaf',
-  imports: [TranslatePipe, RouterLink, AyahActionsComponent],
+  imports: [TranslatePipe, RouterLink, AyahActionsComponent, NgTemplateOutlet],
   templateUrl: './mushaf.html',
   styleUrl: './mushaf.scss',
   host: { '(document:keydown)': 'onKey($event)' },
@@ -250,14 +250,34 @@ export class MushafComponent {
   }
 
   /**
-   * The page header's left side: «الجزء ٢٨ · ¼ الحزب ٥٥».
+   * The page header's juz, written out as the printed page has it: «الجزء الأول».
    *
    * @param data the page
    * @returns the text, from the page's first ayah
    */
-  protected headerPart(data: DtoPage): string {
+  protected juzLabel(data: DtoPage): string {
     const a = data.ayahs[0];
-    return a ? `الجزء ${mushafNumber(a.juz)} · ${hizbLabel(a.hizbQuarter)}` : '';
+    return a ? juzName(a.juz) : '';
+  }
+
+  /**
+   * The margin label of a hizb quarter: «ربع الحزب ٥٢».
+   *
+   * @param hizbQuarter 1 – 240
+   * @returns its words and number
+   */
+  protected quarter(hizbQuarter: number): QuarterLabel {
+    return quarterLabel(hizbQuarter);
+  }
+
+  /**
+   * The first ayah of a drawn page (for the opening pages' foot band).
+   *
+   * @param p the drawn page
+   * @returns the ayah, once loaded
+   */
+  protected d0(p: DrawnPage): DtoAyah | undefined {
+    return p.data?.ayahs[0];
   }
 
   /**

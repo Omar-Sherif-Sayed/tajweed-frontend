@@ -10,9 +10,10 @@ export type Segment =
       /** The words, joined by single spaces exactly as they stand in the ayah's text. */
       readonly text: string;
       /**
-       * The same words grouped for drawing: a word with the pause marks or the sajdah sign written after it (Tanzil
-       * writes them as words of their own), so a justified line never pulls a mark away from its word. Joined by single
-       * spaces they are `text` again — a display layer only.
+       * The same words grouped for drawing: a word with the pause marks or the sajdah sign written after it, drawn
+       * attached to the word as the printed mushaf has them (the author, 2026-11-27: «خليها زي المصحف بالظبط»). Tanzil
+       * writes such a mark as a word of its own after a space; only that space is not drawn — every letter and mark is,
+       * in order. `text` keeps the words exactly as received (copy, search).
        */
       readonly units: readonly string[];
     }
@@ -56,6 +57,8 @@ export type PageLine =
       readonly line: number;
       /** Its pieces, in reading order. */
       readonly segments: readonly Segment[];
+      /** The hizb quarter that starts on this line (its ۞), for the label in the margin; otherwise `null`. */
+      readonly quarter: number | null;
     };
 
 /**
@@ -101,7 +104,8 @@ export function layoutPage(page: DtoPage): PageLine[] {
         segments.push({ kind: 'end', ayah });
       }
     }
-    return { kind: 'text', line: l.line, segments };
+    const rubSegment = segments.find((s) => s.kind === 'rub');
+    return { kind: 'text', line: l.line, segments, quarter: rubSegment ? rubSegment.ayah.hizbQuarter : null };
   });
 }
 
@@ -109,16 +113,17 @@ export function layoutPage(page: DtoPage): PageLine[] {
 const LETTER = /\p{L}/u;
 
 /**
- * Groups words for drawing: each word with the mark-only words that follow it.
+ * Groups words for drawing: each word with the mark-only words that follow it, attached to it (the space Tanzil writes
+ * before such a mark is not drawn; every character of the words and marks is, in order).
  *
  * @param words the words, in order
- * @returns the groups, each joined by single spaces
+ * @returns the groups
  */
 export function units(words: readonly string[]): string[] {
   const out: string[] = [];
   for (const w of words) {
     if (out.length > 0 && !LETTER.test(w)) {
-      out[out.length - 1] += ` ${w}`;
+      out[out.length - 1] += w;
     } else {
       out.push(w);
     }
@@ -138,6 +143,45 @@ const QUARTER_MARKS = ['', '¼ ', '½ ', '¾ '] as const;
 export function hizbLabel(hizbQuarter: number): string {
   const hizb = Math.ceil(hizbQuarter / 4);
   return `${QUARTER_MARKS[(hizbQuarter - 1) % 4]}الحزب ${hizb.toLocaleString('ar-EG')}`;
+}
+
+/** The thirty juz as the printed page heads them: «الجزء الأول» … «الجزء الثلاثون». */
+const JUZ_NAMES = [
+  'الأول', 'الثاني', 'الثالث', 'الرابع', 'الخامس', 'السادس', 'السابع', 'الثامن', 'التاسع', 'العاشر',
+  'الحادي عشر', 'الثاني عشر', 'الثالث عشر', 'الرابع عشر', 'الخامس عشر', 'السادس عشر', 'السابع عشر', 'الثامن عشر',
+  'التاسع عشر', 'العشرون', 'الحادي والعشرون', 'الثاني والعشرون', 'الثالث والعشرون', 'الرابع والعشرون',
+  'الخامس والعشرون', 'السادس والعشرون', 'السابع والعشرون', 'الثامن والعشرون', 'التاسع والعشرون', 'الثلاثون',
+] as const;
+
+/**
+ * A juz written as the printed page heads it.
+ *
+ * @param juz 1 – 30
+ * @returns e.g. «الجزء الأول»
+ */
+export function juzName(juz: number): string {
+  return `الجزء ${JUZ_NAMES[juz - 1] ?? juz.toLocaleString('ar-EG')}`;
+}
+
+/** The parts of a hizb as the margin of the printed page names them where a quarter starts. */
+const QUARTER_NAMES = ['الحزب', 'ربع الحزب', 'نصف الحزب', 'ثلاثة أرباع الحزب'] as const;
+
+/** The margin label of a hizb quarter: its words and its hizb's number. */
+export interface QuarterLabel {
+  /** «الحزب», «ربع الحزب», «نصف الحزب» or «ثلاثة أرباع الحزب». */
+  readonly words: string;
+  /** The hizb's number in Arabic-Indic digits. */
+  readonly hizb: string;
+}
+
+/**
+ * The label the printed page puts in the margin beside the ۞ of a hizb quarter.
+ *
+ * @param hizbQuarter 1 – 240
+ * @returns its words and its hizb number, e.g. {words: «ربع الحزب», hizb: «٥٢»}
+ */
+export function quarterLabel(hizbQuarter: number): QuarterLabel {
+  return { words: QUARTER_NAMES[(hizbQuarter - 1) % 4], hizb: Math.ceil(hizbQuarter / 4).toLocaleString('ar-EG') };
 }
 
 /**

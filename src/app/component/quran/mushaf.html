@@ -57,58 +57,96 @@
       <section
         class="mpage"
         [class.other]="p.page !== current()"
-        [class.center]="p.page <= 2"
+        [class.opening]="p.page <= 2"
+        [class.odd]="p.page % 2 === 1"
         [attr.aria-label]="'quran.page' | translate: { n: num(p.page) }"
         lang="ar"
       >
         @if (p.data; as d) {
           <header class="mhead">
-            <span>{{ d.ayahs[0] ? 'سورة ' + (surah(d.ayahs[0].surahNumber)?.nameAr ?? '') : '' }}</span>
-            <span>{{ headerPart(d) }}</span>
+            <span class="tab">{{ juzLabel(d) }}</span>
+            <span class="tab">{{ d.ayahs[0] ? 'سورة ' + (surah(d.ayahs[0].surahNumber)?.nameAr ?? '') : '' }}</span>
           </header>
         }
-        <div class="mlines" [style.--rows]="p.lines?.length ?? 15">
-          @for (l of p.lines ?? []; track l.line) {
-            @switch (l.kind) {
-              @case ('header') {
-                <div class="ml header">
-                  <span class="hm o">ترتيبها {{ mushaf(l.surah) }}</span>
-                  <span class="in">سورة {{ surah(l.surah)?.nameAr }}</span>
-                  <span class="hm a">آياتها {{ mushaf(surah(l.surah)?.ayahCount ?? 0) }}</span>
+        <div class="mframe">
+          <div class="minner">
+            @if (p.page <= 2) {
+              @for (l of p.lines ?? []; track l.line) {
+                @if (l.kind === 'header') {
+                  <ng-container *ngTemplateOutlet="band; context: { $implicit: l.surah, opening: true }" />
+                }
+              }
+              <div class="cartouche">
+                <div class="mlines" [style.--rows]="(p.lines?.length ?? 8) - 1">
+                  @for (l of p.lines ?? []; track l.line) {
+                    @if (l.kind !== 'header') {
+                      <ng-container *ngTemplateOutlet="line; context: { $implicit: l, page: p.page }" />
+                    }
+                  }
                 </div>
+              </div>
+              @if (d0(p); as a) {
+                <div class="opening-foot"><span>آياتها {{ mushaf(surah(a.surahNumber)?.ayahCount ?? 0) }}</span></div>
               }
-              @case ('basmala') {
-                <div class="ml"><span class="basmala">{{ l.text }}</span></div>
-              }
-              @case ('text') {
-                <div class="ml text">
-                  <span class="fit"
-                    >@for (s of l.segments; track $index) {@switch (s.kind) {@case ('words') {<span
-                          class="ayah"
-                          role="button"
-                          tabindex="0"
-                          [style.background-color]="background(s.ayah)"
-                          (click)="open(s.ayah)"
-                          (keydown.enter)="open(s.ayah)"
-                          >@for (u of s.units; track $index; let last = $last) {<span class="w">{{ u }}</span>{{ last ? '' : ' ' }}}</span
-                        >{{ ' ' }}}@case ('end') {<span
-                          class="ayah-end"
-                          [style.color]="numberColour(s.ayah)"
-                          [style.border-color]="numberColour(s.ayah)"
-                          [style.background-color]="background(s.ayah)"
-                          >{{ mushaf(s.ayah.number) }}</span
-                        >{{ ' ' }}}@case ('rub') {<span class="rub" aria-hidden="true">۞</span>{{ ' ' }}}}}</span
-                  >
-                </div>
-              }
+            } @else {
+              <div class="mlines">
+                @for (l of p.lines ?? []; track l.line) {
+                  <ng-container *ngTemplateOutlet="line; context: { $implicit: l, page: p.page }" />
+                }
+              </div>
             }
-          }
+          </div>
         </div>
         <footer class="mfoot"><span>{{ mushaf(p.page) }}</span></footer>
       </section>
     }
   </div>
 </div>
+
+<!-- A surah band: the name in the middle, «ترتيبها» and «آياتها» in the round medallions at its ends. -->
+<ng-template #band let-n let-opening="opening">
+  <div class="band" [class.big]="opening">
+    <span class="medal"><small>ترتيبها</small>{{ mushaf(n) }}</span>
+    <span class="name">سورة {{ surah(n)?.nameAr }}</span>
+    <span class="medal"><small>آياتها</small>{{ mushaf(surah(n)?.ayahCount ?? 0) }}</span>
+  </div>
+</ng-template>
+
+<!-- One printed line. -->
+<ng-template #line let-l let-page="page">
+  @switch (l.kind) {
+    @case ('header') {
+      <div class="ml"><ng-container *ngTemplateOutlet="band; context: { $implicit: l.surah, opening: false }" /></div>
+    }
+    @case ('basmala') {
+      <div class="ml"><span class="basmala">{{ l.text }}</span></div>
+    }
+    @case ('text') {
+      <div class="ml text">
+        <span class="fit"
+          >@for (s of l.segments; track $index) {@switch (s.kind) {@case ('words') {<span
+                class="ayah"
+                role="button"
+                tabindex="0"
+                [style.background-color]="background(s.ayah)"
+                (click)="open(s.ayah)"
+                (keydown.enter)="open(s.ayah)"
+                >@for (u of s.units; track $index; let last = $last) {<span class="w">{{ u }}</span>{{ last ? '' : ' ' }}}</span
+              >{{ ' ' }}}@case ('end') {<span
+                class="ayah-end"
+                [style.color]="numberColour(s.ayah)"
+                [style.border-color]="numberColour(s.ayah)"
+                [style.background-color]="background(s.ayah)"
+                >{{ mushaf(s.ayah.number) }}</span
+              >{{ ' ' }}}@case ('rub') {<span class="rub" aria-hidden="true">۞</span>{{ ' ' }}}}}</span
+        >
+        @if (l.quarter; as q) {
+          <span class="qtag" aria-hidden="true">{{ quarter(q).words }}<b>{{ quarter(q).hizb }}</b></span>
+        }
+      </div>
+    }
+  }
+</ng-template>
 
 @if (pages()[0].data; as d) {
   <p class="mt-3 text-xs text-muted">

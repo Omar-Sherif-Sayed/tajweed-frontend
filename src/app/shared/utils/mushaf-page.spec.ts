@@ -1,5 +1,5 @@
 import { DtoAyah, DtoPage } from '@shared/schema/response/quran';
-import { hizbLabel, layoutPage, spreadStart } from './mushaf-page';
+import { hizbLabel, juzName, layoutPage, quarterLabel, spreadStart } from './mushaf-page';
 
 /**
  * An ayah for the tests.
@@ -43,6 +43,7 @@ describe('mushaf page layout', () => {
         { kind: 'words', ayah: page.ayahs[0], text: 'a b c', units: ['a', 'b', 'c'] },
         { kind: 'end', ayah: page.ayahs[0] },
       ],
+      quarter: null,
     });
     expect(lines[1]).toEqual({ kind: 'header', line: 2, surah: 2 });
   });
@@ -59,11 +60,22 @@ describe('mushaf page layout', () => {
     ]);
   });
 
-  it('keeps a pause mark with the word before it, without changing a character', () => {
+  it('draws a pause mark attached to its word, as printed, and keeps the words as received', () => {
     const four = layoutPage(page)[3];
     const first = four.kind === 'text' ? four.segments[0] : null;
-    expect(first?.kind === 'words' && first.units).toEqual(['x', 'y ۛ']);
-    expect(first?.kind === 'words' && first.units.join(' ')).toBe('x y ۛ');
+    expect(first?.kind === 'words' && first.units).toEqual(['x', 'yۛ']);
+    expect(first?.kind === 'words' && first.text).toBe('x y ۛ');
+    // every character but the space before the mark is drawn, in order
+    expect(first?.kind === 'words' && first.units.join('')).toBe('x y ۛ'.replaceAll(' ', ''));
+    expect(four.kind === 'text' && four.quarter).toBe(1);
+  });
+
+  it('names the juz and the quarter as the printed page does', () => {
+    expect(juzName(1)).toBe('الجزء الأول');
+    expect(juzName(26)).toBe('الجزء السادس والعشرون');
+    expect(juzName(30)).toBe('الجزء الثلاثون');
+    expect(quarterLabel(206)).toEqual({ words: 'ربع الحزب', hizb: '٥٢' });
+    expect(quarterLabel(237)).toEqual({ words: 'الحزب', hizb: '٦٠' });
   });
 
   it('puts the quarter sign only before the ayah’s first word', () => {

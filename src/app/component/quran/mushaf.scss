@@ -1,7 +1,9 @@
-// The printed page, after design 3 (tajweed-docs/docs/design/prototypes/round-3.html, «3 · mushaf page» and
-// «8 · Web — two pages like an open mushaf»): a framed page, its header, 15 equal lines, the surah band with its order
-// and ayah count, the page number in a ring. Sizes follow the page's width (container units), so the lines keep their
-// words at any size.
+// The printed page, after design 3 and the printed Madinah mushaf's arrangement (the author's photos of 2026-11-27):
+// a framed page with an ornamented band, the juz and the surah in tabs above it, 15 equal lines, the surah band with
+// its order and ayah count in round medallions, the quarter's label in the outer margin, the page number in a
+// cartouche; pages 1 and 2 with a wider band and their lines inside an oval cartouche. The ornament is our own drawing
+// in design 3's colours (the author, 2026-11-27) — circles and arches only: no cross, no four-armed star (§8.10). Sizes
+// follow the page's width (container units), so a page keeps its lines at any size.
 
 // On a computer the open mushaf takes the window's width (up to 1360 px), centred over the page's narrower column.
 :host {
@@ -21,34 +23,76 @@
   gap: 14px;
 }
 
+// On a phone or a narrow window, one page: the one asked for.
+@media (max-width: 1023.98px) {
+  .mpage.other {
+    display: none;
+  }
+}
+
+// ---------------------------------------------------------------------------------------------------------------
+// The page and its frame
+// ---------------------------------------------------------------------------------------------------------------
+
 .mpage {
   flex: 1;
   min-width: 0;
   display: flex;
   flex-direction: column;
-  aspect-ratio: 0.66;
+  aspect-ratio: 0.68;
   container-type: inline-size;
-  margin: 4px;
-  padding: 2.2cqw 2.6cqw 1.2cqw;
-  border: 1px solid var(--t-rule);
-  outline: 1px solid var(--t-rule);
-  outline-offset: 3px;
-  border-radius: 2px;
+  padding: 1.4cqw 1.6cqw 1.2cqw;
+  border-radius: 3px;
   background: var(--t-page);
   color: var(--t-ink);
+  box-shadow: 0 1px 6px rgb(0 0 0 / 0.08);
 }
 
+// The tabs above the frame: the juz on the right, the surah on the left (as printed).
 .mhead {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 0 2px 1cqw;
-  margin-bottom: 0.8cqw;
-  border-bottom: 1px solid var(--t-rule);
-  color: var(--t-muted);
-  font-family: 'Amiri', serif;
-  font-size: 2.3cqw;
-  font-weight: 700;
+  padding: 0 3cqw 0.8cqw;
+
+  .tab {
+    padding: 0.3cqw 1.6cqw;
+    border: 1px solid var(--t-dot);
+    border-radius: 1.2cqw 1.2cqw 0.3cqw 0.3cqw;
+    color: var(--t-ink);
+    font-family: 'Amiri', serif;
+    font-size: 2.2cqw;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+}
+
+// The ornamented band: small rings and dots between two lines.
+.mframe {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  padding: 1.5cqw;
+  border: 0.35cqw solid var(--t-dot);
+  border-radius: 0.6cqw;
+  background:
+    radial-gradient(circle, var(--t-dot) 0 0.28cqw, transparent 0.32cqw) 0 0 / 1.5cqw 1.5cqw,
+    radial-gradient(circle, transparent 0 0.45cqw, var(--t-dot) 0.48cqw 0.56cqw, transparent 0.6cqw) 0.75cqw 0.75cqw /
+      1.5cqw 1.5cqw,
+    var(--t-dotsoft);
+}
+
+.minner {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 1.4cqw 2.4cqw;
+  border: 1px solid var(--t-dot);
+  border-radius: 0.3cqw;
+  background: var(--t-page);
+  box-shadow:
+    inset 0 0 0 0.4cqw var(--t-page),
+    inset 0 0 0 0.55cqw var(--t-rule);
 }
 
 .mlines {
@@ -56,18 +100,76 @@
   display: grid;
   grid-template-rows: repeat(15, 1fr);
   font-family: 'Amiri Quran', serif;
-  font-size: 5.4cqw;
+  font-size: 5.2cqw;
   line-height: 1;
 }
 
-// Pages 1 and 2: their eight lines in the middle of a decorated page, as printed.
-.mpage.center .mlines {
-  grid-template-rows: repeat(var(--rows), 1fr);
-  align-content: center;
-  padding: 6% 12%;
+// ---------------------------------------------------------------------------------------------------------------
+// Pages 1 and 2: a wider band, the surah band at the top, the lines in an oval cartouche, the ayah count at the foot
+// ---------------------------------------------------------------------------------------------------------------
+
+.mpage.opening {
+  .mframe {
+    padding: 4cqw;
+    background:
+      radial-gradient(circle, var(--t-dot) 0 0.4cqw, transparent 0.45cqw) 0 0 / 2.4cqw 2.4cqw,
+      radial-gradient(circle, transparent 0 0.9cqw, var(--t-dot) 0.95cqw 1.1cqw, transparent 1.15cqw) 1.2cqw 1.2cqw /
+        2.4cqw 2.4cqw,
+      var(--t-dotsoft);
+  }
+
+  .minner {
+    gap: 2cqw;
+    padding: 2.4cqw;
+  }
+
+  .cartouche {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7% 14%;
+    border: 0.5cqw double var(--t-dot);
+    border-radius: 50% / 26%;
+    background:
+      radial-gradient(ellipse at center, var(--t-page) 62%, var(--t-dotsoft) 100%);
+  }
+
+  .mlines {
+    width: 100%;
+    height: 100%;
+    grid-template-rows: repeat(var(--rows), 1fr);
+    align-content: center;
+    font-size: 4.7cqw;
+  }
+
+  .ml.text .fit {
+    text-align: center;
+    text-align-last: center;
+  }
 }
 
+.opening-foot {
+  display: flex;
+  justify-content: center;
+
+  span {
+    padding: 0.8cqw 4cqw;
+    border: 0.35cqw solid var(--t-dot);
+    border-radius: 999px;
+    background: var(--t-dotsoft);
+    font-family: 'Amiri', serif;
+    font-size: 3cqw;
+    font-weight: 700;
+  }
+}
+
+// ---------------------------------------------------------------------------------------------------------------
+// The lines
+// ---------------------------------------------------------------------------------------------------------------
+
 .ml {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -82,18 +184,6 @@
   overflow: visible;
   text-align: justify;
   text-align-last: justify;
-}
-
-.mpage.center .ml.text .fit {
-  text-align: center;
-  text-align-last: center;
-}
-
-// On a phone or a narrow window, one page: the one asked for.
-@media (max-width: 1023.98px) {
-  .mpage.other {
-    display: none;
-  }
 }
 
 // A word with its marks: never pulled apart by the justification.
@@ -114,17 +204,20 @@
   }
 }
 
+// The ayah's number in a ring with a dotted edge, as the printed rosette.
 .ayah-end {
   display: inline-grid;
   place-items: center;
-  min-width: 1.5em;
-  height: 1.5em;
-  margin-inline: 0.1em;
+  min-width: 1.55em;
+  height: 1.55em;
+  margin-inline: 0.08em;
   border: 1.5px solid var(--t-dot);
   border-radius: 999px;
-  color: var(--t-dot);
+  outline: 1.5px dotted var(--t-dot);
+  outline-offset: 1px;
+  color: var(--t-ink);
   font-family: 'IBM Plex Sans Arabic', sans-serif;
-  font-size: 0.58em;
+  font-size: 0.56em;
   vertical-align: middle;
 }
 
@@ -136,71 +229,109 @@
   font-size: 0.95em;
 }
 
-// The surah band: a rule, the name between two dots, a rule; the order and the ayah count at its ends.
-.ml.header {
-  gap: 0.4em;
+// The quarter's label in the outer margin, beside the line of its ۞: right of an odd page, left of an even one.
+.qtag {
+  position: absolute;
+  top: 50%;
+  display: grid;
+  width: 4.6cqw;
+  padding: 0.4cqw 0;
+  transform: translateY(-50%);
+  border: 1px solid var(--t-dot);
+  border-radius: 0.8cqw;
+  background: var(--t-page);
+  color: var(--t-dot);
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+  font-size: 1.15cqw;
+  line-height: 1.25;
+  text-align: center;
+  white-space: normal;
+  inset-inline-end: -7.4cqw;
 
-  &::before,
-  &::after {
-    content: '';
-    flex: 1;
-    height: 1px;
-    background: var(--t-rule);
-  }
-
-  &::before {
-    order: 1;
-  }
-
-  &::after {
-    order: 3;
-  }
-
-  .in {
-    order: 2;
-    position: relative;
-    padding: 0 0.6em;
-    font-family: 'Amiri', serif;
-    font-size: 0.62em;
-    font-weight: 700;
-
-    &::before,
-    &::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      width: 0.36em;
-      height: 0.36em;
-      border-radius: 50%;
-      background: var(--t-dot);
-      transform: translateY(-50%);
-    }
-
-    &::before {
-      right: -0.3em;
-    }
-
-    &::after {
-      left: -0.3em;
-    }
-  }
-
-  .hm {
-    color: var(--t-muted);
-    font-family: 'IBM Plex Sans Arabic', sans-serif;
-    font-size: 0.42em;
-    font-weight: 600;
-    white-space: nowrap;
-  }
-
-  .hm.o {
-    order: 0;
-  }
-
-  .hm.a {
-    order: 4;
+  b {
+    font-size: 1.5cqw;
   }
 }
+
+.mpage.odd .qtag {
+  inset-inline-end: auto;
+  inset-inline-start: -7.4cqw;
+}
+
+// ---------------------------------------------------------------------------------------------------------------
+// The surah band
+// ---------------------------------------------------------------------------------------------------------------
+
+.band {
+  display: flex;
+  align-items: center;
+  gap: 1cqw;
+  width: 100%;
+  height: 86%;
+  padding: 0 0.8cqw;
+  border: 0.3cqw solid var(--t-dot);
+  border-radius: 1.2cqw;
+  background:
+    radial-gradient(circle, var(--t-dot) 0 0.18cqw, transparent 0.22cqw) 0 0 / 1.1cqw 1.1cqw,
+    var(--t-dotsoft);
+  box-shadow: inset 0 0 0 0.35cqw var(--t-dotsoft), inset 0 0 0 0.5cqw var(--t-dot);
+
+  .name {
+    flex: 1;
+    align-self: stretch;
+    display: grid;
+    place-items: center;
+    margin: 0.7cqw 0;
+    border: 1px solid var(--t-dot);
+    border-radius: 999px;
+    background: var(--t-page);
+    color: var(--t-ink);
+    font-family: 'Amiri', serif;
+    font-size: 3.3cqw;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  .medal {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    width: 5.4cqw;
+    aspect-ratio: 1;
+    border: 0.25cqw solid var(--t-dot);
+    border-radius: 50%;
+    background: var(--t-page);
+    color: var(--t-ink);
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-size: 1.6cqw;
+    font-weight: 700;
+    line-height: 1.05;
+
+    small {
+      font-size: 1.05cqw;
+      font-weight: 500;
+      color: var(--t-muted);
+    }
+  }
+
+  &.big {
+    height: 9cqw;
+    flex: none;
+
+    .name {
+      font-size: 4.6cqw;
+    }
+
+    .medal {
+      width: 7cqw;
+      font-size: 2cqw;
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------------------------------------------
+// The page number in a cartouche
+// ---------------------------------------------------------------------------------------------------------------
 
 .mfoot {
   display: flex;
@@ -208,16 +339,38 @@
   padding-top: 1cqw;
 
   span {
+    position: relative;
     display: grid;
     place-items: center;
-    min-width: 4.4cqw;
-    height: 4.4cqw;
-    padding: 0 0.6cqw;
-    border: 1.5px solid var(--t-dot);
+    min-width: 10cqw;
+    height: 4.2cqw;
+    padding: 0 2cqw;
+    border: 0.3cqw double var(--t-dot);
     border-radius: 999px;
-    color: var(--t-dot);
+    background: var(--t-dotsoft);
+    color: var(--t-ink);
     font-family: 'IBM Plex Sans Arabic', sans-serif;
     font-size: 2cqw;
     font-weight: 700;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 1cqw;
+      height: 1cqw;
+      border-radius: 50%;
+      background: var(--t-dot);
+      transform: translateY(-50%);
+    }
+
+    &::before {
+      right: -1.6cqw;
+    }
+
+    &::after {
+      left: -1.6cqw;
+    }
   }
 }
