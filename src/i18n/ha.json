@@ -228,7 +228,11 @@
     "previous": "Surar da ta gabata",
     "next": "Sura ta gaba",
     "smaller": "Ƙaramin rubutu",
-    "larger": "Babban rubutu"
+    "larger": "Babban rubutu",
+    "byPage": "Shafukan mushafi",
+    "bySurah": "Ta sura",
+    "previousPage": "Shafin da ya gabata",
+    "nextPage": "Shafi na gaba"
   },
   "tafsir": {
     "none": "Babu tafsirin wannan aya tukuna."

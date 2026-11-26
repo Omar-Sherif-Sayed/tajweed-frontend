@@ -228,7 +228,11 @@
     "previous": "Sura iliyotangulia",
     "next": "Sura inayofuata",
     "smaller": "Maandishi madogo",
-    "larger": "Maandishi makubwa"
+    "larger": "Maandishi makubwa",
+    "byPage": "Kurasa za msahafu",
+    "bySurah": "Kwa sura",
+    "previousPage": "Ukurasa uliotangulia",
+    "nextPage": "Ukurasa unaofuata"
   },
   "tafsir": {
     "none": "Bado hakuna tafsiri ya aya hii."

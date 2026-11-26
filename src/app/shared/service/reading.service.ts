@@ -7,6 +7,8 @@ export interface ReadingPosition {
   readonly surah: number;
   /** The ayah. */
   readonly ayah: number;
+  /** The mushaf page, when it was read as printed pages. */
+  readonly page?: number;
 }
 
 /** A marker colour (F25): its id (also its interface text key `markers.<id>`) and its colour. */
@@ -53,14 +55,16 @@ export class ReadingService {
    *
    * @param surah the surah
    * @param ayah the ayah
+   * @param page the mushaf page, when it is read as printed pages
    */
-  savePosition(surah: number, ayah: number): void {
+  savePosition(surah: number, ayah: number, page?: number): void {
     const current = this.position();
-    if (current?.surah === surah && current.ayah === ayah) {
+    if (current?.surah === surah && current.ayah === ayah && current.page === page) {
       return;
     }
-    this.position.set({ surah, ayah });
-    this.store.write('position', { surah, ayah });
+    const next: ReadingPosition = page ? { surah, ayah, page } : { surah, ayah };
+    this.position.set(next);
+    this.store.write('position', next);
   }
 
   /**

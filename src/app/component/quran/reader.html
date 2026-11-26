@@ -14,6 +14,9 @@
       </p>
     </div>
     <div class="flex items-center gap-1.5">
+      <a [routerLink]="['/', lang(), 'quran', 'page', d.surah.startPage]" class="rounded-full border border-border px-3 py-1.5 text-sm">
+        {{ 'reader.byPage' | translate }}
+      </a>
       <button
         type="button"
         class="size-9 rounded-full border border-border text-sm"

@@ -228,7 +228,11 @@
     "previous": "前のスーラ",
     "next": "次のスーラ",
     "smaller": "文字を小さく",
-    "larger": "文字を大きく"
+    "larger": "文字を大きく",
+    "byPage": "ムスハフのページ",
+    "bySurah": "スーラごと",
+    "previousPage": "前のページ",
+    "nextPage": "次のページ"
   },
   "tafsir": {
     "none": "このアーヤのタフスィールはまだありません。"

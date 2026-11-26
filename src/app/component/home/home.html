@@ -12,8 +12,8 @@
 
 @if (now() && reading.position(); as p) {
   <a
-    [routerLink]="['/', lang(), 'quran', p.surah]"
-    [queryParams]="{ ayah: p.ayah }"
+    [routerLink]="p.page ? ['/', lang(), 'quran', 'page', p.page] : ['/', lang(), 'quran', p.surah]"
+    [queryParams]="p.page ? {} : { ayah: p.ayah }"
     class="mt-5 flex items-center gap-3 rounded-2xl border border-rule bg-page p-4"
   >
     <tj-icon name="book" class="size-7 text-dot" />

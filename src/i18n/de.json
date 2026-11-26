@@ -228,7 +228,11 @@
     "previous": "Vorherige Sure",
     "next": "Nächste Sure",
     "smaller": "Kleinere Schrift",
-    "larger": "Größere Schrift"
+    "larger": "Größere Schrift",
+    "byPage": "Mushaf-Seiten",
+    "bySurah": "Nach Suren",
+    "previousPage": "Vorherige Seite",
+    "nextPage": "Nächste Seite"
   },
   "tafsir": {
     "none": "Für diesen Vers ist noch kein Tafsir verfügbar."

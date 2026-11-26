@@ -20,6 +20,7 @@ export const routes: Routes = [
       { path: '', pathMatch: 'full', loadComponent: () => import('@component/home/home').then((m) => m.HomeComponent) },
       { path: 'about', loadComponent: () => import('@component/about/about').then((m) => m.AboutComponent) },
       { path: 'quran', loadComponent: () => import('@component/quran/quran-index').then((m) => m.QuranIndexComponent) },
+      { path: 'quran/page/:page', loadComponent: () => import('@component/quran/mushaf').then((m) => m.MushafComponent) },
       { path: 'quran/:surah', loadComponent: () => import('@component/quran/reader').then((m) => m.ReaderComponent) },
       { path: 'search', loadComponent: () => import('@component/search/search').then((m) => m.SearchComponent) },
       {

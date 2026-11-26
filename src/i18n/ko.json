@@ -228,7 +228,11 @@
     "previous": "이전 수라",
     "next": "다음 수라",
     "smaller": "글자 작게",
-    "larger": "글자 크게"
+    "larger": "글자 크게",
+    "byPage": "무스하프 쪽",
+    "bySurah": "수라별",
+    "previousPage": "이전 쪽",
+    "nextPage": "다음 쪽"
   },
   "tafsir": {
     "none": "이 구절의 해설(타프시르)은 아직 없습니다."

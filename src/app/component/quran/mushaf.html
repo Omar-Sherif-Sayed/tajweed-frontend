@@ -1,0 +1,125 @@
+<div class="flex flex-wrap items-center gap-2 text-sm">
+  <a [routerLink]="['/', lang(), 'quran']" class="rounded-full border border-border px-3 py-1.5">{{ 'quran.index' | translate }}</a>
+  @if (currentSurah(); as s) {
+    <a [routerLink]="['/', lang(), 'quran', s]" class="rounded-full border border-border px-3 py-1.5">{{ 'reader.bySurah' | translate }}</a>
+  }
+  <div class="ms-auto flex items-center gap-1.5">
+    <button type="button" class="rounded-full border border-border px-3 py-1.5 lg:hidden" [disabled]="current() === 1" (click)="turn(-1)">
+      {{ 'reader.previousPage' | translate }}
+    </button>
+    <button type="button" class="hidden rounded-full border border-border px-3 py-1.5 lg:block" [disabled]="right() === 1" (click)="turn(-2)">
+      {{ 'reader.previousPage' | translate }}
+    </button>
+    <span class="px-1 font-bold text-ink">{{ 'quran.page' | translate: { n: num(current()) } }}</span>
+    <button type="button" class="rounded-full border border-border px-3 py-1.5 lg:hidden" [disabled]="current() === 604" (click)="turn(1)">
+      {{ 'reader.nextPage' | translate }}
+    </button>
+    <button type="button" class="hidden rounded-full border border-border px-3 py-1.5 lg:block" [disabled]="right() + 1 >= 604" (click)="turn(2)">
+      {{ 'reader.nextPage' | translate }}
+    </button>
+  </div>
+</div>
+
+@if (failed()) {
+  <p class="mt-4 rounded-xl bg-dotsoft p-3 text-sm" role="status">{{ 'about.unreachable' | translate }}</p>
+}
+
+<div class="mt-4 grid gap-5 lg:grid-cols-[14rem_1fr]">
+  <aside class="hidden lg:block">
+    <img [src]="landscape()" alt="" class="aspect-[3/1] w-full rounded-xl object-cover" />
+    @if (juz(); as j) {
+      <h2 class="mt-4 font-heading text-base font-bold text-ink">{{ 'quran.juz' | translate: { n: num(j) } }}</h2>
+      <ul class="mt-1 text-sm">
+        @for (s of juzSurahs(); track s.number) {
+          <li>
+            <a
+              [routerLink]="['/', lang(), 'quran', 'page', s.startPage]"
+              class="flex items-center justify-between border-b border-border px-0.5 py-1.5"
+              [class.font-bold]="s.number === currentSurah()"
+              [class.text-ink]="s.number === currentSurah()"
+            >
+              <span>
+                @if (s.number === currentSurah()) {
+                  <span class="me-1.5 inline-block size-1.5 rounded-full bg-dot align-middle"></span>
+                }
+                {{ num(s.number) }} · {{ nameOf(s.number) }}
+              </span>
+              <span class="text-muted">{{ num(s.startPage) }}</span>
+            </a>
+          </li>
+        }
+      </ul>
+    }
+  </aside>
+
+  <div #spread class="spread" dir="rtl">
+    @for (p of pages(); track p.page) {
+      <section
+        class="mpage"
+        [class.other]="p.page !== current()"
+        [class.center]="p.page <= 2"
+        [attr.aria-label]="'quran.page' | translate: { n: num(p.page) }"
+        lang="ar"
+      >
+        @if (p.data; as d) {
+          <header class="mhead">
+            <span>{{ d.ayahs[0] ? 'سورة ' + (surah(d.ayahs[0].surahNumber)?.nameAr ?? '') : '' }}</span>
+            <span>{{ headerPart(d) }}</span>
+          </header>
+        }
+        <div class="mlines" [style.--rows]="p.lines?.length ?? 15">
+          @for (l of p.lines ?? []; track l.line) {
+            @switch (l.kind) {
+              @case ('header') {
+                <div class="ml header">
+                  <span class="hm o">ترتيبها {{ mushaf(l.surah) }}</span>
+                  <span class="in">سورة {{ surah(l.surah)?.nameAr }}</span>
+                  <span class="hm a">آياتها {{ mushaf(surah(l.surah)?.ayahCount ?? 0) }}</span>
+                </div>
+              }
+              @case ('basmala') {
+                <div class="ml"><span class="basmala">{{ l.text }}</span></div>
+              }
+              @case ('text') {
+                <div class="ml text">
+                  <span class="fit"
+                    >@for (s of l.segments; track $index) {@switch (s.kind) {@case ('words') {<span
+                          class="ayah"
+                          role="button"
+                          tabindex="0"
+                          [style.background-color]="background(s.ayah)"
+                          (click)="open(s.ayah)"
+                          (keydown.enter)="open(s.ayah)"
+                          >@for (u of s.units; track $index; let last = $last) {<span class="w">{{ u }}</span>{{ last ? '' : ' ' }}}</span
+                        >{{ ' ' }}}@case ('end') {<span
+                          class="ayah-end"
+                          [style.color]="numberColour(s.ayah)"
+                          [style.border-color]="numberColour(s.ayah)"
+                          [style.background-color]="background(s.ayah)"
+                          >{{ mushaf(s.ayah.number) }}</span
+                        >{{ ' ' }}}@case ('rub') {<span class="rub" aria-hidden="true">۞</span>{{ ' ' }}}}}</span
+                  >
+                </div>
+              }
+            }
+          }
+        </div>
+        <footer class="mfoot"><span>{{ mushaf(p.page) }}</span></footer>
+      </section>
+    }
+  </div>
+</div>
+
+@if (pages()[0].data; as d) {
+  <p class="mt-3 text-xs text-muted">
+    <bdi dir="ltr"
+      ><a [href]="d.textSource.sourceUrl" rel="noopener" class="underline">{{ d.textSource.name }}</a> · {{ d.textSource.licence }} ·
+      <a [href]="d.layoutSource.sourceUrl" rel="noopener" class="underline">{{ d.layoutSource.name }}</a> · {{ d.layoutSource.licence }}</bdi
+    >
+    · <a [href]="report()" rel="noopener" class="underline">{{ 'common.report' | translate }}</a>
+  </p>
+}
+
+@if (selected(); as sel) {
+  <tj-ayah-actions [surah]="sel.surah" [ayah]="sel.ayah" (closed)="selected.set(null)" />
+}

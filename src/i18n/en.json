@@ -228,7 +228,11 @@
     "previous": "Previous surah",
     "next": "Next surah",
     "smaller": "Smaller text",
-    "larger": "Larger text"
+    "larger": "Larger text",
+    "byPage": "Mushaf pages",
+    "bySurah": "By surah",
+    "previousPage": "Previous page",
+    "nextPage": "Next page"
   },
   "tafsir": {
     "none": "No tafsir is available for this ayah yet."

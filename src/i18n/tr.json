@@ -228,7 +228,11 @@
     "previous": "Önceki sure",
     "next": "Sonraki sure",
     "smaller": "Daha küçük yazı",
-    "larger": "Daha büyük yazı"
+    "larger": "Daha büyük yazı",
+    "byPage": "Mushaf sayfaları",
+    "bySurah": "Sure sure",
+    "previousPage": "Önceki sayfa",
+    "nextPage": "Sonraki sayfa"
   },
   "tafsir": {
     "none": "Bu ayetin tefsiri henüz yok."

@@ -228,7 +228,11 @@
     "previous": "Oldingi sura",
     "next": "Keyingi sura",
     "smaller": "Kichikroq matn",
-    "larger": "Kattaroq matn"
+    "larger": "Kattaroq matn",
+    "byPage": "Mushaf sahifalari",
+    "bySurah": "Suralar bo‘yicha",
+    "previousPage": "Oldingi sahifa",
+    "nextPage": "Keyingi sahifa"
   },
   "tafsir": {
     "none": "Bu oyat tafsiri hozircha yo‘q."

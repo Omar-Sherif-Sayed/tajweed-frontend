@@ -228,7 +228,11 @@
     "previous": "Sura anterior",
     "next": "Sura siguiente",
     "smaller": "Texto más pequeño",
-    "larger": "Texto más grande"
+    "larger": "Texto más grande",
+    "byPage": "Páginas del mushaf",
+    "bySurah": "Por sura",
+    "previousPage": "Página anterior",
+    "nextPage": "Página siguiente"
   },
   "tafsir": {
     "none": "Aún no hay tafsir para esta aleya."

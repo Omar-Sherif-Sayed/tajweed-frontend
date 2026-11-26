@@ -228,7 +228,11 @@
     "previous": "Surata anterior",
     "next": "Próxima surata",
     "smaller": "Texto menor",
-    "larger": "Texto maior"
+    "larger": "Texto maior",
+    "byPage": "Páginas do mushaf",
+    "bySurah": "Por surata",
+    "previousPage": "Página anterior",
+    "nextPage": "Próxima página"
   },
   "tafsir": {
     "none": "Ainda não há tafsir para este versículo."

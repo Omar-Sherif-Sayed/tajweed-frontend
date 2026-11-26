@@ -71,16 +71,11 @@ export class QuranIndexComponent {
     return localNumber(n, this.lang());
   }
 
-  /** Opens the reader at the first ayah that starts on the typed page. */
+  /** Opens the typed page of the mushaf. */
   protected async goToPage(): Promise<void> {
     const page = Number(this.pageInput());
-    if (!Number.isInteger(page) || page < 1 || page > 604) {
-      return;
-    }
-    const answer = await this.quran.getPage(page);
-    const first = answer.ayahs[0];
-    if (first) {
-      await this.router.navigate(['/', this.lang(), 'quran', first.surahNumber], { queryParams: { ayah: first.number } });
+    if (Number.isInteger(page) && page >= 1 && page <= 604) {
+      await this.router.navigate(['/', this.lang(), 'quran', 'page', page]);
     }
   }
 }

@@ -228,7 +228,11 @@
     "previous": "Surah sebelumnya",
     "next": "Surah berikutnya",
     "smaller": "Teks lebih kecil",
-    "larger": "Teks lebih besar"
+    "larger": "Teks lebih besar",
+    "byPage": "Halaman mushaf",
+    "bySurah": "Per surah",
+    "previousPage": "Halaman sebelumnya",
+    "nextPage": "Halaman berikutnya"
   },
   "tafsir": {
     "none": "Tafsir ayat ini belum tersedia."

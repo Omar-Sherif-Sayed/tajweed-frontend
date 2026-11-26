@@ -1,0 +1,223 @@
+// The printed page, after design 3 (tajweed-docs/docs/design/prototypes/round-3.html, «3 · mushaf page» and
+// «8 · Web — two pages like an open mushaf»): a framed page, its header, 15 equal lines, the surah band with its order
+// and ayah count, the page number in a ring. Sizes follow the page's width (container units), so the lines keep their
+// words at any size.
+
+// On a computer the open mushaf takes the window's width (up to 1360 px), centred over the page's narrower column.
+:host {
+  display: block;
+}
+
+@media (min-width: 1024px) {
+  :host {
+    --wide: min(1360px, calc(100vw - 2rem));
+    width: var(--wide);
+    margin-inline-start: calc((100% - var(--wide)) / 2);
+  }
+}
+
+.spread {
+  display: flex;
+  gap: 14px;
+}
+
+.mpage {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  aspect-ratio: 0.66;
+  container-type: inline-size;
+  margin: 4px;
+  padding: 2.2cqw 2.6cqw 1.2cqw;
+  border: 1px solid var(--t-rule);
+  outline: 1px solid var(--t-rule);
+  outline-offset: 3px;
+  border-radius: 2px;
+  background: var(--t-page);
+  color: var(--t-ink);
+}
+
+.mhead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2px 1cqw;
+  margin-bottom: 0.8cqw;
+  border-bottom: 1px solid var(--t-rule);
+  color: var(--t-muted);
+  font-family: 'Amiri', serif;
+  font-size: 2.3cqw;
+  font-weight: 700;
+}
+
+.mlines {
+  flex: 1;
+  display: grid;
+  grid-template-rows: repeat(15, 1fr);
+  font-family: 'Amiri Quran', serif;
+  font-size: 5.4cqw;
+  line-height: 1;
+}
+
+// Pages 1 and 2: their eight lines in the middle of a decorated page, as printed.
+.mpage.center .mlines {
+  grid-template-rows: repeat(var(--rows), 1fr);
+  align-content: center;
+  padding: 6% 12%;
+}
+
+.ml {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  white-space: nowrap;
+}
+
+// A text line fills the page's width, as printed: the spaces between its words widen.
+.ml.text .fit {
+  display: block;
+  width: 100%;
+  overflow: visible;
+  text-align: justify;
+  text-align-last: justify;
+}
+
+.mpage.center .ml.text .fit {
+  text-align: center;
+  text-align-last: center;
+}
+
+// On a phone or a narrow window, one page: the one asked for.
+@media (max-width: 1023.98px) {
+  .mpage.other {
+    display: none;
+  }
+}
+
+// A word with its marks: never pulled apart by the justification.
+.w {
+  display: inline-block;
+}
+
+.ayah {
+  cursor: pointer;
+  border-radius: 4px;
+
+  &:hover {
+    background-color: var(--t-dotsoft);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--t-dot);
+  }
+}
+
+.ayah-end {
+  display: inline-grid;
+  place-items: center;
+  min-width: 1.5em;
+  height: 1.5em;
+  margin-inline: 0.1em;
+  border: 1.5px solid var(--t-dot);
+  border-radius: 999px;
+  color: var(--t-dot);
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+  font-size: 0.58em;
+  vertical-align: middle;
+}
+
+.rub {
+  color: var(--t-dot);
+}
+
+.basmala {
+  font-size: 0.95em;
+}
+
+// The surah band: a rule, the name between two dots, a rule; the order and the ayah count at its ends.
+.ml.header {
+  gap: 0.4em;
+
+  &::before,
+  &::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--t-rule);
+  }
+
+  &::before {
+    order: 1;
+  }
+
+  &::after {
+    order: 3;
+  }
+
+  .in {
+    order: 2;
+    position: relative;
+    padding: 0 0.6em;
+    font-family: 'Amiri', serif;
+    font-size: 0.62em;
+    font-weight: 700;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 0.36em;
+      height: 0.36em;
+      border-radius: 50%;
+      background: var(--t-dot);
+      transform: translateY(-50%);
+    }
+
+    &::before {
+      right: -0.3em;
+    }
+
+    &::after {
+      left: -0.3em;
+    }
+  }
+
+  .hm {
+    color: var(--t-muted);
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-size: 0.42em;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  .hm.o {
+    order: 0;
+  }
+
+  .hm.a {
+    order: 4;
+  }
+}
+
+.mfoot {
+  display: flex;
+  justify-content: center;
+  padding-top: 1cqw;
+
+  span {
+    display: grid;
+    place-items: center;
+    min-width: 4.4cqw;
+    height: 4.4cqw;
+    padding: 0 0.6cqw;
+    border: 1.5px solid var(--t-dot);
+    border-radius: 999px;
+    color: var(--t-dot);
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-size: 2cqw;
+    font-weight: 700;
+  }
+}

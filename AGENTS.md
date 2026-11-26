@@ -69,10 +69,12 @@ src/
   app/
     app.config.ts              zoneless, router, hydration, HttpClient on fetch, TanStack Query, ngx-translate
     app.config.server.ts       + server rendering;  app.routes.server.ts: every route rendered per request
-    app.routes.ts              `/` first launch · `/:lang` (one of 22) → layout → '' home, quran, quran/:surah (?ayah=),
+    app.routes.ts              `/` first launch · `/:lang` (one of 22) → layout → '' home, quran, quran/page/:page (the
+                               printed pages), quran/:surah (?ayah=),
                                search (?q=), recitation, radio, hadith (?category=), hadith/:id, prayer, qibla, hijri,
                                sources, about · 404
-    component/<module>/        pages: onboarding/first-launch, home, quran (index, reader, ayah-actions), search,
+    component/<module>/        pages: onboarding/first-launch, home, quran (index, mushaf — the printed pages, reader —
+                               by surah, ayah-actions), search,
                                recitation, radio, hadith (categories, detail), prayer, qibla, hijri, sources, about,
                                not-found
     shared/
@@ -90,6 +92,8 @@ src/
                                recitation), prayer/ (prayer-calc — the Adhan library on the shared method data;
                                prayer-settings — place, method, Asr school)
       utils/quran-text.ts      surah names per language, the mushaf's digits, the basmala heading, «report a mistake»
+      utils/mushaf-page.ts     lays out a printed page from /v1/pages/{p}: its lines from word positions, the ayah
+                               numbers, ۞, the header's hizb, the two-page spread
       schema/response/         Dto* interfaces mirroring the backend
       constants/               languages (the 22, as data), directions (GENERATED), prayer-methods.json (GENERATED copy
                                of tajweed-docs/docs/data-sources/prayer-methods.json), web-credits (fonts, libraries)
@@ -124,6 +128,14 @@ public/landscapes/             GENERATED copies of design 3's 56 landscapes (day
   heading is the first ayah's own first four words (`splitBasmala`); search tints the matched words of the received text
   (a display layer); the playing ayah and the markers are backgrounds. The mushaf's Arabic-Indic digits are used only
   in the ayah-number markers; every other number is in the interface language's own digits (`localNumber`).
+- **The printed pages** (`component/quran/mushaf`, design 3 «two pages like an open mushaf»; the author, 2026-11-26):
+  `/v1/pages/{p}` gives each page's 15 lines as word positions in the Tanzil text (`mushaf_line`, 1.7.0);
+  `layoutPage` takes those words from the ayahs' text split at single spaces and joins them back with single spaces —
+  the same characters — and groups a word with the pause marks after it (`units`), so a justified line never pulls a
+  mark away from its word. Font: Amiri Quran (the author's choice until the King Fahd page fonts are permitted); each
+  line is justified to the page's width (container units), and a line wider than the page is drawn smaller
+  (`fitLines`). Two pages on a computer (odd on the right), one on a phone; the arrow keys turn the pages (left =
+  forward). The index, the juz list and «go to page» open this view; the surah view stays as «بالسورة».
 - **Playback** (`shared/service/audio`): one `PlayerService` for recitations and radio — the rules of the client
   guide §5 and parent §8.3: sources in priority order (`FAILING` last, never dropped), the same source twice then the
   next, waits 1 s, 2 s, 4 s … capped at 30 s, without limit, at once on `online`; a surah file resumes at the last
@@ -155,6 +167,13 @@ TanStack Query and ngx-translate; the warning stands at 750 kB so a real increas
 Chinese, Japanese and Korean (about 200 kB of CSS each) load only with their language.
 
 ## Verified on 2026-11-26
+
+**The printed pages (2026-11-26), with the backend's 1.7.x:** `ng test` 31 tests (with the page layout: words from
+positions, the basmala from ayah 1, a pause mark kept with its word, ۞ only before an ayah's first word, the header's
+hizb, the spread). In the browser: page 545 line by line as the author's photo and design 3 — 15 lines, al-Hashr's band
+with «ترتيبها ٥٩» and «آياتها ٢٤», the basmala, page numbers; pages 545 – 546 side by side at 1440 px with the juz 28
+list, one page at 800 px; pages 1 – 2 with their 8 lines centred; page 264 with ۞ before 15:49; the arrow key to
+pages 3 – 4; no line wider than its page (two drawn 0.96 and 0.995 em); an ayah's actions from the page.
 
 **The ready features (`tajweed-docs/docs/plan/web-plan.md` §6), with the local backend:** `ng lint` 0 errors; `ng test`
 26 tests (with the playback rules — source order, retry rounds and waits, three-digit addresses, 114 → 1, the ayah from

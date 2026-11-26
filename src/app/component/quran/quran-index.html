@@ -53,7 +53,7 @@
     @for (s of surahs.data() ?? []; track s.number) {
       <li>
         <a
-          [routerLink]="['/', lang(), 'quran', s.number]"
+          [routerLink]="['/', lang(), 'quran', 'page', s.startPage]"
           class="flex items-center gap-3 rounded-xl border border-border bg-surface px-3 py-2.5 hover:border-dot"
         >
           <span class="grid size-9 shrink-0 place-items-center rounded-full border border-dot text-sm text-dot">{{ num(s.number) }}</span>
@@ -79,8 +79,7 @@
     @for (j of juzs.data() ?? []; track j.number) {
       <li>
         <a
-          [routerLink]="['/', lang(), 'quran', j.startSurahNumber]"
-          [queryParams]="{ ayah: j.startAyahNumber }"
+          [routerLink]="['/', lang(), 'quran', 'page', j.startPage]"
           class="flex items-center gap-3 rounded-xl border border-border bg-surface px-3 py-2.5 hover:border-dot"
         >
           <span class="grid size-9 shrink-0 place-items-center rounded-full border border-dot text-sm text-dot">{{ num(j.number) }}</span>

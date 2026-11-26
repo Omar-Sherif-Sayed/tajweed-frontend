@@ -66,14 +66,47 @@ export interface DtoJuz {
   readonly startPage: number;
 }
 
-/** A page of the Madinah mushaf (`GET /v1/pages/{p}` — `DtoPage`): the ayahs that start on it. */
+/** What a line of the printed mushaf holds (`MushafLineKind`). */
+export type MushafLineKind = 'SURAH_HEADER' | 'BASMALA' | 'TEXT';
+
+/**
+ * A line of the printed Madinah mushaf, 1405H (`DtoMushafLine`). A text line is the words from `firstWord` of
+ * `firstAyahId` to `lastWord` of `lastAyahId`, both included: the ayahs' `text` split at single spaces, counted from 0.
+ */
+export interface DtoMushafLine {
+  /** The line, 1 – 15. */
+  readonly line: number;
+  /** What it holds. */
+  readonly kind: MushafLineKind;
+  /** The surah of a header or a basmala. */
+  readonly surahNumber: number | null;
+  /** A text line's first ayah (`DtoAyah.id`). */
+  readonly firstAyahId: number | null;
+  /** Its first word, from 0. */
+  readonly firstWord: number | null;
+  /** A text line's last ayah. */
+  readonly lastAyahId: number | null;
+  /** Its last word, from 0. */
+  readonly lastWord: number | null;
+}
+
+/**
+ * A page of the Madinah mushaf (`GET /v1/pages/{p}` — `DtoPage`): its ayahs (every page begins with a new ayah, so
+ * all of them start on it) and its lines as printed.
+ */
 export interface DtoPage {
   /** Its number, 1 – 604. */
   readonly page: number;
-  /** The ayahs that start on it. */
+  /** The ayahs on it, in order. */
   readonly ayahs: readonly DtoAyah[];
+  /** Its lines, top to bottom (15; 8 on pages 1 and 2). */
+  readonly lines: readonly DtoMushafLine[];
+  /** The ayahs before which the printed page draws ۞. */
+  readonly rubAyahIds: readonly number[];
   /** The text's source. */
   readonly textSource: DtoContentSource;
+  /** The source of the line breaks (DigitalKhatt, MIT). */
+  readonly layoutSource: DtoContentSource;
 }
 
 /** One ayah found by the search (`DtoSearchHit`). */
