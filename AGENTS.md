@@ -131,8 +131,13 @@ public/landscapes/             GENERATED copies of design 3's 56 landscapes (day
 - **The printed pages** (`component/quran/mushaf`, design 3 «two pages like an open mushaf»; the author, 2026-11-26):
   `/v1/pages/{p}` gives each page's 15 lines as word positions in the Tanzil text (`mushaf_line`, 1.7.0);
   `layoutPage` takes those words from the ayahs' text split at single spaces and joins them back with single spaces —
-  the same characters — and groups a word with the pause marks after it (`units`), so a justified line never pulls a
-  mark away from its word. Font: Amiri Quran (the author's choice until the King Fahd page fonts are permitted); each
+  the same characters — and draws a word with the pause marks after it attached, without the space Tanzil writes
+  before a mark (`units`; the author, 2026-11-27: «خليها زي المصحف بالظبط» — copy and search keep the text as
+  received). The look as printed (2026-11-27): our own ornament in design 3's colours (circles and arches, no cross),
+  the juz and the surah in tabs, the surah band with «ترتيبها» / «آياتها» medallions, the quarter label in the outer
+  margin, the page number in a cartouche, pages 1 – 2 in an oval cartouche. Font: Amiri Quran — next, the King Fahd
+  QCF V1 page fonts through the Quran Foundation, served by our own server (⏸ the author's keys and his OK to
+  download them; parent `docs/plan/web-plan.md` §7), Amiri kept as the fallback; each
   line is justified to the page's width (container units), and a line wider than the page is drawn smaller
   (`fitLines`). Two pages on a computer (odd on the right), one on a phone; the arrow keys turn the pages (left =
   forward). The index, the juz list and «go to page» open this view; the surah view stays as «بالسورة».
