@@ -24,7 +24,165 @@
     "quran": "Kur'an",
     "recitation": "Tilavet",
     "prayerTimes": "Namaz vakitleri",
-    "building": "Uygulamanın bölümleri hazırlanıyor; ilkleri yakında burada görünecek."
+    "continue": "Okumaya devam et",
+    "resume": "Devam",
+    "hijriDate": "Hicri tarih",
+    "localTime": "Bulunduğunuz yerin saati"
+  },
+  "nav": {
+    "quran": "Kur'an",
+    "search": "Kur'an'da arama",
+    "recitation": "Tilavet",
+    "radio": "Radyo",
+    "hadith": "Hadisler",
+    "prayer": "Namaz vakitleri",
+    "qibla": "Kıble",
+    "hijri": "Hicri takvim",
+    "sources": "Kaynaklar",
+    "tafsir": "Tefsir",
+    "home": "Ana sayfa",
+    "about": "Hakkında"
+  },
+  "quran": {
+    "index": "Fihrist",
+    "indexSub": "114 sure · 30 cüz · 604 sayfa",
+    "surahs": "Sureler",
+    "juzs": "Cüzler",
+    "makki": "Mekkî",
+    "madani": "Medenî",
+    "indexLine": "{{type}} · {{n}} ayet",
+    "page": "Sayfa {{n}}",
+    "juz": "Cüz {{n}}",
+    "hizb": "Hizb {{n}}",
+    "juzStarts": "Başlangıç: {{name}} {{s}}:{{a}}",
+    "position": "{{name}} · Ayet {{n}} / {{k}}",
+    "goToPage": "Sayfaya git",
+    "go": "Git"
+  },
+  "search": {
+    "placeholder": "Bir kelime, sure veya ayet numarası arayın",
+    "results": "{{n}} sonuç",
+    "kindWord": "Bir kelime, harekeli ya da harekesiz",
+    "kindSurah": "Surenin adı veya numarası",
+    "kindAyah": "Ayet numarası, ör. 2:255",
+    "noResults": "Hiçbir şey bulunamadı.",
+    "withTashkeel": "Hareke yazdınız; eşleşmesi gerekti.",
+    "more": "Daha fazla sonuç",
+    "openAyah": "Ayeti aç"
+  },
+  "actions": {
+    "title": "Ayet seçenekleri",
+    "addMarker": "İşaret ekle",
+    "listen": "Dinle",
+    "range": "Ayetler {{a}} – {{b}}",
+    "repeat": "Tekrar × {{n}}",
+    "tafsirs": "Tefsirler",
+    "allTafsirs": "Bu ayetin bütün tefsirleri",
+    "copy": "Ayeti kopyala",
+    "copied": "Kopyalandı",
+    "to": "Bitiş ayeti",
+    "removeMarker": "İşareti kaldır"
+  },
+  "markers": {
+    "title": "Ayet işaretleri",
+    "review": "Tekrar",
+    "memorise": "Ezber",
+    "reflect": "Tefekkür",
+    "local": "Yalnızca cihazınızda saklanır",
+    "tintNote": "Renk ayeti ve numarasını kapsar."
+  },
+  "common": {
+    "report": "Hata bildir",
+    "play": "Oynat",
+    "device": "Yalnızca cihazınızda saklanır",
+    "online": "İnternet bağlantısı gerekir",
+    "close": "Kapat",
+    "loading": "Yükleniyor…",
+    "retry": "Tekrar dene",
+    "search": "Ara"
+  },
+  "player": {
+    "choose": "Kâri seçin",
+    "MURATTAL": "Murattal",
+    "MUJAWWAD": "Mücevved",
+    "MUALLIM": "Muallim (öğretici)",
+    "surahs": "{{n}} sure",
+    "perAyah": "ayet ayet",
+    "now": "Şimdi çalıyor",
+    "modeSurah": "Bir sure",
+    "modeRange": "Bir bölüm",
+    "modeEndless": "Sonuna kadar, sonra yine Fâtiha'dan",
+    "reconnecting": "Yeniden bağlanıyor…",
+    "reconnectNote": "Bağlantı koptu: aynı kaynak yeniden denenir, sonra bir sonraki, durmadan — sizin bir şey yapmanız gerekmez.",
+    "reciter": "Kâri",
+    "resume": "Devam",
+    "surah": "Sure",
+    "pause": "Duraklat",
+    "stop": "Durdur",
+    "listeningOnly": "Yalnızca dinlemek için — gösterilen metin Hafs an Âsım rivayetidir",
+    "wholeSurahs": "Bu tilavet yalnızca tam sureler halinde çalar.",
+    "streamingOnly": "Yalnızca çevrim içi: indirme, kaynağın iznini bekliyor.",
+    "from": "Başlangıç ayeti"
+  },
+  "radio": {
+    "live": "Canlı",
+    "note": "Yalnızca istasyonun kendi yayımladığı yayınlar."
+  },
+  "hadith": {
+    "text": "Hadis",
+    "explanation": "Şerh",
+    "words": "Kelime anlamları",
+    "categories": "Kategoriler",
+    "grade": "Derece",
+    "reference": "Kaynak",
+    "benefits": "Hadisin faydaları",
+    "arabicOnly": "Bu dilde yayımlanmış çeviri yok: Arapça gösteriliyor.",
+    "notLoaded": "Hadisler henüz sunucuya yüklenmedi."
+  },
+  "sources": {
+    "sub": "Uygulamanın kullandığı her şey ve nereden geldiği",
+    "quranFont": "Kur'an yazı tipi",
+    "uiFonts": "Arayüz yazı tipleri",
+    "content": "İçerik",
+    "web": "Sitenin yazı tipleri ve yazılımları"
+  },
+  "prayer": {
+    "fajr": "Sabah",
+    "sunrise": "Güneş",
+    "dhuhr": "Öğle",
+    "asr": "İkindi",
+    "maghrib": "Akşam",
+    "isha": "Yatsı",
+    "next": "Sonraki namaz",
+    "method": "Vakit hesaplama yöntemi",
+    "asrTime": "İkindi vakti",
+    "calcNote": "Vakitler cihazınızda konumunuza göre hesaplanır; konumunuz hiçbir zaman bir sunucuya gönderilmez. Yöntem ülkenize göre otomatik seçilir ve değiştirebilirsiniz.",
+    "lastThird": "Gecenin son üçte biri",
+    "lastThirdStarts": "Son üçte bir başlar",
+    "lastThirdFrom": "Akşam ({{a}}) ile sabah ({{b}}) arası",
+    "useLocation": "Konumumu kullan",
+    "noLocation": "Konum kullanılamıyor. Tarayıcıda izin verin veya aşağıya girin.",
+    "latitude": "Enlem",
+    "longitude": "Boylam",
+    "methodDefault": "Ülkeniz için resmî yöntem henüz okunmadı: Dünya İslam Birliği’ninki kullanılıyor.",
+    "methodMWL": "Dünya İslam Birliği",
+    "methodUmmAlQura": "Ümmü’l-Kurâ (Suudi Arabistan)",
+    "methodEgypt": "Mısır Genel Ölçme Kurumu",
+    "methodTurkey": "Diyanet (Türkiye)",
+    "methodMalaysia": "JAKIM (Malezya)",
+    "methodSingapore": "MUIS (Singapur)",
+    "asrStandard": "Şâfiî, Mâlikî ve Hanbelî",
+    "asrHanafi": "Hanefî",
+    "in": "{{h}} sa {{m}} dk sonra"
+  },
+  "qibla": {
+    "degrees": "kuzeyden {{d}}°",
+    "web": "Bilgisayarda pusula yok: yön derece olarak gösterilir.",
+    "calc": "Cihazınızda, konumunuzdan Kâbe'ye doğru hesaplanır."
+  },
+  "hijri": {
+    "adjust": "Düzeltme: {{n}}",
+    "note": "Ümmü'l-Kurâ takvimi. Ülkenizin duyurusuna uyması için bir iki gün kaydırın."
   },
   "directions": {
     "suhuf": "İlk sahifeler",
@@ -56,10 +214,6 @@
     "nur": "Nur",
     "mountains": "Dağlar — az görme ve renk körlüğü için"
   },
-  "nav": {
-    "home": "Ana sayfa",
-    "about": "Hakkında"
-  },
   "about": {
     "title": "Hakkında",
     "developer": "Geliştirici",
@@ -70,7 +224,13 @@
   "notFound": {
     "title": "Böyle bir sayfa yok."
   },
-  "common": {
-    "close": "Kapat"
+  "reader": {
+    "previous": "Önceki sure",
+    "next": "Sonraki sure",
+    "smaller": "Daha küçük yazı",
+    "larger": "Daha büyük yazı"
+  },
+  "tafsir": {
+    "none": "Bu ayetin tefsiri henüz yok."
   }
 }

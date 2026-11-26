@@ -19,6 +19,26 @@ export const routes: Routes = [
     children: [
       { path: '', pathMatch: 'full', loadComponent: () => import('@component/home/home').then((m) => m.HomeComponent) },
       { path: 'about', loadComponent: () => import('@component/about/about').then((m) => m.AboutComponent) },
+      { path: 'quran', loadComponent: () => import('@component/quran/quran-index').then((m) => m.QuranIndexComponent) },
+      { path: 'quran/:surah', loadComponent: () => import('@component/quran/reader').then((m) => m.ReaderComponent) },
+      { path: 'search', loadComponent: () => import('@component/search/search').then((m) => m.SearchComponent) },
+      {
+        path: 'recitation',
+        loadComponent: () => import('@component/recitation/recitation').then((m) => m.RecitationComponent),
+      },
+      { path: 'radio', loadComponent: () => import('@component/radio/radio').then((m) => m.RadioComponent) },
+      {
+        path: 'hadith',
+        loadComponent: () => import('@component/hadith/hadith-categories').then((m) => m.HadithCategoriesComponent),
+      },
+      {
+        path: 'hadith/:id',
+        loadComponent: () => import('@component/hadith/hadith-detail').then((m) => m.HadithDetailComponent),
+      },
+      { path: 'sources', loadComponent: () => import('@component/sources/sources').then((m) => m.SourcesComponent) },
+      { path: 'prayer', loadComponent: () => import('@component/prayer/prayer').then((m) => m.PrayerComponent) },
+      { path: 'qibla', loadComponent: () => import('@component/qibla/qibla').then((m) => m.QiblaComponent) },
+      { path: 'hijri', loadComponent: () => import('@component/hijri/hijri').then((m) => m.HijriComponent) },
       { path: '**', component: NotFoundComponent },
     ],
   },

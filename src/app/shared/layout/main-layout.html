@@ -4,17 +4,16 @@
       <tj-logo-mark class="size-9" />
       <span class="font-heading text-xl font-bold text-ink">{{ 'app.name' | translate }}</span>
     </a>
-    <nav class="ms-4 flex items-center gap-3 text-sm" [attr.aria-label]="'app.name' | translate">
-      <a [routerLink]="['/', language().code]" routerLinkActive="font-bold text-ink" [routerLinkActiveOptions]="{ exact: true }" class="text-muted">
-        {{ 'nav.home' | translate }}
-      </a>
-      <a [routerLink]="['/', language().code, 'about']" routerLinkActive="font-bold text-ink" class="text-muted">
-        {{ 'nav.about' | translate }}
-      </a>
-    </nav>
+    <a
+      [routerLink]="['/', language().code, 'search']"
+      class="ms-auto flex size-9 items-center justify-center rounded-full border border-border"
+      [attr.aria-label]="'nav.search' | translate"
+    >
+      <tj-icon name="search" class="size-4" />
+    </a>
     <button
       type="button"
-      class="ms-auto flex items-center gap-1.5 rounded-full border border-border px-3 py-1 text-sm"
+      class="flex items-center gap-1.5 rounded-full border border-border px-3 py-1 text-sm"
       aria-haspopup="dialog"
       (click)="pickerOpen.set(true)"
     >
@@ -22,11 +21,29 @@
       <span [attr.lang]="language().code" [style.font-family]="language().font">{{ language().nativeName }}</span>
     </button>
   </div>
+  <nav class="mx-auto max-w-5xl overflow-x-auto px-2" [attr.aria-label]="'app.name' | translate">
+    <ul class="flex gap-1 whitespace-nowrap pb-2 text-sm">
+      @for (link of links; track link.path) {
+        <li>
+          <a
+            [routerLink]="link.path ? ['/', language().code, link.path] : ['/', language().code]"
+            routerLinkActive="bg-dotsoft font-bold text-ink"
+            [routerLinkActiveOptions]="{ exact: !link.path }"
+            class="block rounded-full px-3 py-1 text-muted"
+          >
+            {{ link.key | translate }}
+          </a>
+        </li>
+      }
+    </ul>
+  </nav>
 </header>
 
-<main class="mx-auto max-w-5xl px-4 py-6">
+<main class="mx-auto max-w-5xl px-4 py-6" [class.pb-36]="player.active()">
   <router-outlet />
 </main>
+
+<tj-player-bar />
 
 @if (pickerOpen()) {
   <tj-language-picker

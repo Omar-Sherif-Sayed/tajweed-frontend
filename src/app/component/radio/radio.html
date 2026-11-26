@@ -1,0 +1,51 @@
+<h1 class="font-heading text-2xl font-bold text-ink">{{ 'nav.radio' | translate }}</h1>
+<p class="text-sm text-muted">{{ 'radio.note' | translate }}</p>
+
+<input
+  type="search"
+  class="mt-3 w-full rounded-xl border border-border bg-surface px-3 py-2"
+  [attr.aria-label]="'common.search' | translate"
+  [placeholder]="'common.search' | translate"
+  [value]="filter()"
+  (input)="filter.set($any($event.target).value)"
+/>
+
+@if (radios.isPending()) {
+  <p class="mt-4 text-sm text-muted">{{ 'common.loading' | translate }}</p>
+} @else if (radios.isError()) {
+  <p class="mt-4 rounded-xl bg-dotsoft p-3 text-sm" role="status">{{ 'about.unreachable' | translate }}</p>
+}
+
+<ul class="mt-3 grid gap-2 sm:grid-cols-2">
+  @for (s of stations(); track s.id) {
+    <li>
+      <button
+        type="button"
+        class="flex w-full items-center gap-3 rounded-xl border bg-surface px-3 py-2.5 text-start"
+        [class.border-dot]="playingId() === s.id"
+        [class.border-border]="playingId() !== s.id"
+        [attr.aria-pressed]="playingId() === s.id"
+        (click)="toggle(s)"
+      >
+        <tj-icon name="radio" class="size-6 text-dot" />
+        <span class="min-w-0 flex-1">
+          <span class="block truncate font-bold text-ink">{{ arabic() ? s.nameAr : s.nameEn }}</span>
+          @if (s.riwayah) {
+            <span class="block text-xs text-muted">{{ arabic() ? s.riwayah.nameAr : s.riwayah.nameEn }}</span>
+          }
+        </span>
+        @if (playingId() === s.id) {
+          <span class="rounded-full bg-dotsoft px-2 text-xs font-semibold">{{ 'radio.live' | translate }}</span>
+        }
+      </button>
+    </li>
+  }
+</ul>
+
+@if (radios.data(); as d) {
+  <p class="mt-4 text-xs text-muted" dir="ltr">
+    @for (c of d.credits; track c.name) {
+      <a [href]="c.url" rel="noopener" class="underline">{{ c.name }}</a>
+    }
+  </p>
+}

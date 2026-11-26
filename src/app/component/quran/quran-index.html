@@ -1,0 +1,98 @@
+<h1 class="font-heading text-2xl font-bold text-ink">{{ 'quran.index' | translate }}</h1>
+<p class="text-sm text-muted">{{ 'quran.indexSub' | translate }}</p>
+
+<div class="mt-4 flex flex-wrap items-center gap-2">
+  <div class="flex rounded-full border border-border p-0.5 text-sm" role="tablist">
+    <button
+      type="button"
+      role="tab"
+      class="rounded-full px-4 py-1"
+      [class.bg-primary]="tab() === 'surahs'"
+      [class.text-onprimary]="tab() === 'surahs'"
+      [attr.aria-selected]="tab() === 'surahs'"
+      (click)="tab.set('surahs')"
+    >
+      {{ 'quran.surahs' | translate }}
+    </button>
+    <button
+      type="button"
+      role="tab"
+      class="rounded-full px-4 py-1"
+      [class.bg-primary]="tab() === 'juzs'"
+      [class.text-onprimary]="tab() === 'juzs'"
+      [attr.aria-selected]="tab() === 'juzs'"
+      (click)="tab.set('juzs')"
+    >
+      {{ 'quran.juzs' | translate }}
+    </button>
+  </div>
+  <form class="ms-auto flex items-center gap-2 text-sm" (submit)="$event.preventDefault(); goToPage()">
+    <label for="go-page" class="text-muted">{{ 'quran.goToPage' | translate }}</label>
+    <input
+      id="go-page"
+      type="number"
+      min="1"
+      max="604"
+      inputmode="numeric"
+      class="w-20 rounded-lg border border-border bg-surface px-2 py-1"
+      [value]="pageInput()"
+      (input)="pageInput.set($any($event.target).value)"
+    />
+    <button type="submit" class="rounded-full border border-border px-3 py-1">{{ 'quran.go' | translate }}</button>
+  </form>
+</div>
+
+@if (surahs.isError()) {
+  <p class="mt-4 rounded-xl bg-dotsoft p-3 text-sm" role="status">{{ 'about.unreachable' | translate }}</p>
+} @else if (surahs.isPending()) {
+  <p class="mt-4 text-sm text-muted">{{ 'common.loading' | translate }}</p>
+}
+
+@if (tab() === 'surahs') {
+  <ul class="mt-4 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+    @for (s of surahs.data() ?? []; track s.number) {
+      <li>
+        <a
+          [routerLink]="['/', lang(), 'quran', s.number]"
+          class="flex items-center gap-3 rounded-xl border border-border bg-surface px-3 py-2.5 hover:border-dot"
+        >
+          <span class="grid size-9 shrink-0 place-items-center rounded-full border border-dot text-sm text-dot">{{ num(s.number) }}</span>
+          <span class="min-w-0 flex-1">
+            <span class="block truncate font-bold text-ink">{{ nameOf(s.number) }}</span>
+            <span class="block text-xs text-muted">
+              {{ 'quran.indexLine' | translate: { type: ((s.revelationType === 'MECCAN' ? 'quran.makki' : 'quran.madani') | translate), n: num(s.ayahCount) } }}
+            </span>
+          </span>
+          @if (settings.preferences().lang !== 'ar') {
+            <span class="font-quran text-lg text-ink" lang="ar" dir="rtl">{{ s.nameAr }}</span>
+          }
+          <span class="text-xs text-muted">{{ 'quran.page' | translate: { n: num(s.startPage) } }}</span>
+        </a>
+      </li>
+    }
+  </ul>
+} @else {
+  @if (juzs.isPending()) {
+    <p class="mt-4 text-sm text-muted">{{ 'common.loading' | translate }}</p>
+  }
+  <ul class="mt-4 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+    @for (j of juzs.data() ?? []; track j.number) {
+      <li>
+        <a
+          [routerLink]="['/', lang(), 'quran', j.startSurahNumber]"
+          [queryParams]="{ ayah: j.startAyahNumber }"
+          class="flex items-center gap-3 rounded-xl border border-border bg-surface px-3 py-2.5 hover:border-dot"
+        >
+          <span class="grid size-9 shrink-0 place-items-center rounded-full border border-dot text-sm text-dot">{{ num(j.number) }}</span>
+          <span class="min-w-0 flex-1">
+            <span class="block font-bold text-ink">{{ 'quran.juz' | translate: { n: num(j.number) } }}</span>
+            <span class="block truncate text-xs text-muted">
+              {{ 'quran.juzStarts' | translate: { name: nameOf(j.startSurahNumber), s: num(j.startSurahNumber), a: num(j.startAyahNumber) } }}
+            </span>
+          </span>
+          <span class="text-xs text-muted">{{ 'quran.page' | translate: { n: num(j.startPage) } }}</span>
+        </a>
+      </li>
+    }
+  </ul>
+}

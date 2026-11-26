@@ -1,0 +1,35 @@
+<h1 class="font-heading text-2xl font-bold text-ink">{{ 'nav.sources' | translate }}</h1>
+<p class="text-sm text-muted">{{ 'sources.sub' | translate }}</p>
+
+<h2 class="mt-5 text-sm font-bold">{{ 'sources.content' | translate }}</h2>
+@if (content.isPending()) {
+  <p class="mt-2 text-sm text-muted">{{ 'common.loading' | translate }}</p>
+} @else if (content.isError()) {
+  <p class="mt-2 rounded-xl bg-dotsoft p-3 text-sm" role="status">{{ 'about.unreachable' | translate }}</p>
+} @else if (content.data(); as c) {
+  <ul class="mt-2 divide-y divide-border rounded-xl border border-border bg-surface text-sm" dir="ltr">
+    @for (s of c.sources; track s.code) {
+      <li class="px-3 py-2">
+        <a [href]="s.sourceUrl" class="font-semibold underline" rel="noopener">{{ s.name }}</a>
+        <span class="block text-xs text-muted">{{ s.licence }} · {{ s.obtainedOn }}</span>
+        <span class="block break-all font-mono text-[0.65rem] text-muted">SHA-256 {{ s.sha256 }}</span>
+      </li>
+    }
+  </ul>
+}
+
+<h2 class="mt-5 text-sm font-bold">{{ 'sources.web' | translate }}</h2>
+<ul class="mt-2 divide-y divide-border rounded-xl border border-border bg-surface text-sm" dir="ltr">
+  @for (f of fonts; track f.name) {
+    <li class="px-3 py-2">
+      <a [href]="f.url" class="font-semibold underline" rel="noopener">{{ f.name }}</a>
+      <span class="block text-xs text-muted">{{ f.use }} · {{ f.licence }}</span>
+    </li>
+  }
+  @for (l of libraries; track l.name) {
+    <li class="px-3 py-2">
+      <a [href]="l.url" class="font-semibold underline" rel="noopener">{{ l.name }}</a>
+      <span class="block text-xs text-muted">{{ l.use }} · {{ l.licence }}</span>
+    </li>
+  }
+</ul>

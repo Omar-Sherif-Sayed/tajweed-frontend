@@ -1,0 +1,72 @@
+{
+  "about": "The default prayer-time method of each country (P2-D1), as data shared by the web, Android and iPhone (prayer-methods.md, 'Rules this sets for the clients'). Every method except the fallback was read from its official body's own timetable — see prayer-methods.md for the source, the days read and the measured values. A country not listed uses the fallback, and the screen says so. Adding a country is a change to this file only. The clients build each method from these values (angles, interval, minutes) — not from the Adhan library's presets, which add a minute to Dhuhr for some methods that the official timetables do not show.",
+  "updated": "2026-11-26",
+  "fallback": "MWL",
+  "methods": {
+    "MWL": {
+      "fajrAngle": 18,
+      "ishaAngle": 17,
+      "adjustments": {},
+      "source": "Muslim World League — the fallback where no official timetable has been read"
+    },
+    "UmmAlQura": {
+      "fajrAngle": 18.5,
+      "ishaInterval": 90,
+      "adjustments": {},
+      "source": "Umm al-Qura Calendar (KACST) — https://www.ummulqura.org.sa/en/prayer-times, read 2026-11-23"
+    },
+    "Egypt": {
+      "fajrAngle": 19.5,
+      "ishaAngle": 17.5,
+      "adjustments": {},
+      "source": "Egyptian General Authority of Survey, as published by Dar al-Ifta — https://www.dar-alifta.org/ar/prayer-times, read 2026-11-22"
+    },
+    "Turkey": {
+      "fajrAngle": 18,
+      "ishaAngle": 17,
+      "adjustments": {
+        "sunrise": -7,
+        "dhuhr": 5,
+        "asr": 4,
+        "maghrib": 7
+      },
+      "source": "Diyanet İşleri Başkanlığı — https://namazvakitleri.diyanet.gov.tr, all of 2026 read"
+    },
+    "Malaysia": {
+      "fajrAngle": 18,
+      "ishaAngle": 18,
+      "adjustments": {
+        "fajr": 2,
+        "dhuhr": 3,
+        "maghrib": 2,
+        "isha": 2
+      },
+      "source": "JAKIM e-Solat (zone WLY01), all of 2026 read: 18° for both, each published about two minutes after the 18° moment; Dhuhr +2.8 and Maghrib +1.9 minutes, rounded. Not the library's 20° Singapore preset."
+    },
+    "Singapore": {
+      "fajrAngle": 20,
+      "ishaAngle": 18,
+      "adjustments": {
+        "dhuhr": 1
+      },
+      "source": "MUIS — its timetable on data.gov.sg, all of 2025 read"
+    }
+  },
+  "countries": {
+    "SA": "UmmAlQura",
+    "EG": "Egypt",
+    "TR": "Turkey",
+    "MY": "Malaysia",
+    "SG": "Singapore"
+  },
+  "timeZones": {
+    "about": "The device's IANA time zone suggests its country when no city is chosen (read on the device, never sent anywhere). Only the zones of the countries above.",
+    "Asia/Riyadh": "SA",
+    "Africa/Cairo": "EG",
+    "Europe/Istanbul": "TR",
+    "Asia/Istanbul": "TR",
+    "Asia/Kuala_Lumpur": "MY",
+    "Asia/Kuching": "MY",
+    "Asia/Singapore": "SG"
+  }
+}

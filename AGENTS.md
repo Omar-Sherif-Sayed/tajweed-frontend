@@ -48,6 +48,7 @@ conventions). The plan this scaffold follows, with the author's answers: `docs/p
 | Vitest | 5.x (Angular's default runner) · jsdom |
 | angular-eslint | 22.8.0 · eslint-plugin-jsdoc 65.5.5 |
 | Express (the SSR server) | 5.x |
+| Adhan (`adhan`, Batoul Apps, MIT) | 4.4.3 — prayer times and the Qibla, calculated in the browser (2026-11-26) |
 | Fonts (`@fontsource/*`, SIL OFL 1.1) | 5.3.x: IBM Plex Sans Arabic, Inter, Amiri, Amiri Quran, Noto Nastaliq Urdu, Noto Sans Devanagari / Bengali / KR / JP / SC, Vazirmatn, Noto Naskh Arabic |
 | CI actions | checkout v7, setup-node v7 (7.1.0 read on its releases page 2026-11-26) |
 
@@ -68,18 +69,30 @@ src/
   app/
     app.config.ts              zoneless, router, hydration, HttpClient on fetch, TanStack Query, ngx-translate
     app.config.server.ts       + server rendering;  app.routes.server.ts: every route rendered per request
-    app.routes.ts              `/` first launch · `/:lang` (one of 22) → layout → '' home, 'about' · 404
-    component/<module>/        pages: onboarding/first-launch, home, about, not-found
+    app.routes.ts              `/` first launch · `/:lang` (one of 22) → layout → '' home, quran, quran/:surah (?ayah=),
+                               search (?q=), recitation, radio, hadith (?category=), hadith/:id, prayer, qibla, hijri,
+                               sources, about · 404
+    component/<module>/        pages: onboarding/first-launch, home, quran (index, reader, ayah-actions), search,
+                               recitation, radio, hadith (categories, detail), prayer, qibla, hijri, sources, about,
+                               not-found
     shared/
       component/general/       our wrappers: button (Material), icon and logo-mark (design 3's SVGs, GENERATED icons.ts,
                                logo.ts)
-      component/business/      language-picker (the searchable list of 22)
-      layout/main-layout       brand, navigation, language button
+      component/business/      language-picker (the searchable list of 22), player-bar (the one player, on every page),
+                               place-form (the place for prayer times and the Qibla)
+      layout/main-layout       brand, search, language button, the sections, the player bar
       routing/language.ts      languageMatch (the URL's language), the resolvers, hreflang
       service/                 settings.service (language, appearance, cookie), preferences (the cookie),
-                               translate-loader (the JSON files, bundled per language), integration/<area>/ (the API)
+                               translate-loader (the JSON files, bundled per language), integration/<area>/ (the API:
+                               quran, reciter, tafsir, hadith, appinfo), local-store (the browser's storage),
+                               reading.service (position, text size, markers), hijri.service (Umm al-Qura + adjustment),
+                               audio/ (player.service — resilient playback; playback-plan — its pure rules; the chosen
+                               recitation), prayer/ (prayer-calc — the Adhan library on the shared method data;
+                               prayer-settings — place, method, Asr school)
+      utils/quran-text.ts      surah names per language, the mushaf's digits, the basmala heading, «report a mistake»
       schema/response/         Dto* interfaces mirroring the backend
-      constants/               languages (the 22, as data), directions (GENERATED)
+      constants/               languages (the 22, as data), directions (GENERATED), prayer-methods.json (GENERATED copy
+                               of tajweed-docs/docs/data-sources/prayer-methods.json), web-credits (fonts, libraries)
 tools/sync-design.mjs          copies the design from ../tajweed-docs: texts, tokens, icons, logo, landscapes
 tools/extra-texts.json         the interface texts the design does not have, in the 22 languages
 public/landscapes/             GENERATED copies of design 3's 56 landscapes (day and night)
@@ -103,6 +116,22 @@ public/landscapes/             GENERATED copies of design 3's 56 landscapes (day
   with the page (Angular's HTTP transfer cache), so the browser does not ask again.
 - **Design**: run `node tools/sync-design.mjs` after the design changes in `tajweed-docs`; commit what it writes. Colours
   come only from the tokens (`var(--t-…)`, or Tailwind's `bg-surface`, `text-muted`, `border-border` …).
+- **What stays on the device** (`LocalStore`, keys `tajweed.*`): the reading position, text size, ayah markers, the
+  chosen recitation, the place, the prayer method and Asr school, the Hijri adjustment. Never sent anywhere; a page
+  works when storage is refused. What depends on it (or on the clock, the time zone, the location) is shown only after
+  hydration (`afterNextRender`), so the server's page and the browser's agree.
+- **The Quran text** is drawn exactly as the backend sends it (parent `AGENTS.md` §6.1) in Amiri Quran: the basmala
+  heading is the first ayah's own first four words (`splitBasmala`); search tints the matched words of the received text
+  (a display layer); the playing ayah and the markers are backgrounds. The mushaf's Arabic-Indic digits are used only
+  in the ayah-number markers; every other number is in the interface language's own digits (`localNumber`).
+- **Playback** (`shared/service/audio`): one `PlayerService` for recitations and radio — the rules of the client
+  guide §5 and parent §8.3: sources in priority order (`FAILING` last, never dropped), the same source twice then the
+  next, waits 1 s, 2 s, 4 s … capped at 30 s, without limit, at once on `online`; a surah file resumes at the last
+  position, an ayah file at the ayah; ranges and repeats from the timings or the ayah files; endless crosses 114 → 1;
+  Media Session; a recitation that is not Hafs is never followed on the text.
+- **Prayer times** (`shared/service/prayer`): every method built from `prayer-methods.json` (not the library's presets);
+  the default from the device's time zone, the Muslim World League otherwise — and the screen says so; the place is
+  typed or read from the browser, kept on the device.
 - **Icons**: `<tj-icon name="globe" />` — design 3's SVGs, drawn in `currentColor`, decorative (`aria-hidden`).
 - **Accessibility**: the templates pass angular-eslint's accessibility rules; dialogs have `role="dialog"`,
   `aria-modal`, a label and close on Escape; switches use `role="switch"` and `aria-checked`.
@@ -121,11 +150,26 @@ node dist/tajweed-frontend/server/server.mjs   # the built server (PORT, default
 The backend must allow the web's origin (`CORS_ORIGINS` there). The workspace's `.claude/launch.json` starts both for
 the agent's previews (`backend`, `web`).
 
-Size budget (`angular.json`): the first load is about 685 kB raw — 170 kB over the network — mostly Angular, Material,
+Size budget (`angular.json`): the first load is about 712 kB raw — 176 kB over the network — mostly Angular, Material,
 TanStack Query and ngx-translate; the warning stands at 750 kB so a real increase is noticed. The fonts of
 Chinese, Japanese and Korean (about 200 kB of CSS each) load only with their language.
 
 ## Verified on 2026-11-26
+
+**The ready features (`tajweed-docs/docs/plan/web-plan.md` §6), with the local backend:** `ng lint` 0 errors; `ng test`
+26 tests (with the playback rules — source order, retry rounds and waits, three-digit addresses, 114 → 1, the ayah from
+the timings — and the prayer rules: the method by time zone, the data file's values, Isha 90 min after Maghrib in Umm
+al-Qura, the next prayer, the Qibla bearing); `ng build` 712 kB. In the browser: home with the Hijri date
+(16 Jumada al-Akhirah 1448 on 2026-11-26) and the time; the index (114 surahs, 30 juz, go to page); the reader opening at
+2:255 with the page and juz marks; a marker tinting 103:1 and its number; a range 103:1 played and stopped at its end
+(7.2 s); surah 103 played with the ayah highlighted from the timings; the source broken mid-play → «جارٍ إعادة الاتصال…»,
+then resumed at 9.8 s on the same source; search «الصبر» (4 results, the words tinted) and `2:255`; the reciter picker
+(37 recitations, the riwayah and «listening only» shown); 133 radio stations; prayer times for Makkah in Umm al-Qura with
+the next prayer and the last third of the night; the Qibla; the Hijri month grid with the adjustment; Sources; 375 px
+wide with no horizontal scroll. Not seen with data: tafsirs and hadiths — the local database has not synced them yet
+(the Quran Foundation's credentials; HadeethEnc's daily sync).
+
+**The scaffold:**
 
 - `ng lint` 0 errors; `ng test` 14 tests (the 22 languages and their directions, `Accept-Language`, the cookie, the same
   keys in all 22 text files, the 28 directions named, the language search by own / Arabic / English name and code);

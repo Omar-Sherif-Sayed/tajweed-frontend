@@ -24,7 +24,165 @@
     "quran": "Al-Quran",
     "recitation": "Bacaan",
     "prayerTimes": "Waktu solat",
-    "building": "Bahagian-bahagian aplikasi sedang dibina; yang pertama akan dipaparkan di sini tidak lama lagi."
+    "continue": "Teruskan membaca",
+    "resume": "Sambung",
+    "hijriDate": "Tarikh Hijrah",
+    "localTime": "Waktu di tempat anda"
+  },
+  "nav": {
+    "quran": "Al-Quran",
+    "search": "Carian al-Quran",
+    "recitation": "Bacaan",
+    "radio": "Radio",
+    "hadith": "Hadis",
+    "prayer": "Waktu solat",
+    "qibla": "Kiblat",
+    "hijri": "Kalendar Hijrah",
+    "sources": "Sumber",
+    "tafsir": "Tafsir",
+    "home": "Laman utama",
+    "about": "Perihal"
+  },
+  "quran": {
+    "index": "Indeks",
+    "indexSub": "114 surah · 30 juzuk · 604 halaman",
+    "surahs": "Surah",
+    "juzs": "Juzuk",
+    "makki": "Makkiyyah",
+    "madani": "Madaniyyah",
+    "indexLine": "{{type}} · {{n}} ayat",
+    "page": "Halaman {{n}}",
+    "juz": "Juzuk {{n}}",
+    "hizb": "Hizib {{n}}",
+    "juzStarts": "Bermula: {{name}} {{s}}:{{a}}",
+    "position": "{{name}} · ayat {{n}} daripada {{k}}",
+    "goToPage": "Pergi ke halaman",
+    "go": "Pergi"
+  },
+  "search": {
+    "placeholder": "Cari perkataan, surah atau nombor ayat",
+    "results": "{{n}} hasil",
+    "kindWord": "Perkataan, dengan atau tanpa baris",
+    "kindSurah": "Nama atau nombor surah",
+    "kindAyah": "Nombor ayat, cth. 2:255",
+    "noResults": "Tiada hasil.",
+    "withTashkeel": "Anda menaip baris, jadi ia mesti sepadan.",
+    "more": "Lagi hasil",
+    "openAyah": "Buka ayat"
+  },
+  "actions": {
+    "title": "Pilihan ayat",
+    "addMarker": "Tambah penanda",
+    "listen": "Dengar",
+    "range": "Ayat {{a}} – {{b}}",
+    "repeat": "Ulang × {{n}}",
+    "tafsirs": "Tafsir",
+    "allTafsirs": "Semua tafsir ayat ini",
+    "copy": "Salin ayat",
+    "copied": "Disalin",
+    "to": "Hingga ayat",
+    "removeMarker": "Buang penanda"
+  },
+  "markers": {
+    "title": "Penanda ayat",
+    "review": "Ulang kaji",
+    "memorise": "Hafazan",
+    "reflect": "Tadabbur",
+    "local": "Disimpan pada peranti anda sahaja",
+    "tintNote": "Warna meliputi ayat dan nombornya."
+  },
+  "common": {
+    "report": "Laporkan kesilapan",
+    "play": "Main",
+    "device": "Disimpan pada peranti anda sahaja",
+    "online": "Perlu sambungan internet",
+    "close": "Tutup",
+    "loading": "Memuatkan…",
+    "retry": "Cuba lagi",
+    "search": "Cari"
+  },
+  "player": {
+    "choose": "Pilih qari",
+    "MURATTAL": "Murattal",
+    "MUJAWWAD": "Mujawwad",
+    "MUALLIM": "Muallim (pengajaran)",
+    "surahs": "{{n}} surah",
+    "perAyah": "setiap ayat",
+    "now": "Sedang dimainkan",
+    "modeSurah": "Satu surah",
+    "modeRange": "Julat ayat",
+    "modeEndless": "Hingga akhir, kemudian dari al-Fatihah semula",
+    "reconnecting": "Menyambung semula…",
+    "reconnectNote": "Sambungan terputus: sumber yang sama dicuba semula, kemudian sumber seterusnya, tanpa henti — anda tidak perlu berbuat apa-apa.",
+    "reciter": "Qari",
+    "resume": "Sambung",
+    "surah": "Surah",
+    "pause": "Jeda",
+    "stop": "Henti",
+    "listeningOnly": "Untuk didengar sahaja — teks yang dipaparkan riwayat Hafs daripada Asim",
+    "wholeSurahs": "Bacaan ini hanya memainkan surah penuh.",
+    "streamingOnly": "Strim sahaja: muat turun menunggu kebenaran sumber.",
+    "from": "Dari ayat"
+  },
+  "radio": {
+    "live": "Langsung",
+    "note": "Hanya siaran yang diterbitkan oleh stesen itu sendiri."
+  },
+  "hadith": {
+    "text": "Hadis",
+    "explanation": "Syarah",
+    "words": "Makna kalimah",
+    "categories": "Kategori",
+    "grade": "Darjat",
+    "reference": "Rujukan",
+    "benefits": "Faedah hadis",
+    "arabicOnly": "Tiada terjemahan diterbitkan dalam bahasa ini: dipaparkan dalam bahasa Arab.",
+    "notLoaded": "Hadis belum dimuatkan di pelayan."
+  },
+  "sources": {
+    "sub": "Semua yang digunakan aplikasi, dan dari mana asalnya",
+    "quranFont": "Fon Al-Quran",
+    "uiFonts": "Fon antara muka",
+    "content": "Kandungan",
+    "web": "Fon dan perisian laman"
+  },
+  "prayer": {
+    "fajr": "Subuh",
+    "sunrise": "Syuruk",
+    "dhuhr": "Zohor",
+    "asr": "Asar",
+    "maghrib": "Maghrib",
+    "isha": "Isyak",
+    "next": "Solat seterusnya",
+    "method": "Kaedah pengiraan waktu solat",
+    "asrTime": "Waktu asar",
+    "calcNote": "Waktu dikira pada peranti anda berdasarkan lokasi anda; lokasi anda tidak pernah dihantar ke pelayan. Kaedah mengikut negara anda secara automatik, dan anda boleh menukarnya.",
+    "lastThird": "Sepertiga malam terakhir",
+    "lastThirdStarts": "Sepertiga terakhir bermula pada",
+    "lastThirdFrom": "Dari maghrib ({{a}}) hingga subuh ({{b}})",
+    "useLocation": "Guna lokasi saya",
+    "noLocation": "Lokasi tidak tersedia. Benarkan dalam pelayar, atau isi di bawah.",
+    "latitude": "Latitud",
+    "longitude": "Longitud",
+    "methodDefault": "Kaedah rasmi negara anda belum dibaca: kaedah Liga Muslim Sedunia digunakan.",
+    "methodMWL": "Liga Muslim Sedunia",
+    "methodUmmAlQura": "Umm al-Qura (Arab Saudi)",
+    "methodEgypt": "Pihak Berkuasa Ukur Am Mesir",
+    "methodTurkey": "Diyanet (Turkiye)",
+    "methodMalaysia": "JAKIM (Malaysia)",
+    "methodSingapore": "MUIS (Singapura)",
+    "asrStandard": "Syafi‘i, Maliki dan Hanbali",
+    "asrHanafi": "Hanafi",
+    "in": "dalam {{h}} j {{m}} min"
+  },
+  "qibla": {
+    "degrees": "{{d}}° dari utara",
+    "web": "Komputer tiada kompas: arah dipaparkan dalam darjah.",
+    "calc": "Dikira pada peranti anda, dari lokasi anda ke Kaabah."
+  },
+  "hijri": {
+    "adjust": "Pelarasan: {{n}}",
+    "note": "Kalendar Ummul Qura. Laraskan sehari dua supaya sepadan dengan pengumuman negara anda."
   },
   "directions": {
     "suhuf": "Lembaran pertama",
@@ -56,10 +214,6 @@
     "nur": "Cahaya",
     "mountains": "Gunung — untuk penglihatan lemah dan buta warna"
   },
-  "nav": {
-    "home": "Laman utama",
-    "about": "Perihal"
-  },
   "about": {
     "title": "Perihal",
     "developer": "Pembangun",
@@ -70,7 +224,13 @@
   "notFound": {
     "title": "Halaman ini tiada."
   },
-  "common": {
-    "close": "Tutup"
+  "reader": {
+    "previous": "Surah sebelumnya",
+    "next": "Surah seterusnya",
+    "smaller": "Teks lebih kecil",
+    "larger": "Teks lebih besar"
+  },
+  "tafsir": {
+    "none": "Tafsir ayat ini belum tersedia."
   }
 }

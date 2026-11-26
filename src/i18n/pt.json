@@ -24,7 +24,165 @@
     "quran": "Alcorão",
     "recitation": "Recitação",
     "prayerTimes": "Horários de oração",
-    "building": "As secções da aplicação estão em construção; as primeiras aparecerão aqui em breve."
+    "continue": "Continuar lendo",
+    "resume": "Retomar",
+    "hijriDate": "Data da Hégira",
+    "localTime": "A hora onde está"
+  },
+  "nav": {
+    "quran": "Alcorão",
+    "search": "Pesquisa no Alcorão",
+    "recitation": "Recitação",
+    "radio": "Rádio",
+    "hadith": "Hadices",
+    "prayer": "Horários de oração",
+    "qibla": "Qibla",
+    "hijri": "Calendário da Hégira",
+    "sources": "Fontes",
+    "tafsir": "Tafsir",
+    "home": "Início",
+    "about": "Sobre"
+  },
+  "quran": {
+    "index": "Índice",
+    "indexSub": "114 suratas · 30 juz · 604 páginas",
+    "surahs": "Suratas",
+    "juzs": "Juz",
+    "makki": "Mecana",
+    "madani": "Medinense",
+    "indexLine": "{{type}} · {{n}} versículos",
+    "page": "Página {{n}}",
+    "juz": "Juz {{n}}",
+    "hizb": "Hizb {{n}}",
+    "juzStarts": "Início: {{name}} {{s}}:{{a}}",
+    "position": "{{name}} · versículo {{n}} de {{k}}",
+    "goToPage": "Ir para a página",
+    "go": "Ir"
+  },
+  "search": {
+    "placeholder": "Pesquise uma palavra, uma surata ou um número de versículo",
+    "results": "{{n}} resultados",
+    "kindWord": "Uma palavra, com ou sem vogais",
+    "kindSurah": "Nome ou número da sura",
+    "kindAyah": "Número do versículo, ex. 2:255",
+    "noResults": "Nada encontrado.",
+    "withTashkeel": "Você digitou sinais vocálicos (tashkil), então tinham de coincidir.",
+    "more": "Mais resultados",
+    "openAyah": "Abrir o versículo"
+  },
+  "actions": {
+    "title": "Opções do versículo",
+    "addMarker": "Adicionar marcador",
+    "listen": "Ouvir",
+    "range": "Versículos {{a}} – {{b}}",
+    "repeat": "Repetir × {{n}}",
+    "tafsirs": "Tafsires",
+    "allTafsirs": "Todos os tafsires deste versículo",
+    "copy": "Copiar o versículo",
+    "copied": "Copiado",
+    "to": "Até o versículo",
+    "removeMarker": "Remover o marcador"
+  },
+  "markers": {
+    "title": "Marcadores de versículos",
+    "review": "Rever",
+    "memorise": "Memorizar",
+    "reflect": "Refletir",
+    "local": "Guardados só no seu dispositivo",
+    "tintNote": "A cor cobre o versículo e o seu número."
+  },
+  "common": {
+    "report": "Comunicar um erro",
+    "play": "Reproduzir",
+    "device": "Guardados só no seu dispositivo",
+    "online": "Requer ligação à internet",
+    "close": "Fechar",
+    "loading": "Carregando…",
+    "retry": "Tentar novamente",
+    "search": "Pesquisar"
+  },
+  "player": {
+    "choose": "Escolher um recitador",
+    "MURATTAL": "Murattal",
+    "MUJAWWAD": "Mujawwad",
+    "MUALLIM": "Muallim (de ensino)",
+    "surahs": "{{n}} suras",
+    "perAyah": "por versículo",
+    "now": "A tocar agora",
+    "modeSurah": "Uma sura",
+    "modeRange": "Um trecho",
+    "modeEndless": "Até ao fim, depois de novo desde Al-Fátiha",
+    "reconnecting": "A religar…",
+    "reconnectNote": "A ligação caiu: tenta-se de novo a mesma fonte, depois a seguinte, sem fim — não precisa de fazer nada.",
+    "reciter": "Recitador",
+    "resume": "Retomar",
+    "surah": "Surata",
+    "pause": "Pausar",
+    "stop": "Parar",
+    "listeningOnly": "Apenas para ouvir — o texto mostrado é a riwaya de Hafs de Asim",
+    "wholeSurahs": "Esta recitação toca apenas suratas inteiras.",
+    "streamingOnly": "Apenas online: o download aguarda a permissão da fonte.",
+    "from": "Do versículo"
+  },
+  "radio": {
+    "live": "Em direto",
+    "note": "Só emissões que a própria estação publica."
+  },
+  "hadith": {
+    "text": "O hadith",
+    "explanation": "Explicação",
+    "words": "Significado das palavras",
+    "categories": "Categorias",
+    "grade": "Grau",
+    "reference": "Referência",
+    "benefits": "Benefícios do hadith",
+    "arabicOnly": "Não há tradução publicada neste idioma: exibido em árabe.",
+    "notLoaded": "Os hadiths ainda não foram carregados no servidor."
+  },
+  "sources": {
+    "sub": "Tudo o que o aplicativo usa, e de onde vem",
+    "quranFont": "Fonte do Alcorão",
+    "uiFonts": "Fontes da interface",
+    "content": "Conteúdo",
+    "web": "Fontes e software do site"
+  },
+  "prayer": {
+    "fajr": "Fajr",
+    "sunrise": "Nascer do sol",
+    "dhuhr": "Dhuhr",
+    "asr": "Asr",
+    "maghrib": "Maghrib",
+    "isha": "Isha",
+    "next": "Próxima oração",
+    "method": "Método de cálculo dos horários",
+    "asrTime": "Hora do asr",
+    "calcNote": "Os horários são calculados no seu aparelho a partir da sua localização; a sua localização nunca é enviada a um servidor. O método segue o seu país automaticamente, e pode alterá-lo.",
+    "lastThird": "O último terço da noite",
+    "lastThirdStarts": "O último terço começa às",
+    "lastThirdFrom": "Do magrib ({{a}}) ao fajr ({{b}})",
+    "useLocation": "Usar minha localização",
+    "noLocation": "A localização não está disponível. Permita no navegador ou digite abaixo.",
+    "latitude": "Latitude",
+    "longitude": "Longitude",
+    "methodDefault": "Ainda não foi lido um método oficial para o seu país: usa-se o da Liga Muçulmana Mundial.",
+    "methodMWL": "Liga Muçulmana Mundial",
+    "methodUmmAlQura": "Umm al-Qura (Arábia Saudita)",
+    "methodEgypt": "Autoridade Geral Egípcia de Topografia",
+    "methodTurkey": "Diyanet (Turquia)",
+    "methodMalaysia": "JAKIM (Malásia)",
+    "methodSingapore": "MUIS (Singapura)",
+    "asrStandard": "Chafiita, malikita e hanbalita",
+    "asrHanafi": "Hanafita",
+    "in": "em {{h}} h {{m}} min"
+  },
+  "qibla": {
+    "degrees": "{{d}}° a partir do norte",
+    "web": "No computador não há bússola: a direção é mostrada em graus.",
+    "calc": "Calculado no seu dispositivo, da sua localização até à Caaba."
+  },
+  "hijri": {
+    "adjust": "Ajuste: {{n}}",
+    "note": "Calendário Umm al-Qura. Ajuste-o um ou dois dias para coincidir com o anúncio do seu país."
   },
   "directions": {
     "suhuf": "As primeiras folhas",
@@ -56,10 +214,6 @@
     "nur": "A luz",
     "mountains": "Montanhas — para baixa visão e daltonismo"
   },
-  "nav": {
-    "home": "Início",
-    "about": "Sobre"
-  },
   "about": {
     "title": "Sobre",
     "developer": "Programador",
@@ -70,7 +224,13 @@
   "notFound": {
     "title": "Esta página não existe."
   },
-  "common": {
-    "close": "Fechar"
+  "reader": {
+    "previous": "Surata anterior",
+    "next": "Próxima surata",
+    "smaller": "Texto menor",
+    "larger": "Texto maior"
+  },
+  "tafsir": {
+    "none": "Ainda não há tafsir para este versículo."
   }
 }

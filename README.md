@@ -4,8 +4,12 @@ Part of **Tajweed - The Noble Quran and Its Sciences** (تجويد - القرآ�
 Quran, its recitation and its sciences — web, Android and iPhone, in 22 languages. No advertisements, no registration,
 no login, no tracking.
 
-> **State (2026-11-26): scaffolded.** The first launch (language, colours, an example of Al-Fatihah), the frame of
-> the home page, About, in the 22 languages. The reader and the other features come next.
+> **State (2026-11-26):** in the 22 languages — the first launch; home with the Hijri date and the time; the Quran:
+> the index, the reader by surah, ayah markers, the actions on an ayah or a range, its tafsirs; Quran search;
+> recitation with the reciter picker and uninterrupted playback (one surah, a range with repeat, or to the end and
+> again from Al-Fatihah); Quran radio; hadith (HadeethEnc); prayer times, the last third of the night, the Qibla and the
+> Hijri calendar, calculated on your device; Sources; About. Next: the mushaf page as printed (it waits for the line
+> data and the page fonts' permission), and the sections that wait for their sources' permissions.
 
 ## What it is built with
 

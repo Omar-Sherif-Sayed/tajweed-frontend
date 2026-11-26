@@ -24,7 +24,165 @@
     "quran": "Quran",
     "recitation": "Recitation",
     "prayerTimes": "Prayer times",
-    "building": "The application's sections are being built; the first ones will appear here soon."
+    "continue": "Continue reading",
+    "resume": "Resume",
+    "hijriDate": "Hijri date",
+    "localTime": "The time where you are"
+  },
+  "nav": {
+    "quran": "Quran",
+    "search": "Quran search",
+    "recitation": "Recitation",
+    "radio": "Radio",
+    "hadith": "Hadith",
+    "prayer": "Prayer times",
+    "qibla": "Qibla",
+    "hijri": "Hijri calendar",
+    "sources": "Sources",
+    "tafsir": "Tafsir",
+    "home": "Home",
+    "about": "About"
+  },
+  "quran": {
+    "index": "Index",
+    "indexSub": "114 surahs · 30 juz · 604 pages",
+    "surahs": "Surahs",
+    "juzs": "Juz",
+    "makki": "Makki",
+    "madani": "Madani",
+    "indexLine": "{{type}} · {{n}} ayahs",
+    "page": "Page {{n}}",
+    "juz": "Juz {{n}}",
+    "hizb": "Hizb {{n}}",
+    "juzStarts": "Starts: {{name}} {{s}}:{{a}}",
+    "position": "{{name}} · Ayah {{n}} of {{k}}",
+    "goToPage": "Go to page",
+    "go": "Go"
+  },
+  "search": {
+    "placeholder": "Search a word, a surah or an ayah number",
+    "results": "{{n}} results",
+    "kindWord": "A word, with or without tashkeel",
+    "kindSurah": "A surah's name or number",
+    "kindAyah": "An ayah's number, e.g. 2:255",
+    "noResults": "Nothing found.",
+    "withTashkeel": "You typed tashkeel, so it had to match.",
+    "more": "More results",
+    "openAyah": "Open the ayah"
+  },
+  "actions": {
+    "title": "Ayah actions",
+    "addMarker": "Add a marker",
+    "listen": "Listen",
+    "range": "Ayahs {{a}} – {{b}}",
+    "repeat": "Repeat × {{n}}",
+    "tafsirs": "Tafsirs",
+    "allTafsirs": "All the tafsirs of this ayah",
+    "copy": "Copy the ayah",
+    "copied": "Copied",
+    "to": "To ayah",
+    "removeMarker": "Remove the marker"
+  },
+  "markers": {
+    "title": "Ayah markers",
+    "review": "Review",
+    "memorise": "Memorise",
+    "reflect": "Reflect",
+    "local": "Saved on your device only",
+    "tintNote": "The colour covers the ayah and its number."
+  },
+  "common": {
+    "report": "Report a mistake",
+    "play": "Play",
+    "device": "Saved on your device only",
+    "online": "Needs an internet connection",
+    "close": "Close",
+    "loading": "Loading…",
+    "retry": "Try again",
+    "search": "Search"
+  },
+  "player": {
+    "choose": "Choose a reciter",
+    "MURATTAL": "Murattal",
+    "MUJAWWAD": "Mujawwad",
+    "MUALLIM": "Muallim",
+    "surahs": "{{n}} surahs",
+    "perAyah": "per ayah",
+    "now": "Now playing",
+    "modeSurah": "One surah",
+    "modeRange": "A range",
+    "modeEndless": "To the end, then from Al-Fatihah again",
+    "reconnecting": "Reconnecting…",
+    "reconnectNote": "The connection dropped: the same source is tried again, then the next one, without end — nothing for you to do.",
+    "reciter": "Reciter",
+    "resume": "Resume",
+    "surah": "Surah",
+    "pause": "Pause",
+    "stop": "Stop",
+    "listeningOnly": "Listening only — the text shown is in the riwayah of Hafs from Asim",
+    "wholeSurahs": "This recitation plays whole surahs only.",
+    "streamingOnly": "Streaming only: downloading waits for the source’s permission.",
+    "from": "From ayah"
+  },
+  "radio": {
+    "live": "Live",
+    "note": "Only streams that the broadcaster itself publishes."
+  },
+  "hadith": {
+    "text": "The hadith",
+    "explanation": "Explanation",
+    "words": "Word meanings",
+    "categories": "Categories",
+    "grade": "Grade",
+    "reference": "Reference",
+    "benefits": "Benefits of the hadith",
+    "arabicOnly": "No published translation in this language: shown in Arabic.",
+    "notLoaded": "The hadiths have not been loaded on the server yet."
+  },
+  "sources": {
+    "sub": "Everything the app uses, and where it comes from",
+    "quranFont": "Quran font",
+    "uiFonts": "Interface fonts",
+    "content": "Content",
+    "web": "The website’s fonts and software"
+  },
+  "prayer": {
+    "fajr": "Fajr",
+    "sunrise": "Sunrise",
+    "dhuhr": "Dhuhr",
+    "asr": "Asr",
+    "maghrib": "Maghrib",
+    "isha": "Isha",
+    "next": "Next prayer",
+    "method": "Prayer-time method",
+    "asrTime": "Asr time",
+    "calcNote": "Times are calculated on your device from your location; your location is never sent to a server. The method follows your country automatically, and you can change it.",
+    "lastThird": "The last third of the night",
+    "lastThirdStarts": "The last third begins at",
+    "lastThirdFrom": "From Maghrib ({{a}}) to Fajr ({{b}})",
+    "useLocation": "Use my location",
+    "noLocation": "The location is not available. Allow it in the browser, or enter it below.",
+    "latitude": "Latitude",
+    "longitude": "Longitude",
+    "methodDefault": "No official method has been read for your country yet: the Muslim World League’s is used.",
+    "methodMWL": "Muslim World League",
+    "methodUmmAlQura": "Umm al-Qura (Saudi Arabia)",
+    "methodEgypt": "Egyptian General Authority of Survey",
+    "methodTurkey": "Diyanet (Türkiye)",
+    "methodMalaysia": "JAKIM (Malaysia)",
+    "methodSingapore": "MUIS (Singapore)",
+    "asrStandard": "Shafi‘i, Maliki and Hanbali",
+    "asrHanafi": "Hanafi",
+    "in": "in {{h}} h {{m}} min"
+  },
+  "qibla": {
+    "degrees": "{{d}}° from north",
+    "web": "On a computer there is no compass: the direction is shown in degrees.",
+    "calc": "Calculated on your device, from your location to the Kaaba."
+  },
+  "hijri": {
+    "adjust": "Adjustment: {{n}}",
+    "note": "Umm al-Qura calendar. Adjust it by a day or two to match your country's announcement."
   },
   "directions": {
     "suhuf": "The first sheets",
@@ -56,10 +214,6 @@
     "nur": "Light",
     "mountains": "Mountains — for low vision and colour blindness"
   },
-  "nav": {
-    "home": "Home",
-    "about": "About"
-  },
   "about": {
     "title": "About",
     "developer": "Developer",
@@ -70,7 +224,13 @@
   "notFound": {
     "title": "This page does not exist."
   },
-  "common": {
-    "close": "Close"
+  "reader": {
+    "previous": "Previous surah",
+    "next": "Next surah",
+    "smaller": "Smaller text",
+    "larger": "Larger text"
+  },
+  "tafsir": {
+    "none": "No tafsir is available for this ayah yet."
   }
 }

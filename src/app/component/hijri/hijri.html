@@ -1,0 +1,45 @@
+<h1 class="font-heading text-2xl font-bold text-ink">{{ 'nav.hijri' | translate }}</h1>
+
+@if (now()) {
+  <section class="mt-4 rounded-2xl bg-primary p-4 text-onprimary">
+    <p class="text-2xl font-bold">{{ todayText() }}</p>
+    <p class="text-sm opacity-90">{{ time() }}</p>
+  </section>
+
+  <h2 class="mt-5 font-heading text-lg font-bold text-ink">{{ monthTitle() }}</h2>
+  <div class="mt-2 grid grid-cols-7 gap-1 text-center text-sm">
+    @for (w of weekdays(); track $index) {
+      <div class="py-1 text-xs font-bold text-muted">{{ w }}</div>
+    }
+    @for (d of grid(); track $index) {
+      @if (d) {
+        <div class="rounded-lg border px-1 py-1.5" [class.border-dot]="d.today" [class.bg-dotsoft]="d.today" [class.border-border]="!d.today">
+          <div class="font-bold text-ink">{{ num(d.hijri) }}</div>
+          <div class="text-[0.65rem] text-muted">{{ gregorian(d.date) }}</div>
+        </div>
+      } @else {
+        <div></div>
+      }
+    }
+  </div>
+
+  <section class="mt-4 flex flex-wrap items-center gap-2 text-sm">
+    <span class="font-bold">{{ 'hijri.adjust' | translate: { n: signed(hijri.adjustment()) } }}</span>
+    @for (a of adjustments; track a) {
+      <button
+        type="button"
+        class="min-w-10 rounded-full border px-3 py-1"
+        [class.bg-primary]="hijri.adjustment() === a"
+        [class.text-onprimary]="hijri.adjustment() === a"
+        [class.border-border]="hijri.adjustment() !== a"
+        [attr.aria-pressed]="hijri.adjustment() === a"
+        (click)="hijri.setAdjustment(a)"
+      >
+        {{ signed(a) }}
+      </button>
+    }
+  </section>
+  <p class="mt-2 text-xs text-muted">{{ 'hijri.note' | translate }}</p>
+} @else {
+  <p class="mt-4 text-sm text-muted">{{ 'common.loading' | translate }}</p>
+}

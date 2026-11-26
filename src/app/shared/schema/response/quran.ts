@@ -53,3 +53,70 @@ export interface DtoSurahAyahs {
   /** The text's source — shown on every Quran screen (Tanzil's licence). */
   readonly textSource: DtoContentSource;
 }
+
+/** A juz (`GET /v1/juzs` — `DtoJuz`). */
+export interface DtoJuz {
+  /** Its number, 1 – 30. */
+  readonly number: number;
+  /** The surah it starts in. */
+  readonly startSurahNumber: number;
+  /** The ayah it starts at. */
+  readonly startAyahNumber: number;
+  /** The page it starts on. */
+  readonly startPage: number;
+}
+
+/** A page of the Madinah mushaf (`GET /v1/pages/{p}` — `DtoPage`): the ayahs that start on it. */
+export interface DtoPage {
+  /** Its number, 1 – 604. */
+  readonly page: number;
+  /** The ayahs that start on it. */
+  readonly ayahs: readonly DtoAyah[];
+  /** The text's source. */
+  readonly textSource: DtoContentSource;
+}
+
+/** One ayah found by the search (`DtoSearchHit`). */
+export interface DtoSearchHit {
+  /** The ayah. */
+  readonly ayah: DtoAyah;
+  /**
+   * The indexes (from 0) of the space-separated words of `ayah.text` that matched; **empty = the whole ayah** (the two
+   * spellings split words differently in some ayahs — client guide §4).
+   */
+  readonly matchedWords: readonly number[];
+}
+
+/** How many ayahs of a surah matched (`DtoSurahCount`). */
+export interface DtoSurahCount {
+  /** The surah. */
+  readonly surahNumber: number;
+  /** How many of its ayahs matched. */
+  readonly count: number;
+}
+
+/** The answer of the Quran search (`GET /v1/quran-search` — `DtoQuranSearch`, F16). */
+export interface DtoQuranSearch {
+  /** The query as received. */
+  readonly query: string;
+  /** Whether the query had tashkeel (then the marks had to agree). */
+  readonly withTashkeel: boolean;
+  /** The ayah a reference names (`2:255`), if any. */
+  readonly ayah: DtoAyah | null;
+  /** The surahs a name or number names. */
+  readonly surahs: readonly DtoSurah[];
+  /** How many ayahs contain the words. */
+  readonly total: number;
+  /** The page of hits, from 0. */
+  readonly page: number;
+  /** The page size. */
+  readonly size: number;
+  /** The ayahs of this page, in mushaf order. */
+  readonly hits: readonly DtoSearchHit[];
+  /** The matches counted by surah. */
+  readonly countsBySurah: readonly DtoSurahCount[];
+  /** The displayed text's source. */
+  readonly textSource: DtoContentSource;
+  /** The search text's sources. */
+  readonly searchSources: readonly DtoContentSource[];
+}

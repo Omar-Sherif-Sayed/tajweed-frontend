@@ -24,7 +24,165 @@
     "quran": "Koran",
     "recitation": "Rezitation",
     "prayerTimes": "Gebetszeiten",
-    "building": "Die Bereiche der App werden gerade gebaut; die ersten erscheinen bald hier."
+    "continue": "Weiterlesen",
+    "resume": "Fortsetzen",
+    "hijriDate": "Hidschri-Datum",
+    "localTime": "Die Uhrzeit, wo du bist"
+  },
+  "nav": {
+    "quran": "Koran",
+    "search": "Koransuche",
+    "recitation": "Rezitation",
+    "radio": "Radio",
+    "hadith": "Hadithe",
+    "prayer": "Gebetszeiten",
+    "qibla": "Qibla",
+    "hijri": "Hidschri-Kalender",
+    "sources": "Quellen",
+    "tafsir": "Tafsir",
+    "home": "Startseite",
+    "about": "Über die App"
+  },
+  "quran": {
+    "index": "Inhaltsverzeichnis",
+    "indexSub": "114 Suren · 30 Juz · 604 Seiten",
+    "surahs": "Suren",
+    "juzs": "Juz",
+    "makki": "Mekkanisch",
+    "madani": "Medinensisch",
+    "indexLine": "{{type}} · {{n}} Verse",
+    "page": "Seite {{n}}",
+    "juz": "Juz {{n}}",
+    "hizb": "Hizb {{n}}",
+    "juzStarts": "Beginn: {{name}} {{s}}:{{a}}",
+    "position": "{{name}} · Vers {{n}} von {{k}}",
+    "goToPage": "Zur Seite",
+    "go": "Los"
+  },
+  "search": {
+    "placeholder": "Suche ein Wort, eine Sure oder eine Versnummer",
+    "results": "{{n}} Treffer",
+    "kindWord": "Ein Wort, mit oder ohne Vokalzeichen",
+    "kindSurah": "Name oder Nummer der Sure",
+    "kindAyah": "Versnummer, z. B. 2:255",
+    "noResults": "Nichts gefunden.",
+    "withTashkeel": "Sie haben Vokalzeichen (Taschkil) eingegeben; sie mussten übereinstimmen.",
+    "more": "Weitere Ergebnisse",
+    "openAyah": "Den Vers öffnen"
+  },
+  "actions": {
+    "title": "Aktionen zum Vers",
+    "addMarker": "Markierung hinzufügen",
+    "listen": "Anhören",
+    "range": "Verse {{a}} – {{b}}",
+    "repeat": "Wiederholen × {{n}}",
+    "tafsirs": "Tafsire",
+    "allTafsirs": "Alle Tafsire dieses Verses",
+    "copy": "Vers kopieren",
+    "copied": "Kopiert",
+    "to": "Bis Vers",
+    "removeMarker": "Markierung entfernen"
+  },
+  "markers": {
+    "title": "Vers-Markierungen",
+    "review": "Wiederholen",
+    "memorise": "Auswendig lernen",
+    "reflect": "Nachdenken",
+    "local": "Nur auf deinem Gerät gespeichert",
+    "tintNote": "Die Farbe umfasst den Vers und seine Nummer."
+  },
+  "common": {
+    "report": "Fehler melden",
+    "play": "Abspielen",
+    "device": "Nur auf deinem Gerät gespeichert",
+    "online": "Benötigt eine Internetverbindung",
+    "close": "Schließen",
+    "loading": "Wird geladen…",
+    "retry": "Erneut versuchen",
+    "search": "Suchen"
+  },
+  "player": {
+    "choose": "Rezitator wählen",
+    "MURATTAL": "Murattal",
+    "MUJAWWAD": "Mudschawwad",
+    "MUALLIM": "Muallim (Lehrform)",
+    "surahs": "{{n}} Suren",
+    "perAyah": "je Vers",
+    "now": "Läuft gerade",
+    "modeSurah": "Eine Sure",
+    "modeRange": "Ein Abschnitt",
+    "modeEndless": "Bis zum Ende, dann wieder ab al-Fatiha",
+    "reconnecting": "Verbindung wird wiederhergestellt…",
+    "reconnectNote": "Die Verbindung ist abgebrochen: dieselbe Quelle wird erneut versucht, dann die nächste, ohne Ende — Sie müssen nichts tun.",
+    "reciter": "Rezitator",
+    "resume": "Fortsetzen",
+    "surah": "Sure",
+    "pause": "Pause",
+    "stop": "Stopp",
+    "listeningOnly": "Nur zum Anhören – der angezeigte Text ist die Überlieferung Hafs nach Asim",
+    "wholeSurahs": "Diese Rezitation spielt nur ganze Suren.",
+    "streamingOnly": "Nur online: Herunterladen wartet auf die Erlaubnis der Quelle.",
+    "from": "Ab Vers"
+  },
+  "radio": {
+    "live": "Live",
+    "note": "Nur Streams, die der Sender selbst veröffentlicht."
+  },
+  "hadith": {
+    "text": "Der Hadith",
+    "explanation": "Erläuterung",
+    "words": "Wortbedeutungen",
+    "categories": "Kategorien",
+    "grade": "Einstufung",
+    "reference": "Quelle",
+    "benefits": "Lehren des Hadith",
+    "arabicOnly": "Keine veröffentlichte Übersetzung in dieser Sprache – auf Arabisch angezeigt.",
+    "notLoaded": "Die Hadithe sind auf dem Server noch nicht geladen."
+  },
+  "sources": {
+    "sub": "Alles, was die App verwendet, und woher es stammt",
+    "quranFont": "Koranschrift",
+    "uiFonts": "Schriften der Oberfläche",
+    "content": "Inhalte",
+    "web": "Schriften und Software der Website"
+  },
+  "prayer": {
+    "fajr": "Fadschr",
+    "sunrise": "Sonnenaufgang",
+    "dhuhr": "Dhuhr",
+    "asr": "Asr",
+    "maghrib": "Maghrib",
+    "isha": "Ischa",
+    "next": "Nächstes Gebet",
+    "method": "Berechnungsmethode der Gebetszeiten",
+    "asrTime": "Asr-Zeit",
+    "calcNote": "Die Zeiten werden auf deinem Gerät aus deinem Standort berechnet; dein Standort wird nie an einen Server gesendet. Die Methode richtet sich automatisch nach deinem Land, und du kannst sie ändern.",
+    "lastThird": "Das letzte Drittel der Nacht",
+    "lastThirdStarts": "Das letzte Drittel beginnt um",
+    "lastThirdFrom": "Von Maghrib ({{a}}) bis Fadschr ({{b}})",
+    "useLocation": "Meinen Standort verwenden",
+    "noLocation": "Der Standort ist nicht verfügbar. Erlauben Sie ihn im Browser oder geben Sie ihn unten ein.",
+    "latitude": "Breitengrad",
+    "longitude": "Längengrad",
+    "methodDefault": "Für Ihr Land wurde noch keine offizielle Methode gelesen – die der Islamischen Weltliga wird verwendet.",
+    "methodMWL": "Islamische Weltliga",
+    "methodUmmAlQura": "Umm al-Qura (Saudi-Arabien)",
+    "methodEgypt": "Ägyptische Vermessungsbehörde",
+    "methodTurkey": "Diyanet (Türkei)",
+    "methodMalaysia": "JAKIM (Malaysia)",
+    "methodSingapore": "MUIS (Singapur)",
+    "asrStandard": "Schafiiten, Malikiten und Hanbaliten",
+    "asrHanafi": "Hanafiten",
+    "in": "in {{h}} Std. {{m}} Min."
+  },
+  "qibla": {
+    "degrees": "{{d}}° von Norden",
+    "web": "Am Computer gibt es keinen Kompass: Die Richtung wird in Grad angezeigt.",
+    "calc": "Auf Ihrem Gerät berechnet, von Ihrem Standort zur Kaaba."
+  },
+  "hijri": {
+    "adjust": "Korrektur: {{n}}",
+    "note": "Umm-al-Qura-Kalender. Verschiebe ihn um ein bis zwei Tage, passend zur Bekanntgabe deines Landes."
   },
   "directions": {
     "suhuf": "Die ersten Blätter",
@@ -56,10 +214,6 @@
     "nur": "Licht",
     "mountains": "Berge – für Sehschwäche und Farbenblindheit"
   },
-  "nav": {
-    "home": "Startseite",
-    "about": "Über die App"
-  },
   "about": {
     "title": "Über die App",
     "developer": "Entwickler",
@@ -70,7 +224,13 @@
   "notFound": {
     "title": "Diese Seite gibt es nicht."
   },
-  "common": {
-    "close": "Schließen"
+  "reader": {
+    "previous": "Vorherige Sure",
+    "next": "Nächste Sure",
+    "smaller": "Kleinere Schrift",
+    "larger": "Größere Schrift"
+  },
+  "tafsir": {
+    "none": "Für diesen Vers ist noch kein Tafsir verfügbar."
   }
 }

@@ -24,7 +24,165 @@
     "quran": "Alƙur'ani",
     "recitation": "Karatu",
     "prayerTimes": "Lokutan sallah",
-    "building": "Ana gina sassan manhajar; na farko za su bayyana a nan nan ba da jimawa ba."
+    "continue": "Ci gaba da karatu",
+    "resume": "Ci gaba",
+    "hijriDate": "Kwanan watan Hijira",
+    "localTime": "Lokacin da kake"
+  },
+  "nav": {
+    "quran": "Alƙur'ani",
+    "search": "Bincike a cikin Alƙur'ani",
+    "recitation": "Karatu",
+    "radio": "Rediyo",
+    "hadith": "Hadisai",
+    "prayer": "Lokutan sallah",
+    "qibla": "Alƙibla",
+    "hijri": "Kalandar Hijira",
+    "sources": "Majiyoyi",
+    "tafsir": "Tafsiri",
+    "home": "Gida",
+    "about": "Game da manhajar"
+  },
+  "quran": {
+    "index": "Fihirisa",
+    "indexSub": "sura 114 · juz'i 30 · shafi 604",
+    "surahs": "Surori",
+    "juzs": "Juz'i",
+    "makki": "Makkiyya",
+    "madani": "Madaniyya",
+    "indexLine": "{{type}} · ayoyi {{n}}",
+    "page": "Shafi {{n}}",
+    "juz": "Juz'i {{n}}",
+    "hizb": "Hizbi {{n}}",
+    "juzStarts": "Farawa: {{name}} {{s}}:{{a}}",
+    "position": "{{name}} · aya {{n}} cikin {{k}}",
+    "goToPage": "Je zuwa shafi",
+    "go": "Je"
+  },
+  "search": {
+    "placeholder": "Nemi kalma, sura ko lambar aya",
+    "results": "Sakamako {{n}}",
+    "kindWord": "Kalma, da wasali ko babu",
+    "kindSurah": "Sunan sura ko lambarta",
+    "kindAyah": "Lambar aya, misali 2:255",
+    "noResults": "Ba a sami komai ba.",
+    "withTashkeel": "Kun rubuta wasali, don haka dole ne su dace.",
+    "more": "Ƙarin sakamako",
+    "openAyah": "Buɗe aya"
+  },
+  "actions": {
+    "title": "Zaɓuɓɓukan aya",
+    "addMarker": "Ƙara alama",
+    "listen": "Saurara",
+    "range": "Ayoyi {{a}} – {{b}}",
+    "repeat": "Maimaita × {{n}}",
+    "tafsirs": "Tafsiri",
+    "allTafsirs": "Duk tafsirai na wannan aya",
+    "copy": "Kwafi aya",
+    "copied": "An kwafa",
+    "to": "Zuwa aya",
+    "removeMarker": "Cire alama"
+  },
+  "markers": {
+    "title": "Alamomin aya",
+    "review": "Maimaitawa",
+    "memorise": "Haddacewa",
+    "reflect": "Tunani",
+    "local": "An adana a na'urarka kawai",
+    "tintNote": "Launin yana rufe aya da lambarta."
+  },
+  "common": {
+    "report": "Ba da rahoton kuskure",
+    "play": "Kunna",
+    "device": "An adana a na'urarka kawai",
+    "online": "Yana buƙatar intanet",
+    "close": "Rufe",
+    "loading": "Ana lodawa…",
+    "retry": "Sake gwadawa",
+    "search": "Nema"
+  },
+  "player": {
+    "choose": "Zaɓi makaranci",
+    "MURATTAL": "Murattal",
+    "MUJAWWAD": "Mujawwad",
+    "MUALLIM": "Muallim (na koyarwa)",
+    "surahs": "Surori {{n}}",
+    "perAyah": "kowace aya",
+    "now": "Ana kunnawa yanzu",
+    "modeSurah": "Sura ɗaya",
+    "modeRange": "Wani yanki",
+    "modeEndless": "Har ƙarshe, sannan daga Fatiha kuma",
+    "reconnecting": "Ana sake haɗawa…",
+    "reconnectNote": "Haɗin ya yanke: ana sake gwada majiyar, sannan ta gaba, ba tsayawa — ba sai ka yi komai ba.",
+    "reciter": "Mai karatu",
+    "resume": "Ci gaba",
+    "surah": "Sura",
+    "pause": "Dakata",
+    "stop": "Tsaya",
+    "listeningOnly": "Don saurare kawai — rubutun da ake nunawa riwayar Hafs daga Asim ne",
+    "wholeSurahs": "Wannan karatun yana kunna cikakkun surori kawai.",
+    "streamingOnly": "Ta intanet kawai: saukewa na jiran izinin tushe.",
+    "from": "Daga aya"
+  },
+  "radio": {
+    "live": "Kai tsaye",
+    "note": "Watsa shirye-shiryen da tashar ke wallafawa da kanta kaɗai."
+  },
+  "hadith": {
+    "text": "Hadisi",
+    "explanation": "Sharhi",
+    "words": "Ma'anonin kalmomi",
+    "categories": "Rukunai",
+    "grade": "Daraja",
+    "reference": "Madogara",
+    "benefits": "Fa’idojin hadisi",
+    "arabicOnly": "Babu fassarar da aka buga a wannan harshe: an nuna da Larabci.",
+    "notLoaded": "Ba a riga an loda hadisai a sabar ba."
+  },
+  "sources": {
+    "sub": "Duk abin da manhajar ke amfani da shi, da inda ya fito",
+    "quranFont": "Haruffan Alƙur'ani",
+    "uiFonts": "Haruffan manhaja",
+    "content": "Abubuwan ciki",
+    "web": "Haruffa da manhajojin shafin"
+  },
+  "prayer": {
+    "fajr": "Asuba",
+    "sunrise": "Fitowar rana",
+    "dhuhr": "Azahar",
+    "asr": "La'asar",
+    "maghrib": "Magariba",
+    "isha": "Isha",
+    "next": "Sallah ta gaba",
+    "method": "Hanyar lissafin lokutan sallah",
+    "asrTime": "Lokacin La'asar",
+    "calcNote": "Ana lissafa lokutan a na'urarka daga wurin da kake; ba a taɓa aika wurinka zuwa sabar ba. Hanyar tana bin ƙasarka kai tsaye, kuma za ka iya canza ta.",
+    "lastThird": "Sulusin ƙarshe na dare",
+    "lastThirdStarts": "Sulusin ƙarshe yana farawa da ƙarfe",
+    "lastThirdFrom": "Daga Magariba ({{a}}) zuwa Asuba ({{b}})",
+    "useLocation": "Yi amfani da wurina",
+    "noLocation": "Ba a samu wurin ba. Ba da izini a burauza, ko ku rubuta a ƙasa.",
+    "latitude": "Latitud",
+    "longitude": "Longitud",
+    "methodDefault": "Ba a karanta hanyar hukuma ta ƙasarku ba tukuna: ana amfani da ta Muslim World League.",
+    "methodMWL": "Muslim World League",
+    "methodUmmAlQura": "Umm al-Qura (Saudiyya)",
+    "methodEgypt": "Hukumar Safiyo ta Masar",
+    "methodTurkey": "Diyanet (Turkiyya)",
+    "methodMalaysia": "JAKIM (Malesiya)",
+    "methodSingapore": "MUIS (Singapore)",
+    "asrStandard": "Shafi’i, Maliki da Hanbali",
+    "asrHanafi": "Hanafi",
+    "in": "cikin awa {{h}} minti {{m}}"
+  },
+  "qibla": {
+    "degrees": "{{d}}° daga arewa",
+    "web": "Kwamfuta ba ta da kamfas: ana nuna hanya da digiri.",
+    "calc": "Ana lissafawa a na'urarka, daga wurinka zuwa Ka'aba."
+  },
+  "hijri": {
+    "adjust": "Gyara: {{n}}",
+    "note": "Kalandar Ummul Qura. Gyara ta da kwana ɗaya ko biyu don ta dace da sanarwar ƙasarka."
   },
   "directions": {
     "suhuf": "Takardun farko",
@@ -56,10 +214,6 @@
     "nur": "Haske",
     "mountains": "Duwatsu — don raunin gani da makantar launi"
   },
-  "nav": {
-    "home": "Gida",
-    "about": "Game da manhajar"
-  },
   "about": {
     "title": "Game da manhajar",
     "developer": "Mai haɓakawa",
@@ -70,7 +224,13 @@
   "notFound": {
     "title": "Wannan shafi ba ya nan."
   },
-  "common": {
-    "close": "Rufe"
+  "reader": {
+    "previous": "Surar da ta gabata",
+    "next": "Sura ta gaba",
+    "smaller": "Ƙaramin rubutu",
+    "larger": "Babban rubutu"
+  },
+  "tafsir": {
+    "none": "Babu tafsirin wannan aya tukuna."
   }
 }

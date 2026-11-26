@@ -1,0 +1,92 @@
+@if (data.isError()) {
+  <p class="rounded-xl bg-dotsoft p-3 text-sm" role="status">{{ 'about.unreachable' | translate }}</p>
+} @else if (data.isPending()) {
+  <p class="text-sm text-muted">{{ 'common.loading' | translate }}</p>
+}
+
+@if (data.data(); as d) {
+  <header class="flex flex-wrap items-center gap-3">
+    <div class="min-w-0 flex-1">
+      <h1 class="font-heading text-2xl font-bold text-ink">{{ nameOf(d.surah.number) }}</h1>
+      <p class="text-sm text-muted">
+        {{ 'quran.indexLine' | translate: { type: ((d.surah.revelationType === 'MECCAN' ? 'quran.makki' : 'quran.madani') | translate), n: num(d.surah.ayahCount) } }}
+        · {{ 'quran.page' | translate: { n: num(d.surah.startPage) } }}
+      </p>
+    </div>
+    <div class="flex items-center gap-1.5">
+      <button
+        type="button"
+        class="size-9 rounded-full border border-border text-sm"
+        [attr.aria-label]="'reader.smaller' | translate"
+        [disabled]="reading.textSize() === 0"
+        (click)="reading.changeTextSize(-1)"
+      >
+        −
+      </button>
+      <button
+        type="button"
+        class="size-9 rounded-full border border-border text-lg"
+        [attr.aria-label]="'reader.larger' | translate"
+        (click)="reading.changeTextSize(1)"
+      >
+        +
+      </button>
+      <button type="button" class="rounded-full bg-primary px-4 py-1.5 text-sm text-onprimary" (click)="listen()">
+        {{ 'actions.listen' | translate }}
+      </button>
+    </div>
+  </header>
+
+  <article class="mt-4 rounded-2xl border border-rule bg-page px-4 py-6 sm:px-8">
+    <h2 class="mb-2 text-center font-quran text-[1.9rem] text-ink" lang="ar" dir="rtl">{{ d.surah.nameAr }}</h2>
+    @if (basmala(); as b) {
+      <p class="mb-4 text-center font-quran text-ink" lang="ar" dir="rtl" [style.font-size.rem]="textSize()">{{ b }}</p>
+    }
+    <p class="text-justify font-quran leading-[2.4] text-ink" lang="ar" dir="rtl" [style.font-size.rem]="textSize()">
+      @for (r of ayahs(); track r.ayah.id) {
+        @if (r.juzMark) {
+          <span class="mx-1 rounded-full bg-secondsoft px-2 py-0.5 align-middle font-sans text-xs text-text">{{ 'quran.juz' | translate: { n: num(r.juzMark) } }}</span>
+        }
+        @if (r.pageMark) {
+          <span class="mx-1 rounded-full border border-rule px-2 py-0.5 align-middle font-sans text-xs text-muted">{{ 'quran.page' | translate: { n: num(r.pageMark) } }}</span>
+        }
+        <span
+          [id]="'ayah-' + r.ayah.number"
+          [attr.data-ayah]="r.ayah.number"
+          role="button"
+          tabindex="0"
+          class="cursor-pointer rounded-md transition-colors hover:bg-dotsoft focus-visible:outline-2 focus-visible:outline-dot"
+          [class.bg-secondsoft]="playingAyah() === r.ayah.number"
+          [style.background-color]="playingAyah() === r.ayah.number ? null : tint(r.ayah)"
+          (click)="selected.set(r.ayah)"
+          (keydown.enter)="selected.set(r.ayah)"
+          >{{ r.text }}<span class="ayah-number" [style.color]="numberColour(r.ayah)" [style.border-color]="numberColour(r.ayah)">{{ mushaf(r.ayah.number) }}</span></span
+        >{{ ' ' }}
+      }
+    </p>
+  </article>
+
+  <nav class="mt-4 flex items-center justify-between gap-2 text-sm">
+    @if (d.surah.number > 1) {
+      <a [routerLink]="['/', lang(), 'quran', d.surah.number - 1]" class="rounded-full border border-border px-3 py-1.5">
+        {{ 'reader.previous' | translate }} · {{ nameOf(d.surah.number - 1) }}
+      </a>
+    } @else {
+      <span></span>
+    }
+    @if (d.surah.number < 114) {
+      <a [routerLink]="['/', lang(), 'quran', d.surah.number + 1]" class="rounded-full border border-border px-3 py-1.5">
+        {{ 'reader.next' | translate }} · {{ nameOf(d.surah.number + 1) }}
+      </a>
+    }
+  </nav>
+
+  <p class="mt-4 text-xs text-muted">
+    <bdi dir="ltr"><a [href]="d.textSource.sourceUrl" rel="noopener" class="underline">{{ d.textSource.name }}</a> · {{ d.textSource.licence }}</bdi>
+    · <a [href]="report()" rel="noopener" class="underline">{{ 'common.report' | translate }}</a>
+  </p>
+
+  @if (selected(); as a) {
+    <tj-ayah-actions [surah]="d.surah" [ayah]="a" (closed)="selected.set(null)" />
+  }
+}

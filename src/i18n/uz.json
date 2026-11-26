@@ -24,7 +24,165 @@
     "quran": "Qur'on",
     "recitation": "Tilovat",
     "prayerTimes": "Namoz vaqtlari",
-    "building": "Ilova boʻlimlari tayyorlanmoqda; birinchilari tez orada shu yerda paydo boʻladi."
+    "continue": "Oʻqishni davom ettirish",
+    "resume": "Davom etish",
+    "hijriDate": "Hijriy sana",
+    "localTime": "Siz turgan joydagi vaqt"
+  },
+  "nav": {
+    "quran": "Qur'on",
+    "search": "Qurʼondan qidirish",
+    "recitation": "Tilovat",
+    "radio": "Radio",
+    "hadith": "Hadislar",
+    "prayer": "Namoz vaqtlari",
+    "qibla": "Qibla",
+    "hijri": "Hijriy taqvim",
+    "sources": "Manbalar",
+    "tafsir": "Tafsir",
+    "home": "Bosh sahifa",
+    "about": "Ilova haqida"
+  },
+  "quran": {
+    "index": "Mundarija",
+    "indexSub": "114 sura · 30 pora · 604 sahifa",
+    "surahs": "Suralar",
+    "juzs": "Poralar",
+    "makki": "Makkiy",
+    "madani": "Madaniy",
+    "indexLine": "{{type}} · {{n}} oyat",
+    "page": "{{n}}-sahifa",
+    "juz": "{{n}}-pora",
+    "hizb": "{{n}}-hizb",
+    "juzStarts": "Boshlanishi: {{name}} {{s}}:{{a}}",
+    "position": "{{name}} · {{k}} oyatdan {{n}}-oyat",
+    "goToPage": "Sahifaga o‘tish",
+    "go": "O‘tish"
+  },
+  "search": {
+    "placeholder": "Soʻz, sura yoki oyat raqamini qidiring",
+    "results": "{{n}} ta natija",
+    "kindWord": "Soʻz, harakatli yoki harakatsiz",
+    "kindSurah": "Suraning nomi yoki raqami",
+    "kindAyah": "Oyat raqami, masalan 2:255",
+    "noResults": "Hech narsa topilmadi.",
+    "withTashkeel": "Siz harakat yozdingiz, shuning uchun mos kelishi kerak edi.",
+    "more": "Ko‘proq natijalar",
+    "openAyah": "Oyatni ochish"
+  },
+  "actions": {
+    "title": "Oyat amallari",
+    "addMarker": "Belgi qoʻshish",
+    "listen": "Tinglash",
+    "range": "Oyatlar {{a}} – {{b}}",
+    "repeat": "Takror × {{n}}",
+    "tafsirs": "Tafsirlar",
+    "allTafsirs": "Bu oyatning barcha tafsirlari",
+    "copy": "Oyatdan nusxa olish",
+    "copied": "Nusxalandi",
+    "to": "Oyatgacha",
+    "removeMarker": "Belgini olib tashlash"
+  },
+  "markers": {
+    "title": "Oyat belgilari",
+    "review": "Takrorlash",
+    "memorise": "Yodlash",
+    "reflect": "Tadabbur",
+    "local": "Faqat qurilmangizda saqlanadi",
+    "tintNote": "Rang oyat va uning raqamini qoplaydi."
+  },
+  "common": {
+    "report": "Xato haqida xabar berish",
+    "play": "Ijro",
+    "device": "Faqat qurilmangizda saqlanadi",
+    "online": "Internet aloqasi kerak",
+    "close": "Yopish",
+    "loading": "Yuklanmoqda…",
+    "retry": "Qayta urinish",
+    "search": "Qidirish"
+  },
+  "player": {
+    "choose": "Qorini tanlang",
+    "MURATTAL": "Murattal",
+    "MUJAWWAD": "Mujavvad",
+    "MUALLIM": "Muallim (taʼlimiy)",
+    "surahs": "{{n}} sura",
+    "perAyah": "har oyat",
+    "now": "Hozir ijro etilmoqda",
+    "modeSurah": "Bitta sura",
+    "modeRange": "Oyatlar qismi",
+    "modeEndless": "Oxirigacha, soʻng yana Fotihadan",
+    "reconnecting": "Qayta ulanmoqda…",
+    "reconnectNote": "Aloqa uzildi: oʻsha manba qayta sinab koʻriladi, soʻng keyingisi, toʻxtovsiz — sizdan hech narsa talab qilinmaydi.",
+    "reciter": "Qori",
+    "resume": "Davom etish",
+    "surah": "Sura",
+    "pause": "To‘xtatib turish",
+    "stop": "To‘xtatish",
+    "listeningOnly": "Faqat tinglash uchun — ko‘rsatilgan matn Hafs an Osim rivoyatida",
+    "wholeSurahs": "Bu tilovat faqat to‘liq suralarni ijro etadi.",
+    "streamingOnly": "Faqat onlayn: yuklab olish manbaning ruxsatini kutmoqda.",
+    "from": "Oyatdan"
+  },
+  "radio": {
+    "live": "Jonli",
+    "note": "Faqat stansiyaning oʻzi eʼlon qilgan efirlar."
+  },
+  "hadith": {
+    "text": "Hadis",
+    "explanation": "Sharh",
+    "words": "Soʻz maʼnolari",
+    "categories": "Turkumlar",
+    "grade": "Daraja",
+    "reference": "Manba",
+    "benefits": "Hadis foydalari",
+    "arabicOnly": "Bu tilda nashr etilgan tarjima yo‘q: arabcha ko‘rsatilmoqda.",
+    "notLoaded": "Hadislar hali serverga yuklanmagan."
+  },
+  "sources": {
+    "sub": "Ilova foydalanadigan hamma narsa va uning qayerdan olingani",
+    "quranFont": "Qur'on shrifti",
+    "uiFonts": "Interfeys shriftlari",
+    "content": "Mazmun",
+    "web": "Saytning shriftlari va dasturlari"
+  },
+  "prayer": {
+    "fajr": "Bomdod",
+    "sunrise": "Quyosh chiqishi",
+    "dhuhr": "Peshin",
+    "asr": "Asr",
+    "maghrib": "Shom",
+    "isha": "Xufton",
+    "next": "Keyingi namoz",
+    "method": "Namoz vaqtlarini hisoblash usuli",
+    "asrTime": "Asr vaqti",
+    "calcNote": "Vaqtlar qurilmangizda joylashuvingiz asosida hisoblanadi; joylashuvingiz hech qachon serverga yuborilmaydi. Usul avtomatik ravishda mamlakatingizga qarab tanlanadi va uni oʻzgartirishingiz mumkin.",
+    "lastThird": "Tunning soʻnggi uchdan biri",
+    "lastThirdStarts": "Soʻnggi uchdan biri boshlanadi",
+    "lastThirdFrom": "Shomdan ({{a}}) bomdodgacha ({{b}})",
+    "useLocation": "Joylashuvimdan foydalanish",
+    "noLocation": "Joylashuv mavjud emas. Brauzerda ruxsat bering yoki pastda kiriting.",
+    "latitude": "Kenglik",
+    "longitude": "Uzunlik",
+    "methodDefault": "Mamlakatingizning rasmiy usuli hali o‘qilmagan: Musulmon olami ligasi usuli qo‘llanmoqda.",
+    "methodMWL": "Musulmon olami ligasi",
+    "methodUmmAlQura": "Ummul-Quro (Saudiya Arabistoni)",
+    "methodEgypt": "Misr umumiy geodeziya boshqarmasi",
+    "methodTurkey": "Diyonat (Turkiya)",
+    "methodMalaysia": "JAKIM (Malayziya)",
+    "methodSingapore": "MUIS (Singapur)",
+    "asrStandard": "Shofeiy, molikiy va hanbaliy",
+    "asrHanafi": "Hanafiy",
+    "in": "{{h}} soat {{m}} daqiqadan so‘ng"
+  },
+  "qibla": {
+    "degrees": "shimoldan {{d}}°",
+    "web": "Kompyuterda kompas yoʻq: yoʻnalish darajalarda koʻrsatiladi.",
+    "calc": "Qurilmangizda, joylashuvingizdan Kaʼbagacha hisoblanadi."
+  },
+  "hijri": {
+    "adjust": "Tuzatish: {{n}}",
+    "note": "Ummul-Quro taqvimi. Mamlakatingiz eʼloniga moslash uchun bir-ikki kun suring."
   },
   "directions": {
     "suhuf": "Ilk sahifalar",
@@ -56,10 +214,6 @@
     "nur": "Nur",
     "mountains": "Togʻlar — zaif koʻrish va rang koʻrligi uchun"
   },
-  "nav": {
-    "home": "Bosh sahifa",
-    "about": "Ilova haqida"
-  },
   "about": {
     "title": "Ilova haqida",
     "developer": "Ishlab chiquvchi",
@@ -70,7 +224,13 @@
   "notFound": {
     "title": "Bunday sahifa yoʻq."
   },
-  "common": {
-    "close": "Yopish"
+  "reader": {
+    "previous": "Oldingi sura",
+    "next": "Keyingi sura",
+    "smaller": "Kichikroq matn",
+    "larger": "Kattaroq matn"
+  },
+  "tafsir": {
+    "none": "Bu oyat tafsiri hozircha yo‘q."
   }
 }

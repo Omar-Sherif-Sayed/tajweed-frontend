@@ -1,0 +1,58 @@
+@if (player.now(); as now) {
+  <section
+    class="fixed inset-x-0 bottom-0 z-40 border-t border-border bg-surface shadow-[0_-4px_16px_rgb(0_0_0/0.08)]"
+    [attr.aria-label]="'player.now' | translate"
+  >
+    <div class="mx-auto flex max-w-5xl items-center gap-3 px-4 py-2.5">
+      <tj-icon [name]="now.kind === 'radio' ? 'radio' : 'ear'" class="size-6 text-dot" />
+      <div class="min-w-0 flex-1">
+        <p class="truncate text-sm font-bold text-ink">
+          @if (now.kind === 'recitation' && !listeningOnly()) {
+            <a [routerLink]="['/', settings.preferences().lang, 'quran', now.surah]" [queryParams]="now.ayah ? { ayah: now.ayah } : {}">
+              {{ title() }}
+            </a>
+          } @else {
+            {{ title() }}
+          }
+          @if (now.kind === 'radio') {
+            <span class="ms-1 rounded-full bg-dotsoft px-2 text-xs font-semibold">{{ 'radio.live' | translate }}</span>
+          }
+        </p>
+        <p class="truncate text-xs text-muted">{{ subtitle() }}</p>
+        @if (player.status() === 'reconnecting') {
+          <p class="text-xs font-semibold text-dot" role="status">{{ 'player.reconnecting' | translate }}</p>
+        } @else if (listeningOnly()) {
+          <p class="text-xs text-dot">{{ 'player.listeningOnly' | translate }}</p>
+        }
+      </div>
+      @if (player.status() === 'playing' || player.status() === 'loading' || player.status() === 'reconnecting') {
+        <button type="button" class="rounded-full border border-border px-3 py-1.5 text-sm" (click)="player.pause()">
+          {{ 'player.pause' | translate }}
+        </button>
+      } @else {
+        <button type="button" class="rounded-full bg-primary px-3 py-1.5 text-sm text-onprimary" (click)="player.resume()">
+          {{ 'player.resume' | translate }}
+        </button>
+      }
+      @if (canSkip()) {
+        <button
+          type="button"
+          class="hidden rounded-full border border-border px-3 py-1.5 text-sm sm:block"
+          (click)="player.nextTrack()"
+        >
+          {{ 'reader.next' | translate }}
+        </button>
+      }
+      <button type="button" class="rounded-full border border-border px-3 py-1.5 text-sm" (click)="player.stop()">
+        {{ 'player.stop' | translate }}
+      </button>
+    </div>
+    @if (credits().length) {
+      <p class="mx-auto max-w-5xl px-4 pb-1.5 text-[0.7rem] text-muted" dir="ltr">
+        @for (c of credits(); track c.name; let last = $last) {
+          <a [href]="c.url" rel="noopener" class="underline">{{ c.name }}</a>{{ last ? '' : ' · ' }}
+        }
+      </p>
+    }
+  </section>
+}

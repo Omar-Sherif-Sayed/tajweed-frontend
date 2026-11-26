@@ -1,0 +1,40 @@
+<section class="flex flex-wrap items-center gap-3">
+  <tj-logo-mark class="size-14" />
+  <div class="min-w-0 flex-1">
+    <h1 class="font-heading text-2xl font-bold text-ink">{{ 'app.name' | translate }}</h1>
+    <p class="text-sm text-muted">{{ 'app.tagline' | translate }}</p>
+  </div>
+  <a [routerLink]="['/', lang(), 'hijri']" class="rounded-xl border border-border bg-surface px-3 py-2 text-end">
+    <span class="block text-sm font-bold text-ink" [attr.aria-label]="'home.hijriDate' | translate">{{ hijriDate() || '…' }}</span>
+    <span class="block text-xs text-muted" [attr.aria-label]="'home.localTime' | translate">{{ time() }}</span>
+  </a>
+</section>
+
+@if (now() && reading.position(); as p) {
+  <a
+    [routerLink]="['/', lang(), 'quran', p.surah]"
+    [queryParams]="{ ayah: p.ayah }"
+    class="mt-5 flex items-center gap-3 rounded-2xl border border-rule bg-page p-4"
+  >
+    <tj-icon name="book" class="size-7 text-dot" />
+    <span class="min-w-0 flex-1">
+      <span class="block text-sm text-muted">{{ 'home.continue' | translate }}</span>
+      <span class="block font-bold text-ink">{{ position() ?? '…' }}</span>
+    </span>
+    <span class="rounded-full bg-primary px-3 py-1 text-sm text-onprimary">{{ 'home.resume' | translate }}</span>
+  </a>
+}
+
+<ul class="mt-5 grid grid-cols-3 gap-3 sm:grid-cols-5">
+  @for (tile of tiles; track tile.path) {
+    <li>
+      <a
+        [routerLink]="['/', lang(), tile.path]"
+        class="flex h-full flex-col items-center gap-1.5 rounded-xl border border-border bg-surface p-3 text-center text-xs font-semibold text-ink hover:border-dot"
+      >
+        <tj-icon [name]="tile.icon" class="size-7 text-dot" />
+        <span>{{ tile.key | translate }}</span>
+      </a>
+    </li>
+  }
+</ul>

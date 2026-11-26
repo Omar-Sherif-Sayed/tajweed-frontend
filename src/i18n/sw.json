@@ -24,7 +24,165 @@
     "quran": "Qur'ani",
     "recitation": "Kisomo",
     "prayerTimes": "Nyakati za swala",
-    "building": "Sehemu za programu zinajengwa; za kwanza zitaonekana hapa hivi karibuni."
+    "continue": "Endelea kusoma",
+    "resume": "Endelea",
+    "hijriDate": "Tarehe ya Hijria",
+    "localTime": "Saa ulipo"
+  },
+  "nav": {
+    "quran": "Qur'ani",
+    "search": "Tafuta ndani ya Qur'ani",
+    "recitation": "Kisomo",
+    "radio": "Redio",
+    "hadith": "Hadithi",
+    "prayer": "Nyakati za swala",
+    "qibla": "Kibla",
+    "hijri": "Kalenda ya Hijria",
+    "sources": "Vyanzo",
+    "tafsir": "Tafsiri",
+    "home": "Mwanzo",
+    "about": "Kuhusu"
+  },
+  "quran": {
+    "index": "Fahirisi",
+    "indexSub": "sura 114 · juzuu 30 · kurasa 604",
+    "surahs": "Sura",
+    "juzs": "Juzuu",
+    "makki": "Makkiyya",
+    "madani": "Madaniyya",
+    "indexLine": "{{type}} · aya {{n}}",
+    "page": "Ukurasa {{n}}",
+    "juz": "Juzuu {{n}}",
+    "hizb": "Hizbu {{n}}",
+    "juzStarts": "Inaanza: {{name}} {{s}}:{{a}}",
+    "position": "{{name}} · aya {{n}} kati ya {{k}}",
+    "goToPage": "Nenda ukurasa",
+    "go": "Nenda"
+  },
+  "search": {
+    "placeholder": "Tafuta neno, sura au namba ya aya",
+    "results": "Matokeo {{n}}",
+    "kindWord": "Neno, likiwa na harakati au bila",
+    "kindSurah": "Jina au namba ya sura",
+    "kindAyah": "Namba ya aya, mf. 2:255",
+    "noResults": "Hakuna kilichopatikana.",
+    "withTashkeel": "Uliandika irabu, kwa hiyo zililazimika kulingana.",
+    "more": "Matokeo zaidi",
+    "openAyah": "Fungua aya"
+  },
+  "actions": {
+    "title": "Chaguo za aya",
+    "addMarker": "Ongeza alama",
+    "listen": "Sikiliza",
+    "range": "Aya {{a}} – {{b}}",
+    "repeat": "Rudia × {{n}}",
+    "tafsirs": "Tafsiri",
+    "allTafsirs": "Tafsiri zote za aya hii",
+    "copy": "Nakili aya",
+    "copied": "Imenakiliwa",
+    "to": "Hadi aya",
+    "removeMarker": "Ondoa alama"
+  },
+  "markers": {
+    "title": "Alama za aya",
+    "review": "Kurudia",
+    "memorise": "Kuhifadhi",
+    "reflect": "Kutafakari",
+    "local": "Zimehifadhiwa kwenye kifaa chako tu",
+    "tintNote": "Rangi inafunika aya na nambari yake."
+  },
+  "common": {
+    "report": "Ripoti kosa",
+    "play": "Cheza",
+    "device": "Zimehifadhiwa kwenye kifaa chako tu",
+    "online": "Inahitaji intaneti",
+    "close": "Funga",
+    "loading": "Inapakia…",
+    "retry": "Jaribu tena",
+    "search": "Tafuta"
+  },
+  "player": {
+    "choose": "Chagua msomaji",
+    "MURATTAL": "Murattal",
+    "MUJAWWAD": "Mujawwad",
+    "MUALLIM": "Muallim (ya kufundishia)",
+    "surahs": "Sura {{n}}",
+    "perAyah": "kwa kila aya",
+    "now": "Inacheza sasa",
+    "modeSurah": "Sura moja",
+    "modeRange": "Sehemu ya aya",
+    "modeEndless": "Hadi mwisho, kisha tena kuanzia Al-Fatiha",
+    "reconnecting": "Inaunganisha tena…",
+    "reconnectNote": "Muunganisho umekatika: chanzo kilekile kinajaribiwa tena, kisha kinachofuata, bila kikomo — hupaswi kufanya chochote.",
+    "reciter": "Msomaji",
+    "resume": "Endelea",
+    "surah": "Sura",
+    "pause": "Sitisha",
+    "stop": "Simamisha",
+    "listeningOnly": "Kusikiliza tu — maandishi yanayoonyeshwa ni riwaya ya Hafs kutoka kwa Asim",
+    "wholeSurahs": "Usomaji huu hucheza sura nzima tu.",
+    "streamingOnly": "Mtandaoni tu: kupakua kunasubiri ruhusa ya chanzo.",
+    "from": "Kuanzia aya"
+  },
+  "radio": {
+    "live": "Mubashara",
+    "note": "Mitiririko inayochapishwa na kituo chenyewe pekee."
+  },
+  "hadith": {
+    "text": "Hadithi",
+    "explanation": "Maelezo",
+    "words": "Maana ya maneno",
+    "categories": "Makundi",
+    "grade": "Daraja",
+    "reference": "Marejeo",
+    "benefits": "Mafunzo ya hadithi",
+    "arabicOnly": "Hakuna tafsiri iliyochapishwa kwa lugha hii: inaonyeshwa kwa Kiarabu.",
+    "notLoaded": "Hadithi bado hazijapakiwa kwenye seva."
+  },
+  "sources": {
+    "sub": "Kila kitu ambacho programu inatumia, na kinakotoka",
+    "quranFont": "Fonti ya Qur'ani",
+    "uiFonts": "Fonti za kiolesura",
+    "content": "Maudhui",
+    "web": "Fonti na programu za tovuti"
+  },
+  "prayer": {
+    "fajr": "Alfajiri",
+    "sunrise": "Macheo",
+    "dhuhr": "Adhuhuri",
+    "asr": "Alasiri",
+    "maghrib": "Magharibi",
+    "isha": "Isha",
+    "next": "Swala inayofuata",
+    "method": "Njia ya kuhesabu nyakati za swala",
+    "asrTime": "Wakati wa Alasiri",
+    "calcNote": "Nyakati zinahesabiwa kwenye kifaa chako kutokana na mahali ulipo; mahali ulipo hapatumwi kamwe kwa seva. Njia hufuata nchi yako moja kwa moja, na unaweza kuibadilisha.",
+    "lastThird": "Theluthi ya mwisho ya usiku",
+    "lastThirdStarts": "Theluthi ya mwisho inaanza saa",
+    "lastThirdFrom": "Kutoka Magharibi ({{a}}) hadi Alfajiri ({{b}})",
+    "useLocation": "Tumia mahali nilipo",
+    "noLocation": "Mahali hapapatikani. Ruhusu kwenye kivinjari, au uandike hapa chini.",
+    "latitude": "Latitudo",
+    "longitude": "Longitudo",
+    "methodDefault": "Njia rasmi ya nchi yako bado haijasomwa: inatumika ya Muslim World League.",
+    "methodMWL": "Muslim World League",
+    "methodUmmAlQura": "Umm al-Qura (Saudi Arabia)",
+    "methodEgypt": "Mamlaka ya Upimaji ya Misri",
+    "methodTurkey": "Diyanet (Uturuki)",
+    "methodMalaysia": "JAKIM (Malaysia)",
+    "methodSingapore": "MUIS (Singapore)",
+    "asrStandard": "Shafii, Maliki na Hanbali",
+    "asrHanafi": "Hanafi",
+    "in": "baada ya saa {{h}} dakika {{m}}"
+  },
+  "qibla": {
+    "degrees": "{{d}}° kutoka kaskazini",
+    "web": "Kompyuta haina dira: mwelekeo unaonyeshwa kwa nyuzi.",
+    "calc": "Inahesabiwa kwenye kifaa chako, kutoka mahali ulipo hadi Kaaba."
+  },
+  "hijri": {
+    "adjust": "Marekebisho: {{n}}",
+    "note": "Kalenda ya Ummul Qura. Irekebishe siku moja au mbili ilingane na tangazo la nchi yako."
   },
   "directions": {
     "suhuf": "Kurasa za kwanza",
@@ -56,10 +214,6 @@
     "nur": "Nuru",
     "mountains": "Milima — kwa uoni hafifu na upofu wa rangi"
   },
-  "nav": {
-    "home": "Mwanzo",
-    "about": "Kuhusu"
-  },
   "about": {
     "title": "Kuhusu",
     "developer": "Msanidi",
@@ -70,7 +224,13 @@
   "notFound": {
     "title": "Ukurasa huu haupo."
   },
-  "common": {
-    "close": "Funga"
+  "reader": {
+    "previous": "Sura iliyotangulia",
+    "next": "Sura inayofuata",
+    "smaller": "Maandishi madogo",
+    "larger": "Maandishi makubwa"
+  },
+  "tafsir": {
+    "none": "Bado hakuna tafsiri ya aya hii."
   }
 }

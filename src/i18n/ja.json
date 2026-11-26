@@ -24,7 +24,165 @@
     "quran": "クルアーン",
     "recitation": "読誦",
     "prayerTimes": "礼拝時刻",
-    "building": "アプリの各セクションを作成中です。最初のセクションがまもなくここに表示されます。"
+    "continue": "続きを読む",
+    "resume": "再開",
+    "hijriDate": "ヒジュラ暦の日付",
+    "localTime": "今いる場所の時刻"
+  },
+  "nav": {
+    "quran": "クルアーン",
+    "search": "クルアーン検索",
+    "recitation": "読誦",
+    "radio": "ラジオ",
+    "hadith": "ハディース",
+    "prayer": "礼拝時刻",
+    "qibla": "キブラ",
+    "hijri": "ヒジュラ暦",
+    "sources": "出典",
+    "tafsir": "タフスィール",
+    "home": "ホーム",
+    "about": "このアプリについて"
+  },
+  "quran": {
+    "index": "目次",
+    "indexSub": "114章 · 30ジュズ · 604ページ",
+    "surahs": "章",
+    "juzs": "ジュズ",
+    "makki": "マッカ啓示",
+    "madani": "マディーナ啓示",
+    "indexLine": "{{type}} · {{n}}節",
+    "page": "{{n}}ページ",
+    "juz": "第{{n}}ジュズ",
+    "hizb": "ヒズブ{{n}}",
+    "juzStarts": "開始: {{name}} {{s}}:{{a}}",
+    "position": "{{name}} · 第{{n}}節／全{{k}}節",
+    "goToPage": "ページへ移動",
+    "go": "移動"
+  },
+  "search": {
+    "placeholder": "語、章、または節番号で検索",
+    "results": "{{n}}件",
+    "kindWord": "語(母音記号の有無を問わず)",
+    "kindSurah": "スーラの名前か番号",
+    "kindAyah": "アーヤ番号(例 2:255)",
+    "noResults": "見つかりませんでした。",
+    "withTashkeel": "母音記号（タシュキール）を入力したため、一致が必要でした。",
+    "more": "さらに表示",
+    "openAyah": "アーヤを開く"
+  },
+  "actions": {
+    "title": "節の操作",
+    "addMarker": "しおりを追加",
+    "listen": "聞く",
+    "range": "第{{a}}節 – 第{{b}}節",
+    "repeat": "繰り返し × {{n}}",
+    "tafsirs": "タフスィール",
+    "allTafsirs": "このアーヤのすべてのタフスィール",
+    "copy": "アーヤをコピー",
+    "copied": "コピーしました",
+    "to": "終わりのアーヤ",
+    "removeMarker": "マーカーを外す"
+  },
+  "markers": {
+    "title": "節のしおり",
+    "review": "復習",
+    "memorise": "暗記",
+    "reflect": "熟考",
+    "local": "この端末にのみ保存",
+    "tintNote": "色はアーヤとその番号を覆います。"
+  },
+  "common": {
+    "report": "誤りを報告",
+    "play": "再生",
+    "device": "この端末にのみ保存",
+    "online": "インターネット接続が必要",
+    "close": "閉じる",
+    "loading": "読み込み中…",
+    "retry": "再試行",
+    "search": "検索"
+  },
+  "player": {
+    "choose": "朗誦者を選ぶ",
+    "MURATTAL": "ムラッタル",
+    "MUJAWWAD": "ムジャウワド",
+    "MUALLIM": "ムアッリム(教習)",
+    "surahs": "{{n}}スーラ",
+    "perAyah": "アーヤごと",
+    "now": "再生中",
+    "modeSurah": "1スーラ",
+    "modeRange": "範囲",
+    "modeEndless": "最後まで、その後またファーティハから",
+    "reconnecting": "再接続中…",
+    "reconnectNote": "接続が切れました。同じ配信元を再試行し、次の配信元へと続けます — 操作は不要です。",
+    "reciter": "朗誦者",
+    "resume": "再開",
+    "surah": "スーラ",
+    "pause": "一時停止",
+    "stop": "停止",
+    "listeningOnly": "聴くのみ — 表示中の本文はハフス（アースィム伝）のリワーヤです",
+    "wholeSurahs": "この朗誦はスーラ単位でのみ再生できます。",
+    "streamingOnly": "ストリーミングのみ：ダウンロードは提供元の許可待ちです。",
+    "from": "開始のアーヤ"
+  },
+  "radio": {
+    "live": "ライブ",
+    "note": "放送局自身が公開する配信のみ。"
+  },
+  "hadith": {
+    "text": "ハディース",
+    "explanation": "解説",
+    "words": "語の意味",
+    "categories": "分類",
+    "grade": "評価",
+    "reference": "出典",
+    "benefits": "ハディースの教訓",
+    "arabicOnly": "この言語の公刊訳がないため、アラビア語で表示しています。",
+    "notLoaded": "ハディースはまだサーバーに読み込まれていません。"
+  },
+  "sources": {
+    "sub": "アプリが使うすべてのものと、その出どころ",
+    "quranFont": "クルアーンのフォント",
+    "uiFonts": "インターフェースのフォント",
+    "content": "コンテンツ",
+    "web": "サイトのフォントとソフトウェア"
+  },
+  "prayer": {
+    "fajr": "ファジュル",
+    "sunrise": "日の出",
+    "dhuhr": "ズフル",
+    "asr": "アスル",
+    "maghrib": "マグリブ",
+    "isha": "イシャー",
+    "next": "次の礼拝",
+    "method": "礼拝時刻の計算方法",
+    "asrTime": "アスルの時刻",
+    "calcNote": "時刻は現在地をもとに端末上で計算され、位置情報がサーバーに送られることはありません。計算方法は国に合わせて自動で選ばれ、変更もできます。",
+    "lastThird": "夜の最後の三分の一",
+    "lastThirdStarts": "最後の三分の一の始まり",
+    "lastThirdFrom": "マグリブ({{a}})からファジュル({{b}})まで",
+    "useLocation": "現在地を使う",
+    "noLocation": "位置情報を利用できません。ブラウザーで許可するか、下に入力してください。",
+    "latitude": "緯度",
+    "longitude": "経度",
+    "methodDefault": "お住まいの国の公式方式はまだ確認されていないため、世界イスラーム連盟の方式を使っています。",
+    "methodMWL": "世界イスラーム連盟",
+    "methodUmmAlQura": "ウンム・アル＝クラー（サウジアラビア）",
+    "methodEgypt": "エジプト測量総局",
+    "methodTurkey": "ディヤーネト（トルコ）",
+    "methodMalaysia": "JAKIM（マレーシア）",
+    "methodSingapore": "MUIS（シンガポール）",
+    "asrStandard": "シャーフィイー・マーリキー・ハンバリー",
+    "asrHanafi": "ハナフィー",
+    "in": "あと{{h}}時間{{m}}分"
+  },
+  "qibla": {
+    "degrees": "北から{{d}}°",
+    "web": "パソコンには方位磁針がないため、方向を度数で示します。",
+    "calc": "端末上で計算します — 現在地からカアバまで。"
+  },
+  "hijri": {
+    "adjust": "調整：{{n}}",
+    "note": "ウンム・アル＝クラー暦。国の発表に合わせて1〜2日調整してください。"
   },
   "directions": {
     "suhuf": "最初の書写",
@@ -56,10 +214,6 @@
     "nur": "光",
     "mountains": "山 — 弱視・色覚特性の方へ"
   },
-  "nav": {
-    "home": "ホーム",
-    "about": "このアプリについて"
-  },
   "about": {
     "title": "このアプリについて",
     "developer": "開発者",
@@ -70,7 +224,13 @@
   "notFound": {
     "title": "このページは存在しません。"
   },
-  "common": {
-    "close": "閉じる"
+  "reader": {
+    "previous": "前のスーラ",
+    "next": "次のスーラ",
+    "smaller": "文字を小さく",
+    "larger": "文字を大きく"
+  },
+  "tafsir": {
+    "none": "このアーヤのタフスィールはまだありません。"
   }
 }

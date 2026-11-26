@@ -24,7 +24,165 @@
     "quran": "Al-Qur'an",
     "recitation": "Tilawah",
     "prayerTimes": "Jadwal salat",
-    "building": "Bagian-bagian aplikasi sedang dibangun; bagian pertama akan segera muncul di sini."
+    "continue": "Lanjutkan membaca",
+    "resume": "Lanjutkan",
+    "hijriDate": "Tanggal Hijriah",
+    "localTime": "Waktu di tempatmu"
+  },
+  "nav": {
+    "quran": "Al-Qur'an",
+    "search": "Cari dalam Al-Qur'an",
+    "recitation": "Tilawah",
+    "radio": "Radio",
+    "hadith": "Hadis",
+    "prayer": "Jadwal salat",
+    "qibla": "Kiblat",
+    "hijri": "Kalender Hijriah",
+    "sources": "Sumber",
+    "tafsir": "Tafsir",
+    "home": "Beranda",
+    "about": "Tentang"
+  },
+  "quran": {
+    "index": "Daftar isi",
+    "indexSub": "114 surah · 30 juz · 604 halaman",
+    "surahs": "Surah",
+    "juzs": "Juz",
+    "makki": "Makkiyah",
+    "madani": "Madaniyah",
+    "indexLine": "{{type}} · {{n}} ayat",
+    "page": "Halaman {{n}}",
+    "juz": "Juz {{n}}",
+    "hizb": "Hizb {{n}}",
+    "juzStarts": "Mulai: {{name}} {{s}}:{{a}}",
+    "position": "{{name}} · ayat {{n}} dari {{k}}",
+    "goToPage": "Buka halaman",
+    "go": "Buka"
+  },
+  "search": {
+    "placeholder": "Cari kata, surah, atau nomor ayat",
+    "results": "{{n}} hasil",
+    "kindWord": "Kata, dengan atau tanpa harakat",
+    "kindSurah": "Nama atau nomor surah",
+    "kindAyah": "Nomor ayat, mis. 2:255",
+    "noResults": "Tidak ditemukan.",
+    "withTashkeel": "Anda mengetik harakat, jadi harus cocok.",
+    "more": "Hasil lainnya",
+    "openAyah": "Buka ayat"
+  },
+  "actions": {
+    "title": "Pilihan ayat",
+    "addMarker": "Tambah penanda",
+    "listen": "Dengarkan",
+    "range": "Ayat {{a}} – {{b}}",
+    "repeat": "Ulangi × {{n}}",
+    "tafsirs": "Tafsir",
+    "allTafsirs": "Semua tafsir ayat ini",
+    "copy": "Salin ayat",
+    "copied": "Disalin",
+    "to": "Sampai ayat",
+    "removeMarker": "Hapus penanda"
+  },
+  "markers": {
+    "title": "Penanda ayat",
+    "review": "Murajaah",
+    "memorise": "Hafalan",
+    "reflect": "Tadabur",
+    "local": "Hanya tersimpan di perangkatmu",
+    "tintNote": "Warna mencakup ayat dan nomornya."
+  },
+  "common": {
+    "report": "Laporkan kesalahan",
+    "play": "Putar",
+    "device": "Hanya tersimpan di perangkatmu",
+    "online": "Perlu koneksi internet",
+    "close": "Tutup",
+    "loading": "Memuat…",
+    "retry": "Coba lagi",
+    "search": "Cari"
+  },
+  "player": {
+    "choose": "Pilih qari",
+    "MURATTAL": "Murattal",
+    "MUJAWWAD": "Mujawwad",
+    "MUALLIM": "Muallim (pengajaran)",
+    "surahs": "{{n}} surah",
+    "perAyah": "per ayat",
+    "now": "Sedang diputar",
+    "modeSurah": "Satu surah",
+    "modeRange": "Rentang ayat",
+    "modeEndless": "Sampai akhir, lalu dari Al-Fatihah lagi",
+    "reconnecting": "Menyambung ulang…",
+    "reconnectNote": "Koneksi terputus: sumber yang sama dicoba lagi, lalu sumber berikutnya, tanpa henti — Anda tidak perlu berbuat apa pun.",
+    "reciter": "Qari",
+    "resume": "Lanjutkan",
+    "surah": "Surah",
+    "pause": "Jeda",
+    "stop": "Berhenti",
+    "listeningOnly": "Hanya untuk didengar — teks yang ditampilkan riwayat Hafs dari Ashim",
+    "wholeSurahs": "Bacaan ini hanya memutar surah utuh.",
+    "streamingOnly": "Hanya streaming: unduhan menunggu izin sumber.",
+    "from": "Dari ayat"
+  },
+  "radio": {
+    "live": "Langsung",
+    "note": "Hanya siaran yang diterbitkan stasiun itu sendiri."
+  },
+  "hadith": {
+    "text": "Hadis",
+    "explanation": "Syarah",
+    "words": "Makna kata",
+    "categories": "Kategori",
+    "grade": "Derajat",
+    "reference": "Rujukan",
+    "benefits": "Faedah hadis",
+    "arabicOnly": "Belum ada terjemahan terbit dalam bahasa ini: ditampilkan dalam bahasa Arab.",
+    "notLoaded": "Hadis belum dimuat di server."
+  },
+  "sources": {
+    "sub": "Semua yang dipakai aplikasi, dan dari mana asalnya",
+    "quranFont": "Fon Al-Qur'an",
+    "uiFonts": "Fon antarmuka",
+    "content": "Konten",
+    "web": "Fon dan perangkat lunak situs"
+  },
+  "prayer": {
+    "fajr": "Subuh",
+    "sunrise": "Terbit",
+    "dhuhr": "Zuhur",
+    "asr": "Asar",
+    "maghrib": "Magrib",
+    "isha": "Isya",
+    "next": "Salat berikutnya",
+    "method": "Metode perhitungan waktu salat",
+    "asrTime": "Waktu asar",
+    "calcNote": "Waktu dihitung di perangkat Anda dari lokasi Anda; lokasi Anda tidak pernah dikirim ke server. Metode mengikuti negara Anda secara otomatis, dan Anda bisa mengubahnya.",
+    "lastThird": "Sepertiga malam terakhir",
+    "lastThirdStarts": "Sepertiga terakhir dimulai pukul",
+    "lastThirdFrom": "Dari magrib ({{a}}) sampai subuh ({{b}})",
+    "useLocation": "Gunakan lokasi saya",
+    "noLocation": "Lokasi tidak tersedia. Izinkan di peramban, atau isi di bawah.",
+    "latitude": "Lintang",
+    "longitude": "Bujur",
+    "methodDefault": "Metode resmi negara Anda belum dibaca: dipakai metode Liga Muslim Dunia.",
+    "methodMWL": "Liga Muslim Dunia",
+    "methodUmmAlQura": "Umm al-Qura (Arab Saudi)",
+    "methodEgypt": "Otoritas Survei Umum Mesir",
+    "methodTurkey": "Diyanet (Turki)",
+    "methodMalaysia": "JAKIM (Malaysia)",
+    "methodSingapore": "MUIS (Singapura)",
+    "asrStandard": "Syafi‘i, Maliki dan Hanbali",
+    "asrHanafi": "Hanafi",
+    "in": "dalam {{h}} j {{m}} mnt"
+  },
+  "qibla": {
+    "degrees": "{{d}}° dari utara",
+    "web": "Komputer tidak punya kompas: arah ditampilkan dalam derajat.",
+    "calc": "Dihitung di perangkat Anda, dari lokasi Anda ke Ka'bah."
+  },
+  "hijri": {
+    "adjust": "Penyesuaian: {{n}}",
+    "note": "Kalender Ummul Qura. Sesuaikan satu atau dua hari agar cocok dengan pengumuman negaramu."
   },
   "directions": {
     "suhuf": "Lembaran pertama",
@@ -56,10 +214,6 @@
     "nur": "Cahaya",
     "mountains": "Gunung — untuk penglihatan lemah dan buta warna"
   },
-  "nav": {
-    "home": "Beranda",
-    "about": "Tentang"
-  },
   "about": {
     "title": "Tentang",
     "developer": "Pengembang",
@@ -70,7 +224,13 @@
   "notFound": {
     "title": "Halaman ini tidak ada."
   },
-  "common": {
-    "close": "Tutup"
+  "reader": {
+    "previous": "Surah sebelumnya",
+    "next": "Surah berikutnya",
+    "smaller": "Teks lebih kecil",
+    "larger": "Teks lebih besar"
+  },
+  "tafsir": {
+    "none": "Tafsir ayat ini belum tersedia."
   }
 }

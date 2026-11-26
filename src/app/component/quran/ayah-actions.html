@@ -1,0 +1,98 @@
+<div class="fixed inset-0 z-50 bg-black/40" (click)="closed.emit()" aria-hidden="true"></div>
+<section
+  class="fixed inset-x-0 bottom-0 z-50 mx-auto max-h-[85vh] max-w-2xl overflow-y-auto rounded-t-2xl border border-border bg-surface p-4 shadow-xl"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="ayah-actions-title"
+>
+  <header class="flex items-center gap-2">
+    <h2 id="ayah-actions-title" class="flex-1 font-heading text-lg font-bold text-ink">{{ 'actions.title' | translate }} · {{ reference() }}</h2>
+    <button type="button" class="rounded-full border border-border px-3 py-1 text-sm" (click)="closed.emit()">{{ 'common.close' | translate }}</button>
+  </header>
+
+  <h3 class="mt-4 text-sm font-bold">{{ 'markers.title' | translate }}</h3>
+  <div class="mt-2 flex flex-wrap items-center gap-2">
+    @for (c of colours; track c.id) {
+      <button
+        type="button"
+        class="flex items-center gap-1.5 rounded-full border px-3 py-1 text-sm"
+        [style.border-color]="c.colour"
+        [style.background-color]="reading.markers()[ayah().surahNumber + ':' + ayah().number] === c.id ? c.colour + '26' : null"
+        [attr.aria-pressed]="reading.markers()[ayah().surahNumber + ':' + ayah().number] === c.id"
+        (click)="mark(c.id)"
+      >
+        <span class="size-3 rounded-full" [style.background-color]="c.colour"></span>
+        {{ 'markers.' + c.id | translate }}
+      </button>
+    }
+    @if (reading.markers()[ayah().surahNumber + ':' + ayah().number]) {
+      <button type="button" class="rounded-full border border-border px-3 py-1 text-sm" (click)="mark(null)">
+        {{ 'actions.removeMarker' | translate }}
+      </button>
+    }
+  </div>
+  <p class="mt-1 text-xs text-muted">{{ 'markers.tintNote' | translate }} {{ 'markers.local' | translate }}</p>
+
+  <h3 class="mt-4 text-sm font-bold">{{ 'actions.listen' | translate }}</h3>
+  @if (canRange()) {
+    <div class="mt-2 flex flex-wrap items-center gap-3 text-sm">
+      <label class="flex items-center gap-1.5">
+        {{ 'actions.to' | translate }}
+        <select
+          class="rounded-lg border border-border bg-surface px-2 py-1"
+          [value]="last()"
+          (change)="to.set(+$any($event.target).value)"
+        >
+          @for (n of following(); track n) {
+            <option [value]="n">{{ num(n) }}</option>
+          }
+        </select>
+      </label>
+      <label class="flex items-center gap-1.5">
+        <select class="rounded-lg border border-border bg-surface px-2 py-1" [value]="repeat()" (change)="repeat.set(+$any($event.target).value)">
+          @for (n of [1, 2, 3, 5, 7, 10]; track n) {
+            <option [value]="n">{{ 'actions.repeat' | translate: { n: num(n) } }}</option>
+          }
+        </select>
+      </label>
+      <span class="text-muted">{{ 'actions.range' | translate: { a: num(ayah().number), b: num(last()) } }}</span>
+    </div>
+  } @else {
+    <p class="mt-1 text-xs text-muted">{{ 'player.wholeSurahs' | translate }}</p>
+  }
+  <div class="mt-2 flex flex-wrap gap-2">
+    <button type="button" class="rounded-full bg-primary px-4 py-1.5 text-sm text-onprimary" (click)="listen()">
+      {{ 'common.play' | translate }}
+    </button>
+    <button type="button" class="rounded-full border border-border px-4 py-1.5 text-sm" (click)="copy()">
+      {{ (copied() ? 'actions.copied' : 'actions.copy') | translate }}
+    </button>
+    <button type="button" class="rounded-full border border-border px-4 py-1.5 text-sm" (click)="showTafsirs.set(true)">
+      {{ 'actions.allTafsirs' | translate }}
+    </button>
+  </div>
+
+  @if (showTafsirs()) {
+    <h3 class="mt-5 text-sm font-bold">{{ 'actions.tafsirs' | translate }}</h3>
+    @if (tafsirs.isPending()) {
+      <p class="mt-2 text-sm text-muted">{{ 'common.loading' | translate }}</p>
+    } @else if (tafsirs.isError()) {
+      <p class="mt-2 rounded-xl bg-dotsoft p-3 text-sm" role="status">{{ 'about.unreachable' | translate }}</p>
+    } @else if (tafsirs.data(); as t) {
+      @for (item of t.tafsirs; track item.tafsir.id) {
+        <article class="mt-3 rounded-xl border border-border bg-page p-3" lang="ar" dir="rtl">
+          <h4 class="font-heading font-bold text-ink">{{ item.tafsir.nameAr }} <span class="text-xs font-normal text-muted">— {{ item.tafsir.authorAr }}</span></h4>
+          @if (item.from !== item.to) {
+            <p class="text-xs text-muted" dir="ltr">{{ item.from }} – {{ item.to }}</p>
+          }
+          <div class="mt-2 text-sm leading-7" [innerHTML]="item.text"></div>
+        </article>
+      } @empty {
+        <p class="mt-2 text-sm text-muted">{{ 'tafsir.none' | translate }}</p>
+      }
+      <p class="mt-2 text-xs text-muted" dir="ltr"><a [href]="t.credit.url" rel="noopener" class="underline">{{ t.credit.name }}</a></p>
+    }
+  }
+
+  <p class="mt-4 text-xs"><a [href]="report()" rel="noopener" class="text-muted underline">{{ 'common.report' | translate }}</a></p>
+</section>

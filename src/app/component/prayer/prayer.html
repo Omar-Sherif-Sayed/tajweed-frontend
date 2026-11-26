@@ -1,0 +1,65 @@
+<h1 class="font-heading text-2xl font-bold text-ink">{{ 'nav.prayer' | translate }}</h1>
+<p class="text-sm text-muted">{{ 'prayer.calcNote' | translate }}</p>
+
+@if (now()) {
+  <tj-place-form class="mt-4 block" />
+
+  @if (today(); as t) {
+    @if (next(); as n) {
+      <section class="mt-4 rounded-2xl bg-primary p-4 text-onprimary">
+        <p class="text-sm opacity-80">{{ 'prayer.next' | translate }}</p>
+        <p class="text-2xl font-bold">{{ 'prayer.' + n.name | translate }} · {{ time(t[n.name]) }}</p>
+        <p class="text-sm">{{ 'prayer.in' | translate: { h: num(n.h), m: num(n.m) } }}</p>
+      </section>
+    }
+    <ul class="mt-3 divide-y divide-border rounded-2xl border border-border bg-surface">
+      @for (name of names; track name) {
+        <li class="flex items-center justify-between px-4 py-2.5" [class.font-bold]="next()?.name === name" [class.text-ink]="next()?.name === name">
+          <span>{{ 'prayer.' + name | translate }}</span>
+          <span>{{ time(t[name]) }}</span>
+        </li>
+      }
+    </ul>
+
+    @if (lastThird(); as l) {
+      <section class="mt-3 rounded-2xl border border-rule bg-page px-4 py-3">
+        <h2 class="text-sm font-bold">{{ 'prayer.lastThird' | translate }}</h2>
+        <p class="mt-1">{{ 'prayer.lastThirdStarts' | translate }} <strong class="text-ink">{{ time(l.starts) }}</strong></p>
+        <p class="text-xs text-muted">{{ 'prayer.lastThirdFrom' | translate: { a: time(l.maghrib), b: time(l.fajr) } }}</p>
+      </section>
+    }
+  }
+
+  <section class="mt-4 grid gap-3 sm:grid-cols-2">
+    <label class="block text-sm">
+      <span class="font-bold">{{ 'prayer.method' | translate }}</span>
+      <select
+        class="mt-1 w-full rounded-lg border border-border bg-surface px-2 py-1.5"
+        [value]="prayer.chosenMethod() ?? ''"
+        (change)="chooseMethod($any($event.target).value)"
+      >
+        <option value="">{{ 'prayer.method' + prayer.defaultMethod().id | translate }} ✓</option>
+        @for (id of methods; track id) {
+          <option [value]="id">{{ 'prayer.method' + id | translate }}</option>
+        }
+      </select>
+    </label>
+    <label class="block text-sm">
+      <span class="font-bold">{{ 'prayer.asrTime' | translate }}</span>
+      <select
+        class="mt-1 w-full rounded-lg border border-border bg-surface px-2 py-1.5"
+        [value]="prayer.school()"
+        (change)="prayer.chooseSchool($any($event.target).value)"
+      >
+        <option value="standard">{{ 'prayer.asrStandard' | translate }}</option>
+        <option value="hanafi">{{ 'prayer.asrHanafi' | translate }}</option>
+      </select>
+    </label>
+  </section>
+  @if (prayer.usingFallback()) {
+    <p class="mt-2 rounded-xl bg-dotsoft p-3 text-sm">{{ 'prayer.methodDefault' | translate }}</p>
+  }
+  <p class="mt-2 text-xs text-muted" dir="ltr">{{ source() }}</p>
+} @else {
+  <p class="mt-4 text-sm text-muted">{{ 'common.loading' | translate }}</p>
+}

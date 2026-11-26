@@ -1,0 +1,27 @@
+<h1 class="font-heading text-2xl font-bold text-ink">{{ 'nav.qibla' | translate }}</h1>
+<p class="text-sm text-muted">{{ 'qibla.calc' | translate }}</p>
+
+@if (ready()) {
+  <tj-place-form class="mt-4 block" />
+
+  @if (bearing(); as b) {
+    <section class="mt-4 flex flex-col items-center gap-3 rounded-2xl border border-rule bg-page p-6">
+      <svg viewBox="0 0 200 200" class="size-56" role="img" [attr.aria-label]="'qibla.degrees' | translate: { d: degrees() }">
+        <circle cx="100" cy="100" r="92" fill="none" stroke="var(--t-rule)" stroke-width="2" />
+        @for (tick of [0, 45, 90, 135, 180, 225, 270, 315]; track tick) {
+          <line x1="100" y1="12" x2="100" [attr.y2]="tick % 90 === 0 ? 26 : 20" stroke="var(--t-muted)" stroke-width="2" [attr.transform]="'rotate(' + tick + ' 100 100)'" />
+        }
+        <text x="100" y="42" text-anchor="middle" font-size="16" font-weight="700" fill="var(--t-ink)" direction="ltr">N</text>
+        <g [attr.transform]="'rotate(' + b + ' 100 100)'">
+          <line x1="100" y1="100" x2="100" y2="30" stroke="var(--t-dot)" stroke-width="5" stroke-linecap="round" />
+          <circle cx="100" cy="30" r="7" fill="var(--t-dot)" />
+        </g>
+        <circle cx="100" cy="100" r="6" fill="var(--t-ink)" />
+      </svg>
+      <p class="text-xl font-bold text-ink">{{ 'qibla.degrees' | translate: { d: degrees() } }}</p>
+    </section>
+  }
+  <p class="mt-3 text-xs text-muted">{{ 'qibla.web' | translate }}</p>
+} @else {
+  <p class="mt-4 text-sm text-muted">{{ 'common.loading' | translate }}</p>
+}

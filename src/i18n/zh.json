@@ -24,7 +24,165 @@
     "quran": "古兰经",
     "recitation": "诵读",
     "prayerTimes": "礼拜时间",
-    "building": "应用的各个栏目正在建设中，第一批很快就会出现在这里。"
+    "continue": "继续阅读",
+    "resume": "继续",
+    "hijriDate": "希吉来历日期",
+    "localTime": "你所在地的时间"
+  },
+  "nav": {
+    "quran": "古兰经",
+    "search": "古兰经搜索",
+    "recitation": "诵读",
+    "radio": "电台",
+    "hadith": "圣训",
+    "prayer": "礼拜时间",
+    "qibla": "朝向",
+    "hijri": "希吉来历",
+    "sources": "来源",
+    "tafsir": "经注",
+    "home": "首页",
+    "about": "关于"
+  },
+  "quran": {
+    "index": "目录",
+    "indexSub": "114章 · 30卷 · 604页",
+    "surahs": "章",
+    "juzs": "卷",
+    "makki": "麦加章",
+    "madani": "麦地那章",
+    "indexLine": "{{type}} · {{n}}节",
+    "page": "第{{n}}页",
+    "juz": "第{{n}}卷",
+    "hizb": "希兹卜{{n}}",
+    "juzStarts": "起始:{{name}} {{s}}:{{a}}",
+    "position": "{{name}} · 第{{n}}节，共{{k}}节",
+    "goToPage": "转到页码",
+    "go": "前往"
+  },
+  "search": {
+    "placeholder": "搜索词语、章名或节号",
+    "results": "{{n}} 条结果",
+    "kindWord": "词语，带或不带标音符号",
+    "kindSurah": "章名或章号",
+    "kindAyah": "经文编号，如 2:255",
+    "noResults": "未找到结果。",
+    "withTashkeel": "您输入了元音符号，因此须一致。",
+    "more": "更多结果",
+    "openAyah": "打开经文"
+  },
+  "actions": {
+    "title": "经文操作",
+    "addMarker": "添加书签",
+    "listen": "收听",
+    "range": "第 {{a}}–{{b}} 节",
+    "repeat": "重复 × {{n}}",
+    "tafsirs": "经注",
+    "allTafsirs": "本节经文的全部经注",
+    "copy": "复制经文",
+    "copied": "已复制",
+    "to": "至经文",
+    "removeMarker": "移除标记"
+  },
+  "markers": {
+    "title": "经文书签",
+    "review": "复习",
+    "memorise": "背诵",
+    "reflect": "思考",
+    "local": "只保存在你的设备上",
+    "tintNote": "颜色覆盖经文及其编号。"
+  },
+  "common": {
+    "report": "报告错误",
+    "play": "播放",
+    "device": "只保存在你的设备上",
+    "online": "需要联网",
+    "close": "关闭",
+    "loading": "加载中…",
+    "retry": "重试",
+    "search": "搜索"
+  },
+  "player": {
+    "choose": "选择诵读者",
+    "MURATTAL": "慢诵",
+    "MUJAWWAD": "吟诵",
+    "MUALLIM": "教学诵读",
+    "surahs": "{{n}} 章",
+    "perAyah": "逐节",
+    "now": "正在播放",
+    "modeSurah": "一章",
+    "modeRange": "一段经文",
+    "modeEndless": "直到末尾，再从开端章开始",
+    "reconnecting": "正在重新连接…",
+    "reconnectNote": "连接中断：先重试同一来源，再换下一个，持续不停 — 您无需操作。",
+    "reciter": "诵读者",
+    "resume": "继续",
+    "surah": "章",
+    "pause": "暂停",
+    "stop": "停止",
+    "listeningOnly": "仅供收听——所显示的经文为哈夫斯传自阿绥姆的传本",
+    "wholeSurahs": "此诵读仅能整章播放。",
+    "streamingOnly": "仅限在线收听：下载需等待来源方许可。",
+    "from": "起始经文"
+  },
+  "radio": {
+    "live": "直播",
+    "note": "仅限电台自行公开的音频流。"
+  },
+  "hadith": {
+    "text": "圣训",
+    "explanation": "讲解",
+    "words": "词义",
+    "categories": "分类",
+    "grade": "等级",
+    "reference": "出处",
+    "benefits": "圣训的益处",
+    "arabicOnly": "此语言尚无已出版的译文：以阿拉伯语显示。",
+    "notLoaded": "圣训尚未载入服务器。"
+  },
+  "sources": {
+    "sub": "应用使用的一切及其来源",
+    "quranFont": "古兰经字体",
+    "uiFonts": "界面字体",
+    "content": "内容",
+    "web": "网站的字体与软件"
+  },
+  "prayer": {
+    "fajr": "晨礼",
+    "sunrise": "日出",
+    "dhuhr": "晌礼",
+    "asr": "晡礼",
+    "maghrib": "昏礼",
+    "isha": "宵礼",
+    "next": "下一次礼拜",
+    "method": "礼拜时间计算方法",
+    "asrTime": "晡礼时间",
+    "calcNote": "时间在您的设备上根据您的位置计算;您的位置绝不会发送到服务器。计算方法会自动随您的国家而定,您也可以更改。",
+    "lastThird": "夜晚的最后三分之一",
+    "lastThirdStarts": "最后三分之一开始于",
+    "lastThirdFrom": "从昏礼（{{a}}）到晨礼（{{b}}）",
+    "useLocation": "使用我的位置",
+    "noLocation": "无法获取位置。请在浏览器中允许，或在下方输入。",
+    "latitude": "纬度",
+    "longitude": "经度",
+    "methodDefault": "尚未查明您所在国家的官方方法：使用世界穆斯林联盟的方法。",
+    "methodMWL": "世界穆斯林联盟",
+    "methodUmmAlQura": "乌姆古拉（沙特阿拉伯）",
+    "methodEgypt": "埃及测绘总局",
+    "methodTurkey": "宗教事务局（土耳其）",
+    "methodMalaysia": "JAKIM（马来西亚）",
+    "methodSingapore": "MUIS（新加坡）",
+    "asrStandard": "沙斐仪、马立克、罕百里",
+    "asrHanafi": "哈乃斐",
+    "in": "{{h}}小时{{m}}分钟后"
+  },
+  "qibla": {
+    "degrees": "自正北 {{d}}°",
+    "web": "电脑没有指南针：方向以度数显示。",
+    "calc": "在您的设备上计算，从您的位置到天房。"
+  },
+  "hijri": {
+    "adjust": "调整：{{n}}",
+    "note": "乌姆古拉历。可调整一两天，以符合你所在国家的公告。"
   },
   "directions": {
     "suhuf": "最初的书页",
@@ -56,10 +214,6 @@
     "nur": "光",
     "mountains": "群山——为低视力和色盲者设计"
   },
-  "nav": {
-    "home": "首页",
-    "about": "关于"
-  },
   "about": {
     "title": "关于",
     "developer": "开发者",
@@ -70,7 +224,13 @@
   "notFound": {
     "title": "此页面不存在。"
   },
-  "common": {
-    "close": "关闭"
+  "reader": {
+    "previous": "上一章",
+    "next": "下一章",
+    "smaller": "缩小文字",
+    "larger": "放大文字"
+  },
+  "tafsir": {
+    "none": "此节经文暂无经注。"
   }
 }

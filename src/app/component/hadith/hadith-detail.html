@@ -1,0 +1,66 @@
+<p class="text-sm"><a [routerLink]="['/', lang(), 'hadith']" class="text-muted underline">{{ 'nav.hadith' | translate }}</a></p>
+
+@if (data.isPending()) {
+  <p class="mt-4 text-sm text-muted">{{ 'common.loading' | translate }}</p>
+} @else if (data.isError()) {
+  <p class="mt-4 rounded-xl bg-dotsoft p-3 text-sm" role="status">{{ 'about.unreachable' | translate }}</p>
+} @else if (data.data(); as d) {
+  @if (arabicOnly()) {
+    <p class="mt-3 rounded-xl bg-dotsoft p-3 text-sm">{{ 'hadith.arabicOnly' | translate }}</p>
+  }
+  <div class="mt-3 grid gap-4" [class.lg:grid-cols-2]="texts().length > 1">
+    @for (t of texts(); track t.language) {
+      <article
+        class="rounded-2xl border border-rule bg-page p-4"
+        [attr.lang]="t.language"
+        [attr.dir]="t.language === 'ar' || t.language === 'ur' || t.language === 'fa' || t.language === 'ps' ? 'rtl' : 'ltr'"
+      >
+        <h1 class="font-heading text-xl font-bold text-ink">{{ t.title }}</h1>
+        <h2 class="mt-3 text-xs font-bold text-muted">{{ 'hadith.text' | translate }}</h2>
+        @if (t.hadeethIntro) {
+          <p class="mt-1">{{ t.hadeethIntro }}</p>
+        }
+        <p class="mt-1 text-lg leading-8 text-ink">{{ t.hadeeth }}</p>
+        @if (t.attribution || t.grade) {
+          <dl class="mt-3 grid grid-cols-[auto_1fr] gap-x-3 gap-y-1 text-sm">
+            @if (t.grade) {
+              <dt class="text-muted">{{ 'hadith.grade' | translate }}</dt>
+              <dd class="font-semibold">{{ t.grade }}</dd>
+            }
+            @if (t.attribution) {
+              <dt class="text-muted">{{ 'hadith.reference' | translate }}</dt>
+              <dd>{{ t.attribution }}</dd>
+            }
+          </dl>
+        }
+        @if (t.explanation) {
+          <h2 class="mt-4 text-xs font-bold text-muted">{{ 'hadith.explanation' | translate }}</h2>
+          <p class="mt-1 whitespace-pre-line leading-7">{{ t.explanation }}</p>
+        }
+        @if (t.hints.length) {
+          <h2 class="mt-4 text-xs font-bold text-muted">{{ 'hadith.benefits' | translate }}</h2>
+          <ol class="mt-1 list-decimal space-y-1 ps-5">
+            @for (h of t.hints; track $index) {
+              <li>{{ h }}</li>
+            }
+          </ol>
+        }
+        @if (t.wordsMeanings.length) {
+          <h2 class="mt-4 text-xs font-bold text-muted">{{ 'hadith.words' | translate }}</h2>
+          <dl class="mt-1 space-y-1 text-sm">
+            @for (w of t.wordsMeanings; track $index) {
+              <div><dt class="inline font-semibold">{{ w.word }}:</dt> <dd class="inline">{{ w.meaning }}</dd></div>
+            }
+          </dl>
+        }
+        @if (t.reference) {
+          <p class="mt-4 text-xs text-muted">{{ t.reference }}</p>
+        }
+      </article>
+    }
+  </div>
+  <p class="mt-4 text-xs text-muted">
+    <a [href]="d.sourceUrl" rel="noopener" class="underline">{{ d.credit.name }}</a>
+    · <a [href]="report()" rel="noopener" class="underline">{{ 'common.report' | translate }}</a>
+  </p>
+}

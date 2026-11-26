@@ -10,6 +10,7 @@
 //   src/styles/_directions.scss               every direction's colours, day and night, as CSS variables
 //   src/app/shared/component/general/icon/icons.ts   the design's icons, drawn with `currentColor`
 //   public/landscapes/*.svg, public/logo.svg  the landscapes and the logo
+//   src/app/shared/constants/prayer-methods.json   each country's prayer-time method (docs/data-sources, P2-D1)
 //
 // Nothing religious is generated here: the texts are interface texts; ayahs always come from the backend's API.
 
@@ -50,6 +51,97 @@ const FROM_DESIGN = {
   'home.quran': ['round2', 'm44'],
   'home.recitation': ['round2', 'm45'],
   'home.prayerTimes': ['round2', 'm46'],
+  // The sections built on 2026-11-26 (tajweed-docs/docs/plan/web-plan.md §6) — the design's own texts, reused.
+  'nav.quran': ['round2', 'm44'],
+  'nav.search': ['design3-screens', 't_f16'],
+  'nav.recitation': ['round2', 'm45'],
+  'nav.radio': ['extras', 'ex_radio'],
+  'nav.hadith': ['round2', 'm50'],
+  'nav.prayer': ['round2', 'm46'],
+  'nav.qibla': ['round2', 'm47'],
+  'nav.hijri': ['extras', 'ex_hijri'],
+  'nav.sources': ['round2', 'm65'],
+  'nav.tafsir': ['round2', 'm49'],
+  'home.continue': ['round2', 'm41'],
+  'home.resume': ['round2', 'm43'],
+  'home.hijriDate': ['extras', 'ex_hijri_s'],
+  'home.localTime': ['extras', 'ex_local_time'],
+  'quran.index': ['round2', 'm68'],
+  'quran.indexSub': ['round2', 'm69'],
+  'quran.surahs': ['round2', 'm70'],
+  'quran.juzs': ['round2', 'm71'],
+  'quran.makki': ['round2', 's73'],
+  'quran.madani': ['round2', 's74'],
+  'quran.indexLine': ['round2', 'index_line'],
+  'quran.page': ['round2', 'page_n'],
+  'quran.juz': ['round2', 'juz_n'],
+  'quran.hizb': ['round2', 'hizb_n'],
+  'quran.juzStarts': ['round2', 'juz_starts'],
+  'quran.position': ['round1', 'r1_pos'],
+  'search.placeholder': ['round2', 'm72'],
+  'search.results': ['design3-screens', 's_results'],
+  'search.kindWord': ['design3-screens', 's_k_word'],
+  'search.kindSurah': ['design3-screens', 's_k_surah'],
+  'search.kindAyah': ['design3-screens', 's_k_ayah'],
+  'actions.title': ['extras', 'ex_actions_t'],
+  'actions.addMarker': ['extras', 'ex_add_marker'],
+  'actions.listen': ['extras', 'ex_listen'],
+  'actions.range': ['extras', 'ex_range'],
+  'actions.repeat': ['extras', 'ex_repeat'],
+  'actions.tafsirs': ['extras', 'ex_tafsirs'],
+  'actions.allTafsirs': ['design3-screens', 't_all'],
+  'markers.title': ['extras', 'ex_markers'],
+  'markers.review': ['extras', 'ex_m_review'],
+  'markers.memorise': ['extras', 'ex_m_memo'],
+  'markers.reflect': ['extras', 'ex_m_reflect'],
+  'markers.local': ['extras', 'ex_m_local'],
+  'markers.tintNote': ['extras', 'ex_tint_note'],
+  'common.report': ['design3-screens', 'g_report'],
+  'common.play': ['design3-screens', 'g_play'],
+  'common.device': ['design3-screens', 'g_device'],
+  'common.online': ['design3-screens', 'g_online'],
+  'player.choose': ['design3-screens', 'p_choose'],
+  'player.MURATTAL': ['design3-screens', 'p_murattal'],
+  'player.MUJAWWAD': ['design3-screens', 'p_mujawwad'],
+  'player.MUALLIM': ['design3-screens', 'p_muallim'],
+  'player.surahs': ['design3-screens', 'p_surahs'],
+  'player.perAyah': ['design3-screens', 'p_ayahfiles'],
+  'player.now': ['design3-screens', 'p_now'],
+  'player.modeSurah': ['design3-screens', 'p_m_surah'],
+  'player.modeRange': ['design3-screens', 'p_m_range'],
+  'player.modeEndless': ['design3-screens', 'p_m_endless'],
+  'player.reconnecting': ['design3-screens', 'p_reconnect'],
+  'player.reconnectNote': ['design3-screens', 'p_reconnect_note'],
+  'player.reciter': ['design3-screens', 'g_reciter'],
+  'player.resume': ['round2', 'm43'],
+  'player.surah': ['round1', 'r1_surah'],
+  'radio.live': ['design3-screens', 'r_live'],
+  'radio.note': ['design3-screens', 'r_list'],
+  'hadith.text': ['design3-screens', 'h_text'],
+  'hadith.explanation': ['design3-screens', 'h_explain'],
+  'hadith.words': ['design3-screens', 'w_meanings'],
+  'hadith.categories': ['extras', 'ex_cats'],
+  'sources.sub': ['round2', 'm66'],
+  'sources.quranFont': ['round2', 's84'],
+  'sources.uiFonts': ['round2', 's86'],
+  'prayer.fajr': ['design3-screens', 'pr_fajr'],
+  'prayer.sunrise': ['design3-screens', 'pr_sunrise'],
+  'prayer.dhuhr': ['design3-screens', 'pr_dhuhr'],
+  'prayer.asr': ['design3-screens', 'pr_asr'],
+  'prayer.maghrib': ['design3-screens', 'pr_maghrib'],
+  'prayer.isha': ['design3-screens', 'pr_isha'],
+  'prayer.next': ['design3-screens', 'g_next'],
+  'prayer.method': ['design3-screens', 'st_method'],
+  'prayer.asrTime': ['design3-screens', 'st_asr'],
+  'prayer.calcNote': ['round2', 'm64'],
+  'prayer.lastThird': ['design3-screens', 't_f36'],
+  'prayer.lastThirdStarts': ['design3-screens', 'n_starts'],
+  'prayer.lastThirdFrom': ['design3-screens', 'n_from'],
+  'qibla.degrees': ['design3-screens', 'q_deg'],
+  'qibla.web': ['design3-screens', 'q_web'],
+  'qibla.calc': ['design3-screens', 'q_calc'],
+  'hijri.adjust': ['extras', 'ex_adjust'],
+  'hijri.note': ['extras', 'ex_cal_note'],
 };
 
 const tokens = read(join(docs, 'tokens-design-3.json'));
@@ -155,7 +247,8 @@ writeFileSync(join(root, 'src', 'app', 'shared', 'constants', 'directions.ts'), 
 // ---------------------------------------------------------------------------------------------------------------
 // 3. Icons, logo, landscapes
 // ---------------------------------------------------------------------------------------------------------------
-const ICONS = ['globe', 'down', 'search', 'sun', 'moon', 'home', 'book', 'ear', 'shadow', 'more'];
+const ICONS = ['globe', 'down', 'search', 'sun', 'moon', 'home', 'book', 'ear', 'shadow', 'more',
+  'radio', 'tafsir', 'kaaba', 'ex-cal', 'sheet', 'next', 'prev', 'mark', 'pin', 'qalam', 'dots'];
 const icons = {};
 for (const name of ICONS) {
   let svg = readFileSync(join(docs, 'elements', 'design-3', 'icons', `${name}.svg`), 'utf8').trim();
@@ -181,4 +274,9 @@ mkdirSync(join(root, 'public', 'landscapes'), { recursive: true });
 for (const f of readdirSync(join(docs, 'elements', 'design-3', 'landscapes'))) {
   if (f.endsWith('.svg')) copyFileSync(join(docs, 'elements', 'design-3', 'landscapes', f), join(root, 'public', 'landscapes', f));
 }
+// ---------------------------------------------------------------------------------------------------------------
+// 4. The prayer-time methods (P2-D1): one data file shared by the three clients, copied as it is
+// ---------------------------------------------------------------------------------------------------------------
+copyFileSync(join(docs, '..', 'data-sources', 'prayer-methods.json'), join(root, 'src', 'app', 'shared', 'constants', 'prayer-methods.json'));
+
 console.log(`design synced: ${CODES.length} languages, ${directionIds.length} directions, ${ICONS.length} icons`);
