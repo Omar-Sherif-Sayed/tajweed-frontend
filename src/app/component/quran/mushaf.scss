@@ -204,6 +204,42 @@
   }
 }
 
+// The King Fahd QCF V1 glyphs: each page in its own font (set on the line), a little larger than Amiri's letters.
+.mlines.qcf {
+  font-size: 5.6cqw;
+}
+
+.mpage.opening .mlines.qcf {
+  font-size: 7cqw;
+}
+
+.qg {
+  font-feature-settings: normal;
+  word-spacing: 0.05em;
+}
+
+.basmala.qg {
+  font-size: 1.3em;
+}
+
+// The ayah's number in QCF V1: the page font's own rosette.
+.qend {
+  border-radius: 999px;
+}
+
+// The surah's name in the surah-names font (its ligature draws «سورة» and the name).
+.band .name.qname {
+  font-family: 'qcf-names', 'Amiri', serif;
+  font-size: 8cqw;
+  line-height: 0.8;
+  overflow: hidden;
+  font-weight: 400;
+}
+
+.band.big .name.qname {
+  font-size: 10cqw;
+}
+
 // The ayah's number in a ring with a dotted edge, as the printed rosette.
 .ayah-end {
   display: inline-grid;

@@ -1,5 +1,15 @@
 import { DtoAyah, DtoPage } from '@shared/schema/response/quran';
 
+/** A run of one ayah's glyphs on a line, in the page's QCF V1 font. */
+export interface GlyphRun {
+  /** The ayah. */
+  readonly ayah: DtoAyah;
+  /** Its word glyphs on the line, in order. */
+  readonly words: readonly string[];
+  /** The glyph of its number, when the number stands on this line; otherwise `null`. */
+  readonly end: string | null;
+}
+
 /** A piece of a text line: some words of one ayah, the ayah's number after its last word, or the quarter sign. */
 export type Segment =
   | {
@@ -49,6 +59,8 @@ export type PageLine =
       readonly surah: number;
       /** The basmala's words, as they stand in the ayah's text. */
       readonly text: string;
+      /** The basmala's glyphs in the page-1 QCF V1 font, when the page has them. */
+      readonly glyphs: string | null;
     }
   | {
       /** A run of the text. */
@@ -59,6 +71,11 @@ export type PageLine =
       readonly segments: readonly Segment[];
       /** The hizb quarter that starts on this line (its ۞), for the label in the margin; otherwise `null`. */
       readonly quarter: number | null;
+      /**
+       * The same line as the King Fahd print draws it (QCF V1 glyphs), when the page has them: an ayah's number may
+       * stand at the start of the next line, as printed. Otherwise `null`.
+       */
+      readonly glyphs: readonly GlyphRun[] | null;
     };
 
 /**
@@ -75,6 +92,9 @@ export function layoutPage(page: DtoPage): PageLine[] {
   const words = new Map(page.ayahs.map((a) => [a.id, a.text.split(' ')]));
   const rub = new Set(page.rubAyahIds ?? []);
   const firstWord = (a: DtoAyah): number => a.basmalaWordCount;
+  // In QCF V1 an ayah's number can open the next line (566 lines, as printed) — never the next page, so its ayah is
+  // always on the page.
+  const glyphLines = glyphRuns(page, byId);
 
   // A backend older than 1.7.0 sends no lines: nothing to draw (the page says the server cannot be reached).
   return (page.lines ?? []).map((l): PageLine => {
@@ -84,7 +104,7 @@ export function layoutPage(page: DtoPage): PageLine[] {
     if (l.kind === 'BASMALA') {
       const first = page.ayahs.find((a) => a.surahNumber === l.surahNumber && a.number === 1);
       const text = first ? words.get(first.id)!.slice(0, first.basmalaWordCount).join(' ') : '';
-      return { kind: 'basmala', line: l.line, surah: l.surahNumber!, text };
+      return { kind: 'basmala', line: l.line, surah: l.surahNumber!, text, glyphs: page.qcf?.basmala || null };
     }
     const segments: Segment[] = [];
     for (let id = l.firstAyahId!; id <= l.lastAyahId!; id++) {
@@ -105,8 +125,56 @@ export function layoutPage(page: DtoPage): PageLine[] {
       }
     }
     const rubSegment = segments.find((s) => s.kind === 'rub');
-    return { kind: 'text', line: l.line, segments, quarter: rubSegment ? rubSegment.ayah.hizbQuarter : null };
+    return {
+      kind: 'text',
+      line: l.line,
+      segments,
+      quarter: rubSegment ? rubSegment.ayah.hizbQuarter : null,
+      glyphs: glyphLines.get(l.line) ?? null,
+    };
   });
+}
+
+/** A glyph run while it is being built. */
+interface BuildingRun {
+  /** The ayah. */
+  readonly ayah: DtoAyah;
+  /** Its word glyphs so far. */
+  readonly words: string[];
+  /** Its number's glyph, once met. */
+  end: string | null;
+}
+
+/**
+ * Groups each QCF V1 line's glyphs into runs of one ayah: its words, then its number when it stands on the line.
+ *
+ * @param page the backend's page
+ * @param byId the page's ayahs by id (and the ayah before the page, for a number at the top)
+ * @returns the runs of every text line, by line
+ */
+function glyphRuns(page: DtoPage, byId: ReadonlyMap<number, DtoAyah>): Map<number, GlyphRun[]> {
+  const out = new Map<number, GlyphRun[]>();
+  for (const l of page.qcf?.lines ?? []) {
+    const runs: BuildingRun[] = [];
+    for (const g of l.glyphs) {
+      const ayah = byId.get(g.ayahId);
+      if (!ayah) {
+        return new Map();
+      }
+      let run = runs.at(-1);
+      if (!run || run.ayah.id !== g.ayahId || run.end !== null) {
+        run = { ayah, words: [], end: null };
+        runs.push(run);
+      }
+      if (g.end) {
+        run.end = g.glyph;
+      } else {
+        run.words.push(g.glyph);
+      }
+    }
+    out.set(l.line, runs);
+  }
+  return out;
 }
 
 /** A word with at least one letter; the others are marks (pause marks, the sajdah sign). */

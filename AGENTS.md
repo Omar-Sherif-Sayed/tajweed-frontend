@@ -135,9 +135,15 @@ public/landscapes/             GENERATED copies of design 3's 56 landscapes (day
   before a mark (`units`; the author, 2026-11-27: «خليها زي المصحف بالظبط» — copy and search keep the text as
   received). The look as printed (2026-11-27): our own ornament in design 3's colours (circles and arches, no cross),
   the juz and the surah in tabs, the surah band with «ترتيبها» / «آياتها» medallions, the quarter label in the outer
-  margin, the page number in a cartouche, pages 1 – 2 in an oval cartouche. Font: Amiri Quran — next, the King Fahd
-  QCF V1 page fonts through the Quran Foundation, served by our own server (⏸ the author's keys and his OK to
-  download them; parent `docs/plan/web-plan.md` §7), Amiri kept as the fallback; each
+  margin, the page number in a cartouche, pages 1 – 2 in an oval cartouche. **The letter shapes are the King Fahd
+  Complex's** (2026-11-27): the backend's `qcf` gives each page's glyphs of the Quran Foundation's QCF V1 mushaf;
+  `QcfFontsService` loads the page's font `qcf-p{page}`, the page-1 font for the basmala and `qcf-names` for the
+  surah names (`surah059`) from `/qf-fonts/`, and a page is drawn in glyphs only once its font has loaded —
+  otherwise in Amiri Quran with the same lines. The fonts are **never committed**: `node tools/fetch-qf-fonts.mjs`
+  downloads them (606 files, 48 MB) into `public/qf-fonts/` (in `.gitignore`), on a developer's machine and at
+  deploy — the Quran Foundation's terms: bundled with the site while our account is active, credited «Quran fonts
+  provided by Quran Foundation» (beside the pages and in Sources), never offered on their own. The letters of a
+  page have one size: when a line is wider than the page, the whole page is drawn a little smaller; each
   line is justified to the page's width (container units), and a line wider than the page is drawn smaller
   (`fitLines`). Two pages on a computer (odd on the right), one on a phone; the arrow keys turn the pages (left =
   forward). The index, the juz list and «go to page» open this view; the surah view stays as «بالسورة».

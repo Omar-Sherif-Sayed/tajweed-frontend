@@ -107,6 +107,41 @@ export interface DtoPage {
   readonly textSource: DtoContentSource;
   /** The source of the line breaks (DigitalKhatt, MIT). */
   readonly layoutSource: DtoContentSource;
+  /** The page in the King Fahd QCF V1 glyphs, or `null` while the backend has not synced them (backend 1.8.0). */
+  readonly qcf?: DtoQcfPage | null;
+}
+
+/** A word, or an ayah's number, as a glyph of its page's QCF V1 font (`DtoQcfGlyph`). */
+export interface DtoQcfGlyph {
+  /** Its characters in the page's font. */
+  readonly glyph: string;
+  /** The ayah it belongs to (`DtoAyah.id`). */
+  readonly ayahId: number;
+  /** Whether it is the ayah's number. */
+  readonly end: boolean;
+}
+
+/** A text line of a page in QCF V1 glyphs (`DtoQcfLine`). */
+export interface DtoQcfLine {
+  /** The line, 1 – 15. */
+  readonly line: number;
+  /** Its glyphs, in reading order. */
+  readonly glyphs: readonly DtoQcfGlyph[];
+}
+
+/**
+ * A page in the King Fahd Complex's QCF V1 fonts, from the Quran Foundation (`DtoQcfPage`): the glyphs only draw
+ * the text — what is copied and searched stays the Tanzil text (AGENTS.md §6.1).
+ */
+export interface DtoQcfPage {
+  /** The text lines, top to bottom. */
+  readonly lines: readonly DtoQcfLine[];
+  /** The basmala's glyphs, for the page-1 font. */
+  readonly basmala: string;
+  /** The credit their terms ask for. */
+  readonly credit: string;
+  /** Where the credit links. */
+  readonly creditUrl: string;
 }
 
 /** One ayah found by the search (`DtoSearchHit`). */

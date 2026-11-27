@@ -15,6 +15,12 @@ export interface WebCredit {
  * read (tajweed-docs `AGENTS.md` §7.1). The uses are written in English, as the names are.
  */
 export const WEB_FONTS: readonly WebCredit[] = [
+  {
+    name: 'QCF V1 — King Fahd Complex, Madinah mushaf 1405H (page fonts, surah names)',
+    use: 'the printed pages — Quran fonts provided by Quran Foundation',
+    licence: 'Quran Foundation font terms',
+    url: 'https://quran.foundation/',
+  },
   { name: 'Amiri Quran', use: 'Quran text', licence: 'SIL OFL 1.1', url: 'https://github.com/aliftype/amiri' },
   { name: 'Amiri', use: 'headings', licence: 'SIL OFL 1.1', url: 'https://github.com/aliftype/amiri' },
   { name: 'IBM Plex Sans Arabic', use: 'Arabic interface', licence: 'SIL OFL 1.1', url: 'https://github.com/IBM/plex' },

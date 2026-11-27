@@ -28,3 +28,6 @@ yarn-error.log
 testem.log
 /typings
 __screenshots__/
+
+# The Quran Foundation fonts: fetched by tools/fetch-qf-fonts.mjs, never committed (their terms)
+/public/qf-fonts/

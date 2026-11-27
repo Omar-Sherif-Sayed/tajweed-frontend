@@ -17,6 +17,7 @@ import { TranslatePipe } from '@ngx-translate/core';
 import { injectQuery } from '@tanstack/angular-query-experimental';
 import { DtoAyah, DtoPage, DtoSurah } from '@shared/schema/response/quran';
 import { PlayerService } from '@shared/service/audio/player.service';
+import { QcfFontsService } from '@shared/service/qcf-fonts.service';
 import { QuranService } from '@shared/service/integration/quran/quran.service';
 import { ReadingService } from '@shared/service/reading.service';
 import { SettingsService } from '@shared/service/settings.service';
@@ -47,9 +48,11 @@ interface OpenAyah {
  * Madinah mushaf of 1405H page by page — the same 15 lines, the same words on every line, the surah bands with
  * «ترتيبها» and «آياتها», the basmala, ۞ where the printed copy has it, the page's surah, juz and hizb at the top and
  * its number at the bottom. On a computer two pages face each other, the odd page on the right; on a phone one page.
- * The words are the Tanzil text exactly as received (AGENTS.md §6.1), drawn in Amiri Quran (the author, 2026-11-26)
- * until the King Fahd page fonts are permitted; each line is justified to the page's width, and a line too long for
- * the page is drawn a little smaller. Beside the pages: the surahs of the juz. Tapping an ayah opens its actions.
+ * The letter shapes are the King Fahd Complex's: each page in its own QCF V1 font from the Quran Foundation (the
+ * author, 2026-11-27), the surah names in their surah-names font, the basmala in the page-1 font; until a page's
+ * font has loaded, or when the backend has no glyphs, the page is the Tanzil text exactly as received (AGENTS.md
+ * §6.1) in Amiri Quran. Each line is justified to the page's width, and a line too long for the page is drawn a
+ * little smaller. Beside the pages: the surahs of the juz. Tapping an ayah opens its actions.
  */
 @Component({
   selector: 'tj-mushaf',
@@ -71,6 +74,9 @@ export class MushafComponent {
 
   /** The position and the markers. */
   protected readonly reading = inject(ReadingService);
+
+  /** The King Fahd QCF V1 fonts. */
+  protected readonly fonts = inject(QcfFontsService);
 
   /** The player, for the playing ayah. */
   private readonly player = inject(PlayerService);
@@ -201,11 +207,40 @@ export class MushafComponent {
         this.reading.savePosition(first.surahNumber, first.number, this.current());
       }
     });
+    effect(() => {
+      for (const p of this.pages()) {
+        if (this.browser && p.data?.qcf) {
+          this.fonts.load(p.page);
+        }
+      }
+    });
     afterRenderEffect(() => {
       this.pages();
       this.surahs.data();
+      this.fonts.names();
+      this.pages().forEach((p) => this.fonts.ready(p.page));
       this.fitLines();
     });
+  }
+
+  /**
+   * Whether a page is drawn in the King Fahd QCF V1 glyphs: the backend has them and the page's font has loaded.
+   *
+   * @param p the drawn page
+   * @returns `true` to draw the glyphs
+   */
+  protected qcf(p: DrawnPage): boolean {
+    return !!p.data?.qcf && this.fonts.ready(p.page);
+  }
+
+  /**
+   * A surah's number as the surah-names font reads it: three digits («004» draws An-Nisa).
+   *
+   * @param n the surah
+   * @returns the zero-padded number
+   */
+  protected nameCode(n: number): string {
+    return String(n).padStart(3, '0');
   }
 
   /**
@@ -344,18 +379,27 @@ export class MushafComponent {
   }
 
   /**
-   * Draws a line that is wider than the page a little smaller, so every printed line keeps its words on one line.
+   * Keeps every printed line on one line: when a line is wider than the page, the whole page's letters are drawn a
+   * little smaller — the same size on every line of a page, as printed.
    */
   private fitLines(): void {
     const root = this.spread()?.nativeElement;
     if (!this.browser || !root) {
       return;
     }
-    for (const el of Array.from(root.querySelectorAll<HTMLElement>('.fit'))) {
-      el.style.fontSize = '';
-      const box = el.parentElement!.clientWidth;
-      if (el.scrollWidth > box && box > 0) {
-        el.style.fontSize = `${Math.floor((box / el.scrollWidth) * 1000) / 1000}em`;
+    for (const lines of Array.from(root.querySelectorAll<HTMLElement>('.mlines'))) {
+      const fits = Array.from(lines.querySelectorAll<HTMLElement>('.fit'));
+      fits.forEach((el) => (el.style.fontSize = ''));
+      let scale = 1;
+      for (const el of fits) {
+        const box = el.parentElement!.clientWidth;
+        if (el.scrollWidth > box && box > 0) {
+          scale = Math.min(scale, box / el.scrollWidth);
+        }
+      }
+      if (scale < 1) {
+        const size = `${Math.floor(scale * 1000) / 1000}em`;
+        fits.forEach((el) => (el.style.fontSize = size));
       }
     }
   }
