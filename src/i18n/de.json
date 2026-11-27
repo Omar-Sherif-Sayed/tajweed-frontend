@@ -40,8 +40,15 @@
     "hijri": "Hidschri-Kalender",
     "sources": "Quellen",
     "tafsir": "Tafsir",
+    "hifz": "Auswendiglernen",
+    "khatma": "Khatma und tägliche Portion",
+    "notes": "Meine Notizen",
+    "tracker": "Gebets- und Fastenprotokoll",
+    "kids": "Kinder",
+    "settings": "Einstellungen",
     "home": "Startseite",
-    "about": "Über die App"
+    "about": "Über die App",
+    "privacy": "Datenschutzerklärung"
   },
   "quran": {
     "index": "Inhaltsverzeichnis",
@@ -81,7 +88,8 @@
     "copy": "Vers kopieren",
     "copied": "Kopiert",
     "to": "Bis Vers",
-    "removeMarker": "Markierung entfernen"
+    "removeMarker": "Markierung entfernen",
+    "share": "Als Text teilen"
   },
   "markers": {
     "title": "Vers-Markierungen",
@@ -96,10 +104,12 @@
     "play": "Abspielen",
     "device": "Nur auf deinem Gerät gespeichert",
     "online": "Benötigt eine Internetverbindung",
+    "noRemind": "Keine Erinnerung — die einzige Benachrichtigung ist der Adhan.",
     "close": "Schließen",
     "loading": "Wird geladen…",
     "retry": "Erneut versuchen",
-    "search": "Suchen"
+    "search": "Suchen",
+    "remove": "Entfernen"
   },
   "player": {
     "choose": "Rezitator wählen",
@@ -184,6 +194,60 @@
     "adjust": "Korrektur: {{n}}",
     "note": "Umm-al-Qura-Kalender. Verschiebe ihn um ein bis zwei Tage, passend zur Bekanntgabe deines Landes."
   },
+  "hifz": {
+    "hide": "Wörter ausblenden, um sich zu prüfen",
+    "review": "Wiederholungsplan",
+    "progress": "Gelernt: {{n}} von {{m}} Versen",
+    "days": "Heute · nach 1 Tag · nach 3 Tagen · nach 7 Tagen",
+    "from": "Ab Vers",
+    "to": "Bis Vers",
+    "keep": "Diesen Abschnitt habe ich auswendig gelernt",
+    "reveal": "Tippe auf ein verborgenes Wort, um es zu zeigen.",
+    "showWord": "Wort zeigen",
+    "none": "Noch kein Abschnitt auswendig gelernt.",
+    "next": "Nächste Wiederholung: {{d}}",
+    "reviewed": "Wiederholt",
+    "doneAll": "Wiederholungsplan abgeschlossen"
+  },
+  "khatma": {
+    "days": "In {{n}} Tagen beenden",
+    "today": "Heutige Portion",
+    "pages": "Seiten {{a}} – {{b}}",
+    "progress": "{{p}} % gelesen",
+    "open": "Portion öffnen",
+    "read": "Diese Portion habe ich gelesen",
+    "finished": "Die Khatma ist vollendet — möge Allah sie von dir annehmen",
+    "restart": "Neue Khatma beginnen",
+    "start": "Khatma beginnen"
+  },
+  "notes": {
+    "add": "Notiz hinzufügen",
+    "empty": "Noch keine Notizen. Füge eine über die Aktionen eines Verses hinzu (tippe auf den Vers).",
+    "placeholder": "Deine Notiz…",
+    "save": "Speichern"
+  },
+  "share": {
+    "text": "Als Text"
+  },
+  "tracker": {
+    "fast": "Fasten"
+  },
+  "kids": {
+    "surahs": "Kurze Suren",
+    "letters": "Die arabischen Buchstaben",
+    "repeat": "Hören und dem Rezitator nachsprechen",
+    "lettersAudio": "Die Aussprache der Buchstaben kommt hinzu, sobald eine benannte Quelle gewählt ist."
+  },
+  "settings": {
+    "language": "Sprache",
+    "appearance": "Darstellung",
+    "hijri": "Anpassung des Hidschri-Datums",
+    "file": "Einstellungsdatei",
+    "export": "In Datei speichern",
+    "import": "Aus Datei laden",
+    "fileNote": "Einstellungen, Markierungen, Notizen und Fortschritt — es gibt keine Konten.",
+    "badFile": "Das ist keine Tajweed-Einstellungsdatei."
+  },
   "directions": {
     "suhuf": "Die ersten Blätter",
     "hira": "Hira",
@@ -236,5 +300,9 @@
   },
   "tafsir": {
     "none": "Für diesen Vers ist noch kein Tafsir verfügbar."
+  },
+  "privacy": {
+    "draft": "Entwurf — die endgültige Fassung erscheint vor der ersten Veröffentlichung.",
+    "languages": "Die Datenschutzerklärung erscheint auf Arabisch und Englisch."
   }
 }

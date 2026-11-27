@@ -40,8 +40,15 @@
     "hijri": "Hicri takvim",
     "sources": "Kaynaklar",
     "tafsir": "Tefsir",
+    "hifz": "Hıfz",
+    "khatma": "Hatim ve vird",
+    "notes": "Notlarım",
+    "tracker": "Namaz ve oruç takibi",
+    "kids": "Çocuklar",
+    "settings": "Ayarlar",
     "home": "Ana sayfa",
-    "about": "Hakkında"
+    "about": "Hakkında",
+    "privacy": "Gizlilik politikası"
   },
   "quran": {
     "index": "Fihrist",
@@ -81,7 +88,8 @@
     "copy": "Ayeti kopyala",
     "copied": "Kopyalandı",
     "to": "Bitiş ayeti",
-    "removeMarker": "İşareti kaldır"
+    "removeMarker": "İşareti kaldır",
+    "share": "Metin olarak paylaş"
   },
   "markers": {
     "title": "Ayet işaretleri",
@@ -96,10 +104,12 @@
     "play": "Oynat",
     "device": "Yalnızca cihazınızda saklanır",
     "online": "İnternet bağlantısı gerekir",
+    "noRemind": "Hatırlatma yok — tek bildirim ezandır.",
     "close": "Kapat",
     "loading": "Yükleniyor…",
     "retry": "Tekrar dene",
-    "search": "Ara"
+    "search": "Ara",
+    "remove": "Kaldır"
   },
   "player": {
     "choose": "Kâri seçin",
@@ -184,6 +194,60 @@
     "adjust": "Düzeltme: {{n}}",
     "note": "Ümmü'l-Kurâ takvimi. Ülkenizin duyurusuna uyması için bir iki gün kaydırın."
   },
+  "hifz": {
+    "hide": "Kendinizi sınamak için kelimeleri gizleyin",
+    "review": "Tekrar takvimi",
+    "progress": "Ezberlenen: {{m}} ayetin {{n}}'i",
+    "days": "Bugün · 1 gün sonra · 3 gün sonra · 7 gün sonra",
+    "from": "Başlangıç ayeti",
+    "to": "Bitiş ayeti",
+    "keep": "Bu bölümü ezberledim",
+    "reveal": "Gizli bir kelimeyi göstermek için ona dokunun.",
+    "showWord": "Kelimeyi göster",
+    "none": "Henüz ezberlenen bölüm yok.",
+    "next": "Sonraki tekrar: {{d}}",
+    "reviewed": "Tekrarladım",
+    "doneAll": "Tekrar takvimi tamamlandı"
+  },
+  "khatma": {
+    "days": "{{n}} günde hatim",
+    "today": "Bugünün virdi",
+    "pages": "Sayfa {{a}} – {{b}}",
+    "progress": "%{{p}} okundu",
+    "open": "Bölümü aç",
+    "read": "Bu bölümü okudum",
+    "finished": "Hatim tamamlandı — Allah kabul etsin",
+    "restart": "Yeni hatme başla",
+    "start": "Hatme başla"
+  },
+  "notes": {
+    "add": "Not ekle",
+    "empty": "Henüz not yok. Ayetin işlemlerinden ekleyin (ayete dokunun).",
+    "placeholder": "Notunuz…",
+    "save": "Kaydet"
+  },
+  "share": {
+    "text": "Metin olarak"
+  },
+  "tracker": {
+    "fast": "Oruç"
+  },
+  "kids": {
+    "surahs": "Kısa sureler",
+    "letters": "Arap harfleri",
+    "repeat": "Dinle ve kâriden sonra tekrarla",
+    "lettersAudio": "Harflerin sesleri, adı belli bir kaynak seçildiğinde eklenecek."
+  },
+  "settings": {
+    "language": "Dil",
+    "appearance": "Görünüm",
+    "hijri": "Hicri tarih düzeltmesi",
+    "file": "Ayar dosyası",
+    "export": "Dosyaya kaydet",
+    "import": "Dosyadan yükle",
+    "fileNote": "Ayarlar, işaretler, notlar ve ilerleme — hesap yoktur.",
+    "badFile": "Bu bir Tajweed ayar dosyası değil."
+  },
   "directions": {
     "suhuf": "İlk sahifeler",
     "hira": "Hira",
@@ -236,5 +300,9 @@
   },
   "tafsir": {
     "none": "Bu ayetin tefsiri henüz yok."
+  },
+  "privacy": {
+    "draft": "Taslak — ilk sürümden önce son hâliyle yayımlanacak.",
+    "languages": "Gizlilik politikası Arapça ve İngilizce yayımlanır."
   }
 }

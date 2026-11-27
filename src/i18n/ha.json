@@ -40,8 +40,15 @@
     "hijri": "Kalandar Hijira",
     "sources": "Majiyoyi",
     "tafsir": "Tafsiri",
+    "hifz": "Haddace",
+    "khatma": "Sauka da wirdi",
+    "notes": "Bayanaina",
+    "tracker": "Bin diddigin sallah da azumi",
+    "kids": "Yara",
+    "settings": "Saituna",
     "home": "Gida",
-    "about": "Game da manhajar"
+    "about": "Game da manhajar",
+    "privacy": "Manufar sirri"
   },
   "quran": {
     "index": "Fihirisa",
@@ -81,7 +88,8 @@
     "copy": "Kwafi aya",
     "copied": "An kwafa",
     "to": "Zuwa aya",
-    "removeMarker": "Cire alama"
+    "removeMarker": "Cire alama",
+    "share": "Raba a matsayin rubutu"
   },
   "markers": {
     "title": "Alamomin aya",
@@ -96,10 +104,12 @@
     "play": "Kunna",
     "device": "An adana a na'urarka kawai",
     "online": "Yana buƙatar intanet",
+    "noRemind": "Babu tunatarwa — sanarwa ɗaya tak ita ce kiran sallah.",
     "close": "Rufe",
     "loading": "Ana lodawa…",
     "retry": "Sake gwadawa",
-    "search": "Nema"
+    "search": "Nema",
+    "remove": "Cire"
   },
   "player": {
     "choose": "Zaɓi makaranci",
@@ -184,6 +194,60 @@
     "adjust": "Gyara: {{n}}",
     "note": "Kalandar Ummul Qura. Gyara ta da kwana ɗaya ko biyu don ta dace da sanarwar ƙasarka."
   },
+  "hifz": {
+    "hide": "Ɓoye kalmomi don ka gwada kanka",
+    "review": "Jadawalin bita",
+    "progress": "An haddace: {{n}} cikin aya {{m}}",
+    "days": "Yau · bayan kwana 1 · bayan kwana 3 · bayan kwana 7",
+    "from": "Daga aya",
+    "to": "Zuwa aya",
+    "keep": "Na haddace wannan sashe",
+    "reveal": "Taɓa kalmar da aka ɓoye don ta bayyana.",
+    "showWord": "Nuna kalmar",
+    "none": "Har yanzu ba a haddace wani sashe ba.",
+    "next": "Bita na gaba: {{d}}",
+    "reviewed": "Na bita",
+    "doneAll": "Jadawalin bita ya kammala"
+  },
+  "khatma": {
+    "days": "Sauka cikin kwana {{n}}",
+    "today": "Wirdin yau",
+    "pages": "Shafuka {{a}} – {{b}}",
+    "progress": "An karanta {{p}}%",
+    "open": "Buɗe kason",
+    "read": "Na karanta wannan kason",
+    "finished": "An kammala sauka — Allah Ya karɓa daga gare ka",
+    "restart": "Fara sabuwar sauka",
+    "start": "Fara sauka"
+  },
+  "notes": {
+    "add": "Ƙara bayani",
+    "empty": "Babu bayanin kula tukuna. Ƙara ɗaya daga ayyukan aya (taɓa ayar).",
+    "placeholder": "Bayaninka…",
+    "save": "Ajiye"
+  },
+  "share": {
+    "text": "A matsayin rubutu"
+  },
+  "tracker": {
+    "fast": "Azumi"
+  },
+  "kids": {
+    "surahs": "Gajerun surori",
+    "letters": "Harufan Larabci",
+    "repeat": "Saurara ka maimaita bayan makaranci",
+    "lettersAudio": "Za a ƙara sautin haruffa da zarar an zaɓi tushe mai suna."
+  },
+  "settings": {
+    "language": "Harshe",
+    "appearance": "Kamanni",
+    "hijri": "Gyaran kwanan watan Hijira",
+    "file": "Fayil na saituna",
+    "export": "Ajiye a fayil",
+    "import": "Loda daga fayil",
+    "fileNote": "Saituna, alamomi, bayanai da ci gaba — babu asusu.",
+    "badFile": "Wannan ba fayil ɗin saituna na Tajweed ba ne."
+  },
   "directions": {
     "suhuf": "Takardun farko",
     "hira": "Hira",
@@ -236,5 +300,9 @@
   },
   "tafsir": {
     "none": "Babu tafsirin wannan aya tukuna."
+  },
+  "privacy": {
+    "draft": "Daftari — za a wallafa shi a tsarinsa na ƙarshe kafin fitowar farko.",
+    "languages": "Ana wallafa manufar sirri da Larabci da Turanci."
   }
 }

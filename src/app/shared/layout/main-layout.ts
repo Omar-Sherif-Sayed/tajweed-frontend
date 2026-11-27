@@ -19,7 +19,10 @@ const LINKS = [
   { path: 'qibla', key: 'nav.qibla' },
   { path: 'hijri', key: 'nav.hijri' },
   { path: 'hadith', key: 'nav.hadith' },
+  { path: 'hifz', key: 'nav.hifz' },
+  { path: 'khatma', key: 'nav.khatma' },
   { path: 'sources', key: 'nav.sources' },
+  { path: 'settings', key: 'nav.settings' },
   { path: 'about', key: 'nav.about' },
 ] as const;
 

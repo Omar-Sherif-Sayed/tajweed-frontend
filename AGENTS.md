@@ -147,6 +147,17 @@ public/landscapes/             GENERATED copies of design 3's 56 landscapes (day
   line is justified to the page's width (container units), and a line wider than the page is drawn smaller
   (`fitLines`). Two pages on a computer (odd on the right), one on a phone; the arrow keys turn the pages (left =
   forward). The index, the juz list and «go to page» open this view; the surah view stays as «بالسورة».
+- **The study tools** (2026-11-27; `StudyService`, the arithmetic in `shared/utils/study.ts` with its spec):
+  memorisation (F30, `/hifz` — a range with repeat, its words hidden and shown by a tap, the ranges kept with the
+  design's review schedule: today, after 1, 3 and 7 days), the khatma (F31, `/khatma` — the 604 pages shared over
+  the chosen days, today's portion opens the printed pages), notes on ayahs (F32, written in the ayah's actions,
+  listed at `/notes`), share an ayah as text (F33 — the text as received with its reference; as an image it waits
+  for the font's permission), the prayer and fasting tracker (F37, `/tracker`), kids (F41, `/kids` — the short
+  surahs of juz 30 in a complete muallim recitation, F4, and the 28 letters; their sounds wait for a named source),
+  settings (`/settings` — language, appearance, the settings file F47: everything `LocalStore` keeps plus the
+  language and appearance, saved and loaded by the visitor) and the privacy page (`/privacy`, generated from
+  `tajweed-docs/docs/legal/privacy-policy.md` by `tools/sync-design.mjs`, Arabic or English). All on the device;
+  no reminder of any kind.
 - **Playback** (`shared/service/audio`): one `PlayerService` for recitations and radio — the rules of the client
   guide §5 and parent §8.3: sources in priority order (`FAILING` last, never dropped), the same source twice then the
   next, waits 1 s, 2 s, 4 s … capped at 30 s, without limit, at once on `online`; a surah file resumes at the last

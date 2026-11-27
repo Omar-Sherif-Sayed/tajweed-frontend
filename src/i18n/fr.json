@@ -40,8 +40,15 @@
     "hijri": "Calendrier de l'Hégire",
     "sources": "Sources",
     "tafsir": "Tafsir",
+    "hifz": "Mémorisation",
+    "khatma": "Khatma et portion quotidienne",
+    "notes": "Mes notes",
+    "tracker": "Suivi de la prière et du jeûne",
+    "kids": "Enfants",
+    "settings": "Réglages",
     "home": "Accueil",
-    "about": "À propos"
+    "about": "À propos",
+    "privacy": "Politique de confidentialité"
   },
   "quran": {
     "index": "Index",
@@ -81,7 +88,8 @@
     "copy": "Copier le verset",
     "copied": "Copié",
     "to": "Jusqu’au verset",
-    "removeMarker": "Retirer le marqueur"
+    "removeMarker": "Retirer le marqueur",
+    "share": "Partager en texte"
   },
   "markers": {
     "title": "Signets des versets",
@@ -96,10 +104,12 @@
     "play": "Lire",
     "device": "Enregistrés sur votre appareil uniquement",
     "online": "Nécessite une connexion internet",
+    "noRemind": "Aucun rappel — la seule notification est l'adhan.",
     "close": "Fermer",
     "loading": "Chargement…",
     "retry": "Réessayer",
-    "search": "Rechercher"
+    "search": "Rechercher",
+    "remove": "Supprimer"
   },
   "player": {
     "choose": "Choisir un récitateur",
@@ -184,6 +194,60 @@
     "adjust": "Ajustement : {{n}}",
     "note": "Calendrier Umm al-Qura. Décalez-le d'un ou deux jours selon l'annonce de votre pays."
   },
+  "hifz": {
+    "hide": "Masquer des mots pour vous tester",
+    "review": "Plan de révision",
+    "progress": "Mémorisés : {{n}} sur {{m}} versets",
+    "days": "Aujourd'hui · après 1 jour · après 3 jours · après 7 jours",
+    "from": "De l'ayah",
+    "to": "À l'ayah",
+    "keep": "J'ai mémorisé ce passage",
+    "reveal": "Touchez un mot caché pour l'afficher.",
+    "showWord": "Afficher le mot",
+    "none": "Aucun passage mémorisé pour l'instant.",
+    "next": "Prochaine révision : {{d}}",
+    "reviewed": "Révisé",
+    "doneAll": "Programme de révision terminé"
+  },
+  "khatma": {
+    "days": "Terminer en {{n}} jours",
+    "today": "Portion du jour",
+    "pages": "Pages {{a}} – {{b}}",
+    "progress": "{{p}} % lu",
+    "open": "Ouvrir la portion",
+    "read": "J'ai lu cette portion",
+    "finished": "La khatma est achevée — qu'Allah l'accepte de toi",
+    "restart": "Commencer une nouvelle khatma",
+    "start": "Commencer la khatma"
+  },
+  "notes": {
+    "add": "Ajouter une note",
+    "empty": "Aucune note pour l'instant. Ajoutez-en une depuis les actions de l'ayah (touchez l'ayah).",
+    "placeholder": "Votre note…",
+    "save": "Enregistrer"
+  },
+  "share": {
+    "text": "En texte"
+  },
+  "tracker": {
+    "fast": "Jeûne"
+  },
+  "kids": {
+    "surahs": "Sourates courtes",
+    "letters": "Les lettres arabes",
+    "repeat": "Écoute et répète après le récitateur",
+    "lettersAudio": "Les sons des lettres seront ajoutés dès qu'une source nommée sera choisie."
+  },
+  "settings": {
+    "language": "Langue",
+    "appearance": "Apparence",
+    "hijri": "Ajustement de la date hégirienne",
+    "file": "Fichier de réglages",
+    "export": "Enregistrer dans un fichier",
+    "import": "Charger depuis un fichier",
+    "fileNote": "Réglages, marqueurs, notes et progression — il n'y a pas de comptes.",
+    "badFile": "Ce n'est pas un fichier de réglages Tajweed."
+  },
   "directions": {
     "suhuf": "Les premières feuilles",
     "hira": "Hira",
@@ -236,5 +300,9 @@
   },
   "tafsir": {
     "none": "Aucun tafsir n’est encore disponible pour ce verset."
+  },
+  "privacy": {
+    "draft": "Brouillon — publié dans sa forme finale avant la première version.",
+    "languages": "La politique de confidentialité est publiée en arabe et en anglais."
   }
 }

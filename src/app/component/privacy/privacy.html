@@ -1,0 +1,17 @@
+<p class="rounded-xl bg-dotsoft p-3 text-sm">{{ 'privacy.draft' | translate }} {{ 'privacy.languages' | translate }}</p>
+
+<article class="mt-4 max-w-3xl text-sm leading-relaxed" [attr.lang]="arabic() ? 'ar' : 'en'" [attr.dir]="arabic() ? 'rtl' : 'ltr'">
+  @for (b of blocks(); track $index) {
+    @switch (b.kind) {
+      @case ('title') {
+        <h1 class="font-heading text-2xl font-bold text-ink">{{ b.text }}</h1>
+      }
+      @case ('heading') {
+        <h2 class="mt-5 font-heading text-lg font-bold text-ink">{{ b.text }}</h2>
+      }
+      @default {
+        <p class="mt-2">{{ b.text }}</p>
+      }
+    }
+  }
+</article>

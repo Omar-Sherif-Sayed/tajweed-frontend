@@ -8,13 +8,16 @@ import { ReciterService } from '@shared/service/integration/reciter/reciter.serv
 import { TafsirService } from '@shared/service/integration/tafsir/tafsir.service';
 import { MARKER_COLOURS, ReadingService } from '@shared/service/reading.service';
 import { SettingsService } from '@shared/service/settings.service';
+import { StudyService } from '@shared/service/study.service';
 import { localNumber, reportLink, surahName } from '@shared/utils/quran-text';
 
 /**
  * The actions on an ayah or a range (F26) and its markers (F25), in a sheet over the reader: a marker colour (a tint
  * over the ayah and its number — the author, 2026-11-20), copy the ayah with its reference, listen to it or to a range
  * («from … to», with repeat) in the chosen recitation, and read all its tafsirs (F5) as the backend has synced them,
- * with the Quran Foundation's credit. The virtue (F29) waits for its hadith edition.
+ * with the Quran Foundation's credit; a private note on the ayah (F32); share it as text (F33 — the text exactly as
+ * received with its reference; as an image it waits for the font's permission). The virtue (F29) waits for its
+ * hadith edition.
  */
 @Component({
   selector: 'tj-ayah-actions',
@@ -97,6 +100,18 @@ export class AyahActionsComponent {
     Array.from({ length: this.surah().ayahCount - this.ayah().number + 1 }, (_, i) => this.ayah().number + i),
   );
 
+  /** The visitor's notes. */
+  protected readonly study = inject(StudyService);
+
+  /** Whether the note is being written. */
+  protected readonly writing = signal(false);
+
+  /** Whether the ayah was shared or copied for sharing. */
+  protected readonly shared = signal(false);
+
+  /** The ayah's note, or an empty text. */
+  protected readonly note = computed(() => this.study.notes()[`${this.ayah().surahNumber}:${this.ayah().number}`] ?? '');
+
   /** The link that reports a mistake in this ayah. */
   protected readonly report = computed(() => reportLink(`Quran ${this.ayah().surahNumber}:${this.ayah().number}`));
 
@@ -117,6 +132,32 @@ export class AyahActionsComponent {
    */
   protected mark(id: string | null): void {
     this.reading.setMarker(this.ayah().surahNumber, this.ayah().number, id);
+  }
+
+  /**
+   * Saves the ayah's note (an empty text removes it).
+   *
+   * @param text the note
+   */
+  protected saveNote(text: string): void {
+    this.study.saveNote(this.ayah().surahNumber, this.ayah().number, text);
+    this.writing.set(false);
+  }
+
+  /** Shares the ayah as text — exactly as received, with its reference — or copies it where sharing is not offered. */
+  protected async share(): Promise<void> {
+    const a = this.ayah();
+    const text = `${a.text} [${this.surah().nameAr} ${a.surahNumber}:${a.number}]`;
+    try {
+      if (navigator.share) {
+        await navigator.share({ text });
+      } else {
+        await navigator.clipboard?.writeText(text);
+      }
+      this.shared.set(true);
+    } catch {
+      // the visitor closed the share sheet
+    }
   }
 
   /** Copies the ayah — its text exactly as received — with its reference. */

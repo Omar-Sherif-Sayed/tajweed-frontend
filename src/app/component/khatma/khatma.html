@@ -1,0 +1,48 @@
+<h1 class="font-heading text-2xl font-bold text-ink">{{ 'nav.khatma' | translate }}</h1>
+<p class="mt-1 text-xs text-muted">{{ 'common.device' | translate }} · {{ 'common.noRemind' | translate }}</p>
+
+@if (study.khatma(); as k) {
+  <section class="mt-4 rounded-2xl bg-primary p-4 text-onprimary">
+    <p class="text-sm opacity-90">{{ 'khatma.days' | translate: { n: num(k.days) } }}</p>
+    @if (portion(); as p) {
+      <p class="mt-1 text-xl font-bold">{{ 'khatma.today' | translate }} · {{ 'khatma.pages' | translate: { a: num(p.from), b: num(p.to) } }}</p>
+      <div class="mt-3 flex flex-wrap gap-2 text-sm">
+        <a [routerLink]="['/', lang(), 'quran', 'page', p.from]" class="rounded-full bg-onprimary px-4 py-1.5 text-primary">{{ 'khatma.open' | translate }}</a>
+        <button type="button" class="rounded-full border border-onprimary px-4 py-1.5" (click)="study.readKhatmaThrough(p.to)">
+          {{ 'khatma.read' | translate }}
+        </button>
+      </div>
+    } @else {
+      <p class="mt-1 text-xl font-bold">{{ 'khatma.finished' | translate }}</p>
+    }
+  </section>
+  <div class="mt-4 h-2.5 overflow-hidden rounded-full bg-dotsoft" role="progressbar" [attr.aria-valuenow]="percent()" aria-valuemin="0" aria-valuemax="100">
+    <div class="h-full bg-dot" [style.width.%]="percent()"></div>
+  </div>
+  <p class="mt-1 text-sm text-muted">
+    {{ 'khatma.progress' | translate: { p: num(percent()) } }} · {{ num(portionsRead()) }} / {{ num(k.days) }}
+  </p>
+  <button type="button" class="mt-4 rounded-full border border-border px-4 py-1.5 text-sm" (click)="study.endKhatma()">{{ 'khatma.restart' | translate }}</button>
+} @else {
+  <section class="mt-4 rounded-2xl border border-border bg-surface p-4">
+    <p class="text-sm font-bold text-ink">{{ 'khatma.days' | translate: { n: num(days()) } }}</p>
+    <div class="mt-2 flex flex-wrap gap-2 text-sm">
+      @for (n of choices; track n) {
+        <button
+          type="button"
+          class="rounded-full border px-3 py-1"
+          [class.border-dot]="n === days()"
+          [class.bg-dotsoft]="n === days()"
+          [class.border-border]="n !== days()"
+          [attr.aria-pressed]="n === days()"
+          (click)="days.set(n)"
+        >
+          {{ num(n) }}
+        </button>
+      }
+    </div>
+    <button type="button" class="mt-3 rounded-full bg-primary px-4 py-1.5 text-sm text-onprimary" (click)="study.startKhatma(days())">
+      {{ 'khatma.start' | translate }}
+    </button>
+  </section>
+}

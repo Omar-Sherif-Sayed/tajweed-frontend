@@ -40,8 +40,15 @@
     "hijri": "Kalender Hijriah",
     "sources": "Sumber",
     "tafsir": "Tafsir",
+    "hifz": "Hafalan",
+    "khatma": "Khatam dan wirid",
+    "notes": "Catatan saya",
+    "tracker": "Catatan salat dan puasa",
+    "kids": "Anak-anak",
+    "settings": "Pengaturan",
     "home": "Beranda",
-    "about": "Tentang"
+    "about": "Tentang",
+    "privacy": "Kebijakan privasi"
   },
   "quran": {
     "index": "Daftar isi",
@@ -81,7 +88,8 @@
     "copy": "Salin ayat",
     "copied": "Disalin",
     "to": "Sampai ayat",
-    "removeMarker": "Hapus penanda"
+    "removeMarker": "Hapus penanda",
+    "share": "Bagikan sebagai teks"
   },
   "markers": {
     "title": "Penanda ayat",
@@ -96,10 +104,12 @@
     "play": "Putar",
     "device": "Hanya tersimpan di perangkatmu",
     "online": "Perlu koneksi internet",
+    "noRemind": "Tanpa pengingat — satu-satunya notifikasi adalah azan.",
     "close": "Tutup",
     "loading": "Memuat…",
     "retry": "Coba lagi",
-    "search": "Cari"
+    "search": "Cari",
+    "remove": "Hapus"
   },
   "player": {
     "choose": "Pilih qari",
@@ -184,6 +194,60 @@
     "adjust": "Penyesuaian: {{n}}",
     "note": "Kalender Ummul Qura. Sesuaikan satu atau dua hari agar cocok dengan pengumuman negaramu."
   },
+  "hifz": {
+    "hide": "Sembunyikan kata untuk menguji diri",
+    "review": "Jadwal murajaah",
+    "progress": "Dihafal: {{n}} dari {{m}} ayat",
+    "days": "Hari ini · 1 hari lagi · 3 hari lagi · 7 hari lagi",
+    "from": "Dari ayat",
+    "to": "Sampai ayat",
+    "keep": "Saya telah menghafal bagian ini",
+    "reveal": "Ketuk kata yang tersembunyi untuk menampilkannya.",
+    "showWord": "Tampilkan kata",
+    "none": "Belum ada bagian yang dihafal.",
+    "next": "Murajaah berikutnya: {{d}}",
+    "reviewed": "Sudah diulang",
+    "doneAll": "Jadwal murajaah selesai"
+  },
+  "khatma": {
+    "days": "Khatam dalam {{n}} hari",
+    "today": "Wirid hari ini",
+    "pages": "Halaman {{a}} – {{b}}",
+    "progress": "{{p}}% dibaca",
+    "open": "Buka bagian",
+    "read": "Saya sudah membaca bagian ini",
+    "finished": "Khatam selesai — semoga Allah menerimanya darimu",
+    "restart": "Mulai khatam baru",
+    "start": "Mulai khatam"
+  },
+  "notes": {
+    "add": "Tambah catatan",
+    "empty": "Belum ada catatan. Tambahkan dari tindakan ayat (ketuk ayatnya).",
+    "placeholder": "Catatan Anda…",
+    "save": "Simpan"
+  },
+  "share": {
+    "text": "Sebagai teks"
+  },
+  "tracker": {
+    "fast": "Puasa"
+  },
+  "kids": {
+    "surahs": "Surah-surah pendek",
+    "letters": "Huruf Arab",
+    "repeat": "Dengarkan dan tirukan qari",
+    "lettersAudio": "Suara huruf ditambahkan setelah sumber yang jelas dipilih."
+  },
+  "settings": {
+    "language": "Bahasa",
+    "appearance": "Tampilan",
+    "hijri": "Penyesuaian tanggal Hijriah",
+    "file": "Berkas pengaturan",
+    "export": "Simpan ke berkas",
+    "import": "Muat dari berkas",
+    "fileNote": "Pengaturan, penanda, catatan, dan kemajuan — tidak ada akun.",
+    "badFile": "Ini bukan berkas pengaturan Tajweed."
+  },
   "directions": {
     "suhuf": "Lembaran pertama",
     "hira": "Hira",
@@ -236,5 +300,9 @@
   },
   "tafsir": {
     "none": "Tafsir ayat ini belum tersedia."
+  },
+  "privacy": {
+    "draft": "Draf — diterbitkan dalam bentuk akhir sebelum rilis pertama.",
+    "languages": "Kebijakan privasi diterbitkan dalam bahasa Arab dan Inggris."
   }
 }

@@ -40,8 +40,15 @@
     "hijri": "Kalenda ya Hijria",
     "sources": "Vyanzo",
     "tafsir": "Tafsiri",
+    "hifz": "Kuhifadhi",
+    "khatma": "Khitma na sehemu ya kila siku",
+    "notes": "Maelezo yangu",
+    "tracker": "Ufuatiliaji wa swala na saumu",
+    "kids": "Watoto",
+    "settings": "Mipangilio",
     "home": "Mwanzo",
-    "about": "Kuhusu"
+    "about": "Kuhusu",
+    "privacy": "Sera ya faragha"
   },
   "quran": {
     "index": "Fahirisi",
@@ -81,7 +88,8 @@
     "copy": "Nakili aya",
     "copied": "Imenakiliwa",
     "to": "Hadi aya",
-    "removeMarker": "Ondoa alama"
+    "removeMarker": "Ondoa alama",
+    "share": "Shiriki kama maandishi"
   },
   "markers": {
     "title": "Alama za aya",
@@ -96,10 +104,12 @@
     "play": "Cheza",
     "device": "Zimehifadhiwa kwenye kifaa chako tu",
     "online": "Inahitaji intaneti",
+    "noRemind": "Hakuna kikumbusho — arifa pekee ni adhana.",
     "close": "Funga",
     "loading": "Inapakia…",
     "retry": "Jaribu tena",
-    "search": "Tafuta"
+    "search": "Tafuta",
+    "remove": "Ondoa"
   },
   "player": {
     "choose": "Chagua msomaji",
@@ -184,6 +194,60 @@
     "adjust": "Marekebisho: {{n}}",
     "note": "Kalenda ya Ummul Qura. Irekebishe siku moja au mbili ilingane na tangazo la nchi yako."
   },
+  "hifz": {
+    "hide": "Ficha maneno ili kujipima",
+    "review": "Ratiba ya kurudia",
+    "progress": "Zimehifadhiwa: {{n}} kati ya aya {{m}}",
+    "days": "Leo · baada ya siku 1 · baada ya siku 3 · baada ya siku 7",
+    "from": "Kuanzia aya",
+    "to": "Hadi aya",
+    "keep": "Nimehifadhi sehemu hii",
+    "reveal": "Gusa neno lililofichwa ili lionekane.",
+    "showWord": "Onyesha neno",
+    "none": "Bado hakuna sehemu iliyohifadhiwa.",
+    "next": "Marudio yajayo: {{d}}",
+    "reviewed": "Nimerudia",
+    "doneAll": "Ratiba ya marudio imekamilika"
+  },
+  "khatma": {
+    "days": "Maliza kwa siku {{n}}",
+    "today": "Sehemu ya leo",
+    "pages": "Kurasa {{a}} – {{b}}",
+    "progress": "{{p}}% imesomwa",
+    "open": "Fungua sehemu",
+    "read": "Nimesoma sehemu hii",
+    "finished": "Khitma imekamilika — Allah aikubali kutoka kwako",
+    "restart": "Anza khitma mpya",
+    "start": "Anza khitma"
+  },
+  "notes": {
+    "add": "Ongeza maelezo",
+    "empty": "Bado hakuna maelezo. Ongeza kupitia vitendo vya aya (gusa aya).",
+    "placeholder": "Maelezo yako…",
+    "save": "Hifadhi"
+  },
+  "share": {
+    "text": "Kama maandishi"
+  },
+  "tracker": {
+    "fast": "Saumu"
+  },
+  "kids": {
+    "surahs": "Sura fupi",
+    "letters": "Herufi za Kiarabu",
+    "repeat": "Sikiliza na urudie baada ya msomaji",
+    "lettersAudio": "Sauti za herufi zitaongezwa baada ya kuchagua chanzo chenye jina."
+  },
+  "settings": {
+    "language": "Lugha",
+    "appearance": "Mwonekano",
+    "hijri": "Marekebisho ya tarehe ya Hijria",
+    "file": "Faili la mipangilio",
+    "export": "Hifadhi kwenye faili",
+    "import": "Pakia kutoka faili",
+    "fileNote": "Mipangilio, alama, maelezo na maendeleo — hakuna akaunti.",
+    "badFile": "Hili si faili la mipangilio ya Tajweed."
+  },
   "directions": {
     "suhuf": "Kurasa za kwanza",
     "hira": "Hira",
@@ -236,5 +300,9 @@
   },
   "tafsir": {
     "none": "Bado hakuna tafsiri ya aya hii."
+  },
+  "privacy": {
+    "draft": "Rasimu — itachapishwa kwa umbo lake la mwisho kabla ya toleo la kwanza.",
+    "languages": "Sera ya faragha inachapishwa kwa Kiarabu na Kiingereza."
   }
 }

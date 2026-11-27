@@ -1,0 +1,39 @@
+<h1 class="font-heading text-2xl font-bold text-ink">{{ 'nav.tracker' | translate }}</h1>
+<p class="mt-1 text-xs text-muted">{{ 'common.device' | translate }} · {{ 'common.noRemind' | translate }}</p>
+
+<div class="mt-4 overflow-x-auto">
+  <table class="w-full border-separate border-spacing-1 text-center text-sm">
+    <thead>
+      <tr>
+        <th class="text-start"></th>
+        @for (i of items; track i) {
+          <th class="px-1 text-xs font-bold text-muted">{{ label(i) | translate }}</th>
+        }
+      </tr>
+    </thead>
+    <tbody>
+      @for (d of days(); track d.key; let first = $first) {
+        <tr>
+          <th class="whitespace-nowrap pe-2 text-start text-xs" [class.text-ink]="first" [class.font-bold]="first">{{ d.label }}</th>
+          @for (i of items; track i) {
+            <td>
+              <button
+                type="button"
+                class="size-9 rounded-full border text-base"
+                [class.bg-primary]="study.tracker()[d.key]?.[i]"
+                [class.text-onprimary]="study.tracker()[d.key]?.[i]"
+                [class.border-primary]="study.tracker()[d.key]?.[i]"
+                [class.border-border]="!study.tracker()[d.key]?.[i]"
+                [attr.aria-pressed]="!!study.tracker()[d.key]?.[i]"
+                [attr.aria-label]="(label(i) | translate) + ' · ' + d.label"
+                (click)="study.toggle(d.key, i)"
+              >
+                {{ study.tracker()[d.key]?.[i] ? '✓' : '' }}
+              </button>
+            </td>
+          }
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>

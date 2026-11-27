@@ -70,7 +70,26 @@
     <button type="button" class="rounded-full border border-border px-4 py-1.5 text-sm" (click)="showTafsirs.set(true)">
       {{ 'actions.allTafsirs' | translate }}
     </button>
+    <button type="button" class="rounded-full border border-border px-4 py-1.5 text-sm" (click)="share()">
+      {{ (shared() ? 'actions.copied' : 'actions.share') | translate }}
+    </button>
+    <button type="button" class="rounded-full border border-border px-4 py-1.5 text-sm" [attr.aria-expanded]="writing()" (click)="writing.set(!writing())">
+      {{ 'notes.add' | translate }}
+    </button>
   </div>
+  @if (writing() || note()) {
+    <div class="mt-3">
+      @if (writing()) {
+        <textarea #noteText rows="3" class="w-full rounded-xl border border-border bg-page p-2 text-sm" [placeholder]="'notes.placeholder' | translate" [value]="note()"></textarea>
+        <button type="button" class="mt-1 rounded-full bg-primary px-4 py-1.5 text-sm text-onprimary" (click)="saveNote(noteText.value)">
+          {{ 'notes.save' | translate }}
+        </button>
+      } @else {
+        <p class="whitespace-pre-line rounded-xl bg-dotsoft p-2 text-sm">{{ note() }}</p>
+      }
+      <p class="mt-1 text-xs text-muted">{{ 'common.device' | translate }}</p>
+    </div>
+  }
 
   @if (showTafsirs()) {
     <h3 class="mt-5 text-sm font-bold">{{ 'actions.tafsirs' | translate }}</h3>

@@ -40,8 +40,15 @@
     "hijri": "Hijriy taqvim",
     "sources": "Manbalar",
     "tafsir": "Tafsir",
+    "hifz": "Yodlash",
+    "khatma": "Xatm va vird",
+    "notes": "Mening qaydlarim",
+    "tracker": "Namoz va roʻza hisobi",
+    "kids": "Bolalar",
+    "settings": "Sozlamalar",
     "home": "Bosh sahifa",
-    "about": "Ilova haqida"
+    "about": "Ilova haqida",
+    "privacy": "Maxfiylik siyosati"
   },
   "quran": {
     "index": "Mundarija",
@@ -81,7 +88,8 @@
     "copy": "Oyatdan nusxa olish",
     "copied": "Nusxalandi",
     "to": "Oyatgacha",
-    "removeMarker": "Belgini olib tashlash"
+    "removeMarker": "Belgini olib tashlash",
+    "share": "Matn sifatida ulashish"
   },
   "markers": {
     "title": "Oyat belgilari",
@@ -96,10 +104,12 @@
     "play": "Ijro",
     "device": "Faqat qurilmangizda saqlanadi",
     "online": "Internet aloqasi kerak",
+    "noRemind": "Eslatma yoʻq — yagona bildirishnoma azondir.",
     "close": "Yopish",
     "loading": "Yuklanmoqda…",
     "retry": "Qayta urinish",
-    "search": "Qidirish"
+    "search": "Qidirish",
+    "remove": "Oʻchirish"
   },
   "player": {
     "choose": "Qorini tanlang",
@@ -184,6 +194,60 @@
     "adjust": "Tuzatish: {{n}}",
     "note": "Ummul-Quro taqvimi. Mamlakatingiz eʼloniga moslash uchun bir-ikki kun suring."
   },
+  "hifz": {
+    "hide": "Oʻzingizni sinash uchun soʻzlarni yashiring",
+    "review": "Takrorlash jadvali",
+    "progress": "Yodlangan: {{m}} oyatdan {{n}}",
+    "days": "Bugun · 1 kundan keyin · 3 kundan keyin · 7 kundan keyin",
+    "from": "Oyatdan",
+    "to": "Oyatgacha",
+    "keep": "Bu qismni yodladim",
+    "reveal": "Yashirin soʻzni koʻrsatish uchun ustiga bosing.",
+    "showWord": "Soʻzni koʻrsatish",
+    "none": "Hali yodlangan qism yoʻq.",
+    "next": "Keyingi takrorlash: {{d}}",
+    "reviewed": "Takrorladim",
+    "doneAll": "Takrorlash jadvali yakunlandi"
+  },
+  "khatma": {
+    "days": "{{n}} kunda xatm",
+    "today": "Bugungi vird",
+    "pages": "{{a}} – {{b}}-sahifalar",
+    "progress": "{{p}}% oʻqildi",
+    "open": "Qismni ochish",
+    "read": "Bu qismni oʻqidim",
+    "finished": "Xatm tugadi — Alloh qabul qilsin",
+    "restart": "Yangi xatm boshlash",
+    "start": "Xatmni boshlash"
+  },
+  "notes": {
+    "add": "Qayd qoʻshish",
+    "empty": "Hali qaydlar yoʻq. Oyat amallaridan qoʻshing (oyatga bosing).",
+    "placeholder": "Qaydingiz…",
+    "save": "Saqlash"
+  },
+  "share": {
+    "text": "Matn sifatida"
+  },
+  "tracker": {
+    "fast": "Roʻza"
+  },
+  "kids": {
+    "surahs": "Qisqa suralar",
+    "letters": "Arab harflari",
+    "repeat": "Tinglang va qoridan keyin takrorlang",
+    "lettersAudio": "Harflar talaffuzi nomi aniq manba tanlangach qoʻshiladi."
+  },
+  "settings": {
+    "language": "Til",
+    "appearance": "Koʻrinish",
+    "hijri": "Hijriy sanani tuzatish",
+    "file": "Sozlamalar fayli",
+    "export": "Faylga saqlash",
+    "import": "Fayldan yuklash",
+    "fileNote": "Sozlamalar, belgilar, qaydlar va natijalar — hisob yoʻq.",
+    "badFile": "Bu Tajweed sozlamalar fayli emas."
+  },
   "directions": {
     "suhuf": "Ilk sahifalar",
     "hira": "Hiro",
@@ -236,5 +300,9 @@
   },
   "tafsir": {
     "none": "Bu oyat tafsiri hozircha yo‘q."
+  },
+  "privacy": {
+    "draft": "Qoralama — birinchi chiqarilishdan oldin yakuniy shaklda eʼlon qilinadi.",
+    "languages": "Maxfiylik siyosati arab va ingliz tillarida eʼlon qilinadi."
   }
 }

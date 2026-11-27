@@ -68,3 +68,17 @@ body {
   line-height: 1;
   vertical-align: middle;
 }
+
+// Memorisation (F30): a hidden word keeps its place and width; a tap shows it. The text is never changed, only covered.
+.hide-word {
+  border-radius: 0.3em;
+  background: var(--t-dotsoft);
+  color: transparent;
+  cursor: pointer;
+  font: inherit;
+  line-height: inherit;
+
+  &:focus-visible {
+    outline: 2px solid var(--t-dot);
+  }
+}

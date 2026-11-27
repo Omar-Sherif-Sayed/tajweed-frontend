@@ -40,8 +40,15 @@
     "hijri": "Hijri calendar",
     "sources": "Sources",
     "tafsir": "Tafsir",
+    "hifz": "Memorisation",
+    "khatma": "Khatma and daily portion",
+    "notes": "My notes",
+    "tracker": "Prayer and fasting tracker",
+    "kids": "Kids",
+    "settings": "Settings",
     "home": "Home",
-    "about": "About"
+    "about": "About",
+    "privacy": "Privacy policy"
   },
   "quran": {
     "index": "Index",
@@ -81,7 +88,8 @@
     "copy": "Copy the ayah",
     "copied": "Copied",
     "to": "To ayah",
-    "removeMarker": "Remove the marker"
+    "removeMarker": "Remove the marker",
+    "share": "Share as text"
   },
   "markers": {
     "title": "Ayah markers",
@@ -96,10 +104,12 @@
     "play": "Play",
     "device": "Saved on your device only",
     "online": "Needs an internet connection",
+    "noRemind": "No reminder — the only notification is the adhan.",
     "close": "Close",
     "loading": "Loading…",
     "retry": "Try again",
-    "search": "Search"
+    "search": "Search",
+    "remove": "Remove"
   },
   "player": {
     "choose": "Choose a reciter",
@@ -184,6 +194,60 @@
     "adjust": "Adjustment: {{n}}",
     "note": "Umm al-Qura calendar. Adjust it by a day or two to match your country's announcement."
   },
+  "hifz": {
+    "hide": "Hide words to test yourself",
+    "review": "Review schedule",
+    "progress": "Memorised: {{n}} of {{m}} ayahs",
+    "days": "Today · after 1 day · after 3 days · after 7 days",
+    "from": "From ayah",
+    "to": "To ayah",
+    "keep": "I memorised this range",
+    "reveal": "Tap a hidden word to show it.",
+    "showWord": "Show the word",
+    "none": "No range memorised yet.",
+    "next": "Next review: {{d}}",
+    "reviewed": "Reviewed",
+    "doneAll": "Review schedule complete"
+  },
+  "khatma": {
+    "days": "Finish in {{n}} days",
+    "today": "Today's portion",
+    "pages": "Pages {{a}} – {{b}}",
+    "progress": "{{p}}% read",
+    "open": "Open the portion",
+    "read": "I read this portion",
+    "finished": "The khatma is complete — may Allah accept it from you",
+    "restart": "Start a new khatma",
+    "start": "Start the khatma"
+  },
+  "notes": {
+    "add": "Add a note",
+    "empty": "No notes yet. Add one from an ayah's actions (tap the ayah).",
+    "placeholder": "Your note…",
+    "save": "Save"
+  },
+  "share": {
+    "text": "As text"
+  },
+  "tracker": {
+    "fast": "Fasting"
+  },
+  "kids": {
+    "surahs": "Short surahs",
+    "letters": "The Arabic letters",
+    "repeat": "Listen and repeat after the reciter",
+    "lettersAudio": "The letters' sounds are added once a named source for them is chosen."
+  },
+  "settings": {
+    "language": "Language",
+    "appearance": "Appearance",
+    "hijri": "Hijri date adjustment",
+    "file": "Settings file",
+    "export": "Save to a file",
+    "import": "Load from a file",
+    "fileNote": "Settings, markers, notes and progress — there are no accounts.",
+    "badFile": "This is not a Tajweed settings file."
+  },
   "directions": {
     "suhuf": "The first sheets",
     "hira": "Hira",
@@ -236,5 +300,9 @@
   },
   "tafsir": {
     "none": "No tafsir is available for this ayah yet."
+  },
+  "privacy": {
+    "draft": "Draft — published in its final form before the first release.",
+    "languages": "The privacy policy is published in Arabic and English."
   }
 }

@@ -40,8 +40,15 @@
     "hijri": "Calendario de la hégira",
     "sources": "Fuentes",
     "tafsir": "Tafsir",
+    "hifz": "Memorización",
+    "khatma": "Jatma y porción diaria",
+    "notes": "Mis notas",
+    "tracker": "Registro de oración y ayuno",
+    "kids": "Niños",
+    "settings": "Ajustes",
     "home": "Inicio",
-    "about": "Acerca de"
+    "about": "Acerca de",
+    "privacy": "Política de privacidad"
   },
   "quran": {
     "index": "Índice",
@@ -81,7 +88,8 @@
     "copy": "Copiar la aleya",
     "copied": "Copiado",
     "to": "Hasta la aleya",
-    "removeMarker": "Quitar el marcador"
+    "removeMarker": "Quitar el marcador",
+    "share": "Compartir como texto"
   },
   "markers": {
     "title": "Marcadores de aleyas",
@@ -96,10 +104,12 @@
     "play": "Reproducir",
     "device": "Guardados solo en tu dispositivo",
     "online": "Necesita conexión a internet",
+    "noRemind": "Sin recordatorios — la única notificación es el adhan.",
     "close": "Cerrar",
     "loading": "Cargando…",
     "retry": "Reintentar",
-    "search": "Buscar"
+    "search": "Buscar",
+    "remove": "Quitar"
   },
   "player": {
     "choose": "Elige un recitador",
@@ -184,6 +194,60 @@
     "adjust": "Ajuste: {{n}}",
     "note": "Calendario Umm al-Qura. Ajústalo uno o dos días para coincidir con el anuncio de tu país."
   },
+  "hifz": {
+    "hide": "Oculta palabras para ponerte a prueba",
+    "review": "Plan de repaso",
+    "progress": "Memorizadas: {{n}} de {{m}} aleyas",
+    "days": "Hoy · en 1 día · en 3 días · en 7 días",
+    "from": "Desde la aleya",
+    "to": "Hasta la aleya",
+    "keep": "He memorizado este pasaje",
+    "reveal": "Toca una palabra oculta para mostrarla.",
+    "showWord": "Mostrar la palabra",
+    "none": "Aún no has memorizado ningún pasaje.",
+    "next": "Próximo repaso: {{d}}",
+    "reviewed": "Repasado",
+    "doneAll": "Calendario de repaso completado"
+  },
+  "khatma": {
+    "days": "Terminar en {{n}} días",
+    "today": "Porción de hoy",
+    "pages": "Páginas {{a}} – {{b}}",
+    "progress": "{{p}}% leído",
+    "open": "Abrir la porción",
+    "read": "He leído esta porción",
+    "finished": "El jatm está completo — que Allah lo acepte de ti",
+    "restart": "Empezar un nuevo jatm",
+    "start": "Empezar el jatm"
+  },
+  "notes": {
+    "add": "Añadir una nota",
+    "empty": "Aún no hay notas. Añade una desde las acciones de la aleya (toca la aleya).",
+    "placeholder": "Tu nota…",
+    "save": "Guardar"
+  },
+  "share": {
+    "text": "Como texto"
+  },
+  "tracker": {
+    "fast": "Ayuno"
+  },
+  "kids": {
+    "surahs": "Suras cortas",
+    "letters": "Las letras árabes",
+    "repeat": "Escucha y repite tras el recitador",
+    "lettersAudio": "Los sonidos de las letras se añadirán cuando se elija una fuente con nombre."
+  },
+  "settings": {
+    "language": "Idioma",
+    "appearance": "Apariencia",
+    "hijri": "Ajuste de la fecha hiyrí",
+    "file": "Archivo de ajustes",
+    "export": "Guardar en un archivo",
+    "import": "Cargar desde un archivo",
+    "fileNote": "Ajustes, marcadores, notas y progreso — no hay cuentas.",
+    "badFile": "Este no es un archivo de ajustes de Tajweed."
+  },
   "directions": {
     "suhuf": "Las primeras hojas",
     "hira": "Hira",
@@ -236,5 +300,9 @@
   },
   "tafsir": {
     "none": "Aún no hay tafsir para esta aleya."
+  },
+  "privacy": {
+    "draft": "Borrador — se publicará en su forma final antes del primer lanzamiento.",
+    "languages": "La política de privacidad se publica en árabe e inglés."
   }
 }

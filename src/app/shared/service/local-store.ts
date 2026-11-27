@@ -50,4 +50,48 @@ export class LocalStore {
       // Storage refused (private window, quota): the setting lives for this visit only.
     }
   }
+
+  /**
+   * Every value this application keeps, for the settings file (F47).
+   *
+   * @returns key (without the prefix) → value
+   */
+  readAll(): Record<string, unknown> {
+    const out: Record<string, unknown> = {};
+    if (!this.browser) {
+      return out;
+    }
+    try {
+      for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        if (key?.startsWith(PREFIX)) {
+          out[key.slice(PREFIX.length)] = JSON.parse(localStorage.getItem(key) ?? 'null');
+        }
+      }
+    } catch {
+      // Storage refused: an empty file.
+    }
+    return out;
+  }
+
+  /**
+   * Replaces every value with those of a settings file (F47).
+   *
+   * @param data key (without the prefix) → value
+   */
+  replaceAll(data: Readonly<Record<string, unknown>>): void {
+    if (!this.browser) {
+      return;
+    }
+    try {
+      for (const key of Object.keys(this.readAll())) {
+        localStorage.removeItem(PREFIX + key);
+      }
+    } catch {
+      // Storage refused: nothing to remove.
+    }
+    for (const [key, value] of Object.entries(data)) {
+      this.write(key, value);
+    }
+  }
 }

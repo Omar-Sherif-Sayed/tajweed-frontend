@@ -1,0 +1,19 @@
+<h1 class="font-heading text-2xl font-bold text-ink">{{ 'nav.notes' | translate }}</h1>
+<p class="mt-1 text-xs text-muted">{{ 'common.device' | translate }}</p>
+
+@if (list().length === 0) {
+  <p class="mt-4 rounded-xl bg-dotsoft p-3 text-sm">{{ 'notes.empty' | translate }}</p>
+}
+<ul class="mt-4 space-y-3">
+  @for (n of list(); track n.surah + ':' + n.ayah) {
+    <li class="rounded-2xl border border-border bg-surface p-3">
+      <div class="flex flex-wrap items-center gap-2 text-sm">
+        <a [routerLink]="['/', lang(), 'quran', n.surah]" [fragment]="'ayah-' + n.ayah" class="font-bold text-ink underline">{{ nameOf(n.surah) }} {{ num(n.ayah) }}</a>
+        <button type="button" class="ms-auto rounded-full border border-border px-3 py-1" (click)="study.saveNote(n.surah, n.ayah, '')">
+          {{ 'common.remove' | translate }}
+        </button>
+      </div>
+      <p class="mt-2 whitespace-pre-line text-sm">{{ n.text }}</p>
+    </li>
+  }
+</ul>

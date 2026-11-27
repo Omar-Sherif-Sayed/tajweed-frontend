@@ -40,8 +40,15 @@
     "hijri": "希吉来历",
     "sources": "来源",
     "tafsir": "经注",
+    "hifz": "背诵",
+    "khatma": "通读与每日功课",
+    "notes": "我的笔记",
+    "tracker": "礼拜与斋戒记录",
+    "kids": "儿童",
+    "settings": "设置",
     "home": "首页",
-    "about": "关于"
+    "about": "关于",
+    "privacy": "隐私政策"
   },
   "quran": {
     "index": "目录",
@@ -81,7 +88,8 @@
     "copy": "复制经文",
     "copied": "已复制",
     "to": "至经文",
-    "removeMarker": "移除标记"
+    "removeMarker": "移除标记",
+    "share": "以文字分享"
   },
   "markers": {
     "title": "经文书签",
@@ -96,10 +104,12 @@
     "play": "播放",
     "device": "只保存在你的设备上",
     "online": "需要联网",
+    "noRemind": "无提醒 — 唯一的通知是宣礼。",
     "close": "关闭",
     "loading": "加载中…",
     "retry": "重试",
-    "search": "搜索"
+    "search": "搜索",
+    "remove": "删除"
   },
   "player": {
     "choose": "选择诵读者",
@@ -184,6 +194,60 @@
     "adjust": "调整：{{n}}",
     "note": "乌姆古拉历。可调整一两天，以符合你所在国家的公告。"
   },
+  "hifz": {
+    "hide": "隐藏词语以自我检测",
+    "review": "复习计划",
+    "progress": "已背：{{m}} 节中的 {{n}} 节",
+    "days": "今天 · 1 天后 · 3 天后 · 7 天后",
+    "from": "起始经文",
+    "to": "结束经文",
+    "keep": "我已背会这一段",
+    "reveal": "点按隐藏的词即可显示。",
+    "showWord": "显示该词",
+    "none": "尚未背会任何段落。",
+    "next": "下次复习：{{d}}",
+    "reviewed": "已复习",
+    "doneAll": "复习计划已完成"
+  },
+  "khatma": {
+    "days": "{{n}} 天读完",
+    "today": "今日功课",
+    "pages": "第 {{a}} – {{b}} 页",
+    "progress": "已读 {{p}}%",
+    "open": "打开今日份",
+    "read": "我已读完这一份",
+    "finished": "通读完成——愿真主接受",
+    "restart": "开始新的通读",
+    "start": "开始通读"
+  },
+  "notes": {
+    "add": "添加笔记",
+    "empty": "还没有笔记。可在经文操作中添加（点按经文）。",
+    "placeholder": "你的笔记…",
+    "save": "保存"
+  },
+  "share": {
+    "text": "文字"
+  },
+  "tracker": {
+    "fast": "斋戒"
+  },
+  "kids": {
+    "surahs": "短章",
+    "letters": "阿拉伯字母",
+    "repeat": "听并跟随诵读者复诵",
+    "lettersAudio": "字母的读音将在选定有名可查的来源后加入。"
+  },
+  "settings": {
+    "language": "语言",
+    "appearance": "外观",
+    "hijri": "伊历日期调整",
+    "file": "设置文件",
+    "export": "保存到文件",
+    "import": "从文件载入",
+    "fileNote": "设置、标记、笔记和进度 — 没有账户。",
+    "badFile": "这不是 Tajweed 的设置文件。"
+  },
   "directions": {
     "suhuf": "最初的书页",
     "hira": "希拉",
@@ -236,5 +300,9 @@
   },
   "tafsir": {
     "none": "此节经文暂无经注。"
+  },
+  "privacy": {
+    "draft": "草案——首次发布前公布定稿。",
+    "languages": "隐私政策以阿拉伯语和英语发布。"
   }
 }

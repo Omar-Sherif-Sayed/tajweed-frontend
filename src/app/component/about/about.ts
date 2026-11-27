@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
 import { injectQuery } from '@tanstack/angular-query-experimental';
 import { AppInfoService } from '@shared/service/integration/appinfo/appinfo.service';
@@ -10,7 +11,7 @@ import { SettingsService } from '@shared/service/settings.service';
  */
 @Component({
   selector: 'tj-about',
-  imports: [TranslatePipe],
+  imports: [TranslatePipe, RouterLink],
   templateUrl: './about.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

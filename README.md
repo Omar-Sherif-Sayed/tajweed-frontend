@@ -8,7 +8,9 @@ no login, no tracking.
 > the index, **the printed pages — two pages like an open mushaf, the 1405H lines, framed and ornamented as printed, in the King Fahd Complex's letter shapes (QCF V1, Quran fonts provided by Quran Foundation)** — and the reader by surah, ayah markers, the actions on an ayah or a range, its tafsirs; Quran search;
 > recitation with the reciter picker and uninterrupted playback (one surah, a range with repeat, or to the end and
 > again from Al-Fatihah); Quran radio; hadith (HadeethEnc); prayer times, the last third of the night, the Qibla and the
-> Hijri calendar, calculated on your device; Sources; About. Next: the sections that wait for their sources' permissions.
+> Hijri calendar, calculated on your device; memorisation, the khatma, notes, sharing an ayah, the prayer and fasting
+> tracker, kids, settings with the settings file — all kept on your device; Sources; About; the privacy policy. Next: the
+> sections that wait for their sources' permissions.
 
 ## What it is built with
 

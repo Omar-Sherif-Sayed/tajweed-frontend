@@ -40,8 +40,15 @@
     "hijri": "히즈라 달력",
     "sources": "출처",
     "tafsir": "타프시르",
+    "hifz": "암기",
+    "khatma": "완독과 매일 분량",
+    "notes": "내 메모",
+    "tracker": "기도와 단식 기록",
+    "kids": "어린이",
+    "settings": "설정",
     "home": "홈",
-    "about": "앱 정보"
+    "about": "앱 정보",
+    "privacy": "개인정보 처리방침"
   },
   "quran": {
     "index": "목차",
@@ -81,7 +88,8 @@
     "copy": "구절 복사",
     "copied": "복사됨",
     "to": "끝 구절",
-    "removeMarker": "표시 지우기"
+    "removeMarker": "표시 지우기",
+    "share": "텍스트로 공유"
   },
   "markers": {
     "title": "아야 표시",
@@ -96,10 +104,12 @@
     "play": "재생",
     "device": "기기에만 저장됨",
     "online": "인터넷 연결 필요",
+    "noRemind": "알림 없음 — 유일한 알림은 아잔입니다.",
     "close": "닫기",
     "loading": "불러오는 중…",
     "retry": "다시 시도",
-    "search": "검색"
+    "search": "검색",
+    "remove": "삭제"
   },
   "player": {
     "choose": "낭송자 선택",
@@ -184,6 +194,60 @@
     "adjust": "조정: {{n}}",
     "note": "움 알쿠라 달력. 나라의 발표에 맞춰 하루나 이틀 조정하세요."
   },
+  "hifz": {
+    "hide": "단어를 가려 스스로 시험하기",
+    "review": "복습 일정",
+    "progress": "암기: {{m}}아야 중 {{n}}",
+    "days": "오늘 · 1일 후 · 3일 후 · 7일 후",
+    "from": "시작 아야",
+    "to": "끝 아야",
+    "keep": "이 구간을 외웠습니다",
+    "reveal": "숨긴 단어를 누르면 보입니다.",
+    "showWord": "단어 보기",
+    "none": "아직 외운 구간이 없습니다.",
+    "next": "다음 복습: {{d}}",
+    "reviewed": "복습함",
+    "doneAll": "복습 일정 완료"
+  },
+  "khatma": {
+    "days": "{{n}}일 만에 완독",
+    "today": "오늘의 분량",
+    "pages": "{{a}} – {{b}}쪽",
+    "progress": "{{p}}% 읽음",
+    "open": "분량 열기",
+    "read": "이 분량을 읽었습니다",
+    "finished": "완독했습니다 — 알라께서 받아 주시기를",
+    "restart": "새 완독 시작",
+    "start": "완독 시작"
+  },
+  "notes": {
+    "add": "메모 추가",
+    "empty": "아직 메모가 없습니다. 아야의 동작에서 추가하세요(아야를 누르세요).",
+    "placeholder": "메모…",
+    "save": "저장"
+  },
+  "share": {
+    "text": "텍스트로"
+  },
+  "tracker": {
+    "fast": "단식"
+  },
+  "kids": {
+    "surahs": "짧은 수라",
+    "letters": "아랍어 글자",
+    "repeat": "듣고 낭송자를 따라 하세요",
+    "lettersAudio": "글자의 소리는 출처가 정해지면 추가됩니다."
+  },
+  "settings": {
+    "language": "언어",
+    "appearance": "화면 모양",
+    "hijri": "히즈라력 날짜 조정",
+    "file": "설정 파일",
+    "export": "파일로 저장",
+    "import": "파일에서 불러오기",
+    "fileNote": "설정, 표시, 메모, 진도 — 계정은 없습니다.",
+    "badFile": "Tajweed 설정 파일이 아닙니다."
+  },
   "directions": {
     "suhuf": "첫 기록",
     "hira": "히라",
@@ -236,5 +300,9 @@
   },
   "tafsir": {
     "none": "이 구절의 해설(타프시르)은 아직 없습니다."
+  },
+  "privacy": {
+    "draft": "초안 — 첫 출시 전에 최종본이 게시됩니다.",
+    "languages": "개인정보 처리방침은 아랍어와 영어로 게시됩니다."
   }
 }

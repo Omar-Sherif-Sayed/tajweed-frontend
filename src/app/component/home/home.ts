@@ -21,7 +21,13 @@ const TILES = [
   { path: 'qibla', key: 'nav.qibla', icon: 'kaaba' },
   { path: 'hijri', key: 'nav.hijri', icon: 'ex-cal' },
   { path: 'hadith', key: 'nav.hadith', icon: 'qalam' },
+  { path: 'hifz', key: 'nav.hifz', icon: 'd3-hifz' },
+  { path: 'khatma', key: 'nav.khatma', icon: 'book' },
+  { path: 'notes', key: 'nav.notes', icon: 'mark' },
+  { path: 'tracker', key: 'nav.tracker', icon: 'sun' },
+  { path: 'kids', key: 'nav.kids', icon: 'ear' },
   { path: 'sources', key: 'nav.sources', icon: 'sheet' },
+  { path: 'settings', key: 'nav.settings', icon: 'dots' },
 ] as const;
 
 /**
