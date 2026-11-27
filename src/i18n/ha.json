@@ -46,6 +46,7 @@
     "tracker": "Bin diddigin sallah da azumi",
     "kids": "Yara",
     "settings": "Saituna",
+    "zakat": "Lissafin zakka",
     "home": "Gida",
     "about": "Game da manhajar",
     "privacy": "Manufar sirri"
@@ -237,6 +238,27 @@
     "letters": "Harufan Larabci",
     "repeat": "Saurara ka maimaita bayan makaranci",
     "lettersAudio": "Za a ƙara sautin haruffa da zarar an zaɓi tushe mai suna."
+  },
+  "zakat": {
+    "money": "Kuɗi da ajiya",
+    "due": "Zakkar da ta wajaba",
+    "noInheritance": "Babu lissafin gado: gado yana buƙatar malami.",
+    "intro": "An nuna hukuncin kowace hukuma a ƙarƙashin sunanta, tare da fatawowinta; manhajar ba ta zaɓa a tsakaninsu.",
+    "scope": "Don kuɗi da ajiya kawai; zinariya, kayan ado, kayan kasuwa da basussuka suna da hukuncinsu a cikin fatawowi.",
+    "prices": "Rubuta farashin yau da kuɗinka — manhajar ba ta kawo farashi.",
+    "gold21": "Giram ɗaya na zinariya mai karat 21",
+    "gold24": "Giram ɗaya na zinariya tsantsa (karat 24)",
+    "silver": "Giram ɗaya na azurfa tsantsa",
+    "egypt": "Masar — Dar al-Ifta al-Misriyyah",
+    "saudi": "Saudiyya — Kwamitin Dindindin da Majalisar Manyan Malamai",
+    "egyptRule": "Nisabi: darajar giram 85 na zinariya mai karat 21.",
+    "saudiRule": "Nisabin kuɗi: mafi ƙanƙanta cikin nisabi biyu — darajar giram 85 na zinariya tsantsa ko giram 595 na azurfa tsantsa.",
+    "saudiGrams": "Giram bisa ƙiyasin Ibn Uthaimin da tarukan matsalolin zakka na zamani; Shaikh Ibn Baz ya faɗi nisabin zinariya giram 92.",
+    "rate": "Idan kuɗi ya kai nisabi kuma cikakkiyar shekarar hijira ta wuce a kansa: 2.5%.",
+    "nisab": "Nisabin yau",
+    "needPrices": "Rubuta farashin a sama don ganin nisabi.",
+    "below": "Ƙasa da nisabi — babu zakka a kansa.",
+    "fatwas": "Fatawowi"
   },
   "settings": {
     "language": "Harshe",

@@ -46,6 +46,7 @@
     "tracker": "Suivi de la prière et du jeûne",
     "kids": "Enfants",
     "settings": "Réglages",
+    "zakat": "Calculateur de zakat",
     "home": "Accueil",
     "about": "À propos",
     "privacy": "Politique de confidentialité"
@@ -237,6 +238,27 @@
     "letters": "Les lettres arabes",
     "repeat": "Écoute et répète après le récitateur",
     "lettersAudio": "Les sons des lettres seront ajoutés dès qu'une source nommée sera choisie."
+  },
+  "zakat": {
+    "money": "Argent et épargne",
+    "due": "Zakat due",
+    "noInheritance": "Pas de calculateur d'héritage : l'héritage requiert un savant.",
+    "intro": "La règle de chaque organisme figure sous son nom, avec ses fatwas ; l'application ne choisit pas entre elles.",
+    "scope": "Pour l'argent et l'épargne seulement ; l'or, les bijoux, les marchandises et les dettes ont leurs propres règles dans les fatwas.",
+    "prices": "Saisissez les prix du jour dans votre monnaie — l'application ne récupère aucun prix.",
+    "gold21": "Un gramme d'or 21 carats",
+    "gold24": "Un gramme d'or pur (24 carats)",
+    "silver": "Un gramme d'argent pur",
+    "egypt": "Égypte — Dar al-Ifta al-Misriyya",
+    "saudi": "Arabie saoudite — le Comité permanent et le Conseil des grands oulémas",
+    "egyptRule": "Nisab : la valeur de 85 grammes d'or 21 carats.",
+    "saudiRule": "Nisab de l'argent : le plus bas des deux nisabs — la valeur de 85 g d'or pur ou de 595 g d'argent pur.",
+    "saudiGrams": "Les grammes sont ceux d'Ibn Outhaymine et des séminaires sur les questions actuelles de la zakat ; cheikh Ibn Baz a fixé le nisab de l'or à 92 grammes.",
+    "rate": "Quand l'argent atteint le nisab et qu'une année hégirienne entière est passée : 2,5 %.",
+    "nisab": "Nisab aujourd'hui",
+    "needPrices": "Saisissez les prix ci-dessus pour voir le nisab.",
+    "below": "En dessous du nisab — aucune zakat n'est due.",
+    "fatwas": "Les fatwas"
   },
   "settings": {
     "language": "Langue",

@@ -46,6 +46,7 @@
     "tracker": "Registo de oração e jejum",
     "kids": "Crianças",
     "settings": "Definições",
+    "zakat": "Calculadora de zakat",
     "home": "Início",
     "about": "Sobre",
     "privacy": "Política de privacidade"
@@ -237,6 +238,27 @@
     "letters": "As letras árabes",
     "repeat": "Ouve e repete depois do recitador",
     "lettersAudio": "Os sons das letras serão acrescentados quando for escolhida uma fonte identificada."
+  },
+  "zakat": {
+    "money": "Dinheiro e poupanças",
+    "due": "Zakat devido",
+    "noInheritance": "Não há calculadora de herança: a herança precisa de um sábio.",
+    "intro": "A regra de cada órgão aparece sob o seu nome, com as suas fatwas; a aplicação não escolhe entre elas.",
+    "scope": "Apenas para dinheiro e poupanças; o ouro, as joias, as mercadorias e as dívidas têm regras próprias nas fatwas.",
+    "prices": "Escreva os preços de hoje na sua moeda — a aplicação não obtém preços.",
+    "gold21": "Um grama de ouro de 21 quilates",
+    "gold24": "Um grama de ouro puro (24 quilates)",
+    "silver": "Um grama de prata pura",
+    "egypt": "Egito — Dar al-Ifta al-Misriyya",
+    "saudi": "Arábia Saudita — o Comité Permanente e o Conselho dos Grandes Ulemás",
+    "egyptRule": "Nisab: o valor de 85 gramas de ouro de 21 quilates.",
+    "saudiRule": "Nisab do dinheiro: o menor dos dois nisabs — o valor de 85 g de ouro puro ou de 595 g de prata pura.",
+    "saudiGrams": "Os gramas são os de Ibn Uthaymin e dos seminários sobre questões atuais do zakat; o xeque Ibn Baz indicou o nisab do ouro em 92 gramas.",
+    "rate": "Quando o dinheiro atinge o nisab e passa sobre ele um ano hégira completo: 2,5%.",
+    "nisab": "Nisab hoje",
+    "needPrices": "Escreva os preços acima para ver o nisab.",
+    "below": "Abaixo do nisab — não há zakat devido.",
+    "fatwas": "As fatwas"
   },
   "settings": {
     "language": "Idioma",

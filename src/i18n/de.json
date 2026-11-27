@@ -46,6 +46,7 @@
     "tracker": "Gebets- und Fastenprotokoll",
     "kids": "Kinder",
     "settings": "Einstellungen",
+    "zakat": "Zakat-Rechner",
     "home": "Startseite",
     "about": "Über die App",
     "privacy": "Datenschutzerklärung"
@@ -237,6 +238,27 @@
     "letters": "Die arabischen Buchstaben",
     "repeat": "Hören und dem Rezitator nachsprechen",
     "lettersAudio": "Die Aussprache der Buchstaben kommt hinzu, sobald eine benannte Quelle gewählt ist."
+  },
+  "zakat": {
+    "money": "Geld und Ersparnisse",
+    "due": "Fällige Zakat",
+    "noInheritance": "Kein Erbschaftsrechner: das Erbrecht braucht einen Gelehrten.",
+    "intro": "Die Regel jeder Stelle steht unter ihrem Namen, mit ihren Fatwas; die App wählt nicht zwischen ihnen.",
+    "scope": "Nur für Geld und Ersparnisse; Gold, Schmuck, Handelsware und Schulden haben eigene Regeln in den Fatwas.",
+    "prices": "Geben Sie die heutigen Preise in Ihrer Währung ein — die App lädt keine Preise.",
+    "gold21": "Ein Gramm Gold, 21 Karat",
+    "gold24": "Ein Gramm reines Gold (24 Karat)",
+    "silver": "Ein Gramm reines Silber",
+    "egypt": "Ägypten — Dar al-Ifta al-Misriyya",
+    "saudi": "Saudi-Arabien — der Ständige Ausschuss und der Rat der Großen Gelehrten",
+    "egyptRule": "Nisab: der Wert von 85 Gramm Gold mit 21 Karat.",
+    "saudiRule": "Nisab des Geldes: der niedrigere der beiden Nisabs — der Wert von 85 g reinem Gold oder 595 g reinem Silber.",
+    "saudiGrams": "Die Gramm folgen Ibn Uthaimin und den Seminaren zu aktuellen Zakat-Fragen; Scheich Ibn Baz gab den Gold-Nisab mit 92 Gramm an.",
+    "rate": "Wenn das Geld den Nisab erreicht und ein volles Hidschra-Jahr darüber vergangen ist: 2,5 %.",
+    "nisab": "Nisab heute",
+    "needPrices": "Geben Sie oben die Preise ein, um den Nisab zu sehen.",
+    "below": "Unter dem Nisab — keine Zakat fällig.",
+    "fatwas": "Die Fatwas"
   },
   "settings": {
     "language": "Sprache",

@@ -26,6 +26,7 @@ const TILES = [
   { path: 'notes', key: 'nav.notes', icon: 'mark' },
   { path: 'tracker', key: 'nav.tracker', icon: 'sun' },
   { path: 'kids', key: 'nav.kids', icon: 'ear' },
+  { path: 'zakat', key: 'nav.zakat', icon: 'sheet' },
   { path: 'sources', key: 'nav.sources', icon: 'sheet' },
   { path: 'settings', key: 'nav.settings', icon: 'dots' },
 ] as const;

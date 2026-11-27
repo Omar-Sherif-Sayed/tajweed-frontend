@@ -1,0 +1,69 @@
+<h1 class="font-heading text-2xl font-bold text-ink">{{ 'nav.zakat' | translate }}</h1>
+<p class="mt-1 text-sm text-muted">{{ 'zakat.intro' | translate }}</p>
+<p class="mt-1 text-xs text-muted">{{ 'zakat.scope' | translate }} · {{ 'common.device' | translate }}</p>
+
+<section class="mt-4 rounded-2xl border border-border bg-surface p-4">
+  <label class="block text-sm">
+    <span class="font-bold text-ink">{{ 'zakat.money' | translate }}</span>
+    <input
+      type="number"
+      inputmode="decimal"
+      min="0"
+      class="mt-1 w-full rounded-lg border border-border bg-page px-3 py-2"
+      (input)="set('amount', $any($event.target).value)"
+    />
+  </label>
+  <p class="mt-3 text-xs text-muted">{{ 'zakat.prices' | translate }}</p>
+  <div class="mt-1 grid gap-3 sm:grid-cols-3">
+    <label class="block text-sm">
+      <span class="text-muted">{{ 'zakat.gold21' | translate }}</span>
+      <input type="number" inputmode="decimal" min="0" class="mt-1 w-full rounded-lg border border-border bg-page px-3 py-2" (input)="set('gold21', $any($event.target).value)" />
+    </label>
+    <label class="block text-sm">
+      <span class="text-muted">{{ 'zakat.gold24' | translate }}</span>
+      <input type="number" inputmode="decimal" min="0" class="mt-1 w-full rounded-lg border border-border bg-page px-3 py-2" (input)="set('gold24', $any($event.target).value)" />
+    </label>
+    <label class="block text-sm">
+      <span class="text-muted">{{ 'zakat.silver' | translate }}</span>
+      <input type="number" inputmode="decimal" min="0" class="mt-1 w-full rounded-lg border border-border bg-page px-3 py-2" (input)="set('silver', $any($event.target).value)" />
+    </label>
+  </div>
+</section>
+
+<div class="mt-4 grid gap-4 md:grid-cols-2">
+  @for (o of outcomes(); track o.body.id) {
+    <section class="rounded-2xl border border-border bg-surface p-4">
+      <h2 class="font-heading text-lg font-bold text-ink">{{ o.body.nameKey | translate }}</h2>
+      <p class="mt-1 text-sm text-ink">{{ o.body.ruleKey | translate }}</p>
+      @if (o.body.id === 'saudi') {
+        <p class="mt-1 text-xs text-muted">{{ 'zakat.saudiGrams' | translate }}</p>
+      }
+      <p class="mt-1 text-xs text-muted">{{ 'zakat.rate' | translate }}</p>
+
+      <div class="mt-3 rounded-xl bg-dotsoft p-3">
+        @if (o.outcome.nisab === null) {
+          <p class="text-sm text-muted">{{ 'zakat.needPrices' | translate }}</p>
+        } @else {
+          <p class="text-sm"><span class="text-muted">{{ 'zakat.nisab' | translate }}:</span> <span class="font-bold text-ink">{{ num(o.outcome.nisab) }}</span></p>
+          @if (o.outcome.due) {
+            <p class="mt-1 text-base"><span class="text-muted">{{ 'zakat.due' | translate }}:</span> <span class="font-bold text-ink">{{ num(o.outcome.due) }}</span></p>
+          } @else {
+            <p class="mt-1 text-sm text-ink">{{ 'zakat.below' | translate }}</p>
+          }
+        }
+      </div>
+
+      <h3 class="mt-3 text-sm font-bold text-ink">{{ 'zakat.fatwas' | translate }}</h3>
+      <ul class="mt-1 space-y-2">
+        @for (f of o.body.fatwas; track f.url) {
+          <li class="text-sm" dir="rtl" lang="ar">
+            <a class="font-bold text-dot underline" [href]="f.url" target="_blank" rel="noopener">{{ f.title }}</a>
+            <span class="block text-xs text-muted">{{ f.detail }}</span>
+          </li>
+        }
+      </ul>
+    </section>
+  }
+</div>
+
+<p class="mt-4 text-xs text-muted">{{ 'zakat.noInheritance' | translate }}</p>

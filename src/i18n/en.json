@@ -46,6 +46,7 @@
     "tracker": "Prayer and fasting tracker",
     "kids": "Kids",
     "settings": "Settings",
+    "zakat": "Zakat calculator",
     "home": "Home",
     "about": "About",
     "privacy": "Privacy policy"
@@ -237,6 +238,27 @@
     "letters": "The Arabic letters",
     "repeat": "Listen and repeat after the reciter",
     "lettersAudio": "The letters' sounds are added once a named source for them is chosen."
+  },
+  "zakat": {
+    "money": "Cash and savings",
+    "due": "Zakat due",
+    "noInheritance": "No inheritance calculator: inheritance needs a scholar.",
+    "intro": "Each body's ruling is shown under its own name, with its fatwas; the app does not choose between them.",
+    "scope": "For money and savings only; gold you own, jewellery, trade goods and debts have their own rulings in the fatwas.",
+    "prices": "Type today's prices in your own currency — the app does not fetch prices.",
+    "gold21": "One gram of 21-carat gold",
+    "gold24": "One gram of pure gold (24 carat)",
+    "silver": "One gram of pure silver",
+    "egypt": "Egypt — Dar al-Ifta al-Misriyyah",
+    "saudi": "Saudi Arabia — the Permanent Committee and the Council of Senior Scholars",
+    "egyptRule": "Nisab: the value of 85 grams of 21-carat gold.",
+    "saudiRule": "Nisab of money: the lower of the two nisabs — the value of 85 grams of pure gold or of 595 grams of pure silver.",
+    "saudiGrams": "The grams are those of Ibn Uthaymeen and the seminars on contemporary zakat issues; Shaykh Ibn Baz gave the gold nisab as 92 grams.",
+    "rate": "When the money reaches the nisab and a full Hijri year passes over it: 2.5%.",
+    "nisab": "Nisab today",
+    "needPrices": "Type the prices above to see the nisab.",
+    "below": "Below the nisab — no zakat is due on it.",
+    "fatwas": "The fatwas"
   },
   "settings": {
     "language": "Language",

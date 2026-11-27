@@ -46,6 +46,7 @@
     "tracker": "Rekod solat dan puasa",
     "kids": "Kanak-kanak",
     "settings": "Tetapan",
+    "zakat": "Kalkulator zakat",
     "home": "Laman utama",
     "about": "Perihal",
     "privacy": "Dasar privasi"
@@ -237,6 +238,27 @@
     "letters": "Huruf Arab",
     "repeat": "Dengar dan ulang selepas qari",
     "lettersAudio": "Bunyi huruf akan ditambah setelah sumber yang dinamakan dipilih."
+  },
+  "zakat": {
+    "money": "Wang tunai dan simpanan",
+    "due": "Zakat yang wajib",
+    "noInheritance": "Tiada kalkulator pusaka: pusaka memerlukan ulama.",
+    "intro": "Ketetapan setiap badan dipaparkan di bawah namanya, bersama fatwanya; aplikasi tidak memilih antara keduanya.",
+    "scope": "Untuk wang dan simpanan sahaja; emas, barang kemas, barang dagangan dan hutang ada ketetapan sendiri dalam fatwa.",
+    "prices": "Taip harga hari ini dalam mata wang anda — aplikasi tidak mengambil harga.",
+    "gold21": "Segram emas 21 karat",
+    "gold24": "Segram emas tulen (24 karat)",
+    "silver": "Segram perak tulen",
+    "egypt": "Mesir — Dar al-Ifta al-Misriyyah",
+    "saudi": "Arab Saudi — Jawatankuasa Tetap dan Majlis Ulama Kanan",
+    "egyptRule": "Nisab: nilai 85 gram emas 21 karat.",
+    "saudiRule": "Nisab wang: yang lebih rendah antara dua nisab — nilai 85 gram emas tulen atau 595 gram perak tulen.",
+    "saudiGrams": "Gram mengikut kiraan Ibnu Uthaimin dan seminar isu zakat semasa; Syeikh Ibnu Baz menyebut nisab emas 92 gram.",
+    "rate": "Apabila wang mencapai nisab dan berlalu setahun hijrah penuh: 2.5%.",
+    "nisab": "Nisab hari ini",
+    "needPrices": "Taip harga di atas untuk melihat nisab.",
+    "below": "Di bawah nisab — tiada zakat.",
+    "fatwas": "Fatwa"
   },
   "settings": {
     "language": "Bahasa",

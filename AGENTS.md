@@ -158,6 +158,12 @@ public/landscapes/             GENERATED copies of design 3's 56 landscapes (day
   language and appearance, saved and loaded by the visitor) and the privacy page (`/privacy`, generated from
   `tajweed-docs/docs/legal/privacy-policy.md` by `tools/sync-design.mjs`, Arabic or English). All on the device;
   no reminder of any kind.
+- **Zakat** (F42, `/zakat`, 2026-11-27 — the author: both rulings, each under its body): money and savings
+  only; the visitor types today's prices (nothing is fetched); Egypt's Dar al-Ifta (85 g of 21-carat gold) and the
+  Saudi Permanent Committee / Council of Senior Scholars (the lower of 85 g pure gold and 595 g pure silver) side by
+  side, the app never choosing — the measures in `shared/utils/zakat.ts` (with its spec), the bodies and their fatwas
+  (linked, never copied — their sites reserve their rights) in `shared/constants/zakat-bodies.ts`; no inheritance
+  calculator.
 - **Playback** (`shared/service/audio`): one `PlayerService` for recitations and radio — the rules of the client
   guide §5 and parent §8.3: sources in priority order (`FAILING` last, never dropped), the same source twice then the
   next, waits 1 s, 2 s, 4 s … capped at 30 s, without limit, at once on `online`; a surah file resumes at the last

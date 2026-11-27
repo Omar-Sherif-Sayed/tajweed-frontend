@@ -46,6 +46,7 @@
     "tracker": "Ufuatiliaji wa swala na saumu",
     "kids": "Watoto",
     "settings": "Mipangilio",
+    "zakat": "Kikokotoo cha zaka",
     "home": "Mwanzo",
     "about": "Kuhusu",
     "privacy": "Sera ya faragha"
@@ -237,6 +238,27 @@
     "letters": "Herufi za Kiarabu",
     "repeat": "Sikiliza na urudie baada ya msomaji",
     "lettersAudio": "Sauti za herufi zitaongezwa baada ya kuchagua chanzo chenye jina."
+  },
+  "zakat": {
+    "money": "Fedha na akiba",
+    "due": "Zaka inayodaiwa",
+    "noInheritance": "Hakuna kikokotoo cha mirathi: mirathi inahitaji mwanazuoni.",
+    "intro": "Hukumu ya kila taasisi inaonyeshwa chini ya jina lake, pamoja na fatwa zake; programu haichagui kati yake.",
+    "scope": "Kwa pesa na akiba tu; dhahabu, mapambo, bidhaa za biashara na madeni yana hukumu zake katika fatwa.",
+    "prices": "Andika bei za leo kwa sarafu yako — programu haileti bei.",
+    "gold21": "Gramu moja ya dhahabu ya karati 21",
+    "gold24": "Gramu moja ya dhahabu safi (karati 24)",
+    "silver": "Gramu moja ya fedha safi",
+    "egypt": "Misri — Dar al-Ifta al-Misriyyah",
+    "saudi": "Saudi Arabia — Kamati ya Kudumu na Baraza la Wanazuoni Wakuu",
+    "egyptRule": "Nisabu: thamani ya gramu 85 za dhahabu ya karati 21.",
+    "saudiRule": "Nisabu ya pesa: iliyo ndogo kati ya nisabu mbili — thamani ya gramu 85 za dhahabu safi au gramu 595 za fedha safi.",
+    "saudiGrams": "Gramu ni kwa makadirio ya Ibn Uthaymin na semina za masuala ya kisasa ya zaka; Sheikh Ibn Baz alitaja nisabu ya dhahabu kuwa gramu 92.",
+    "rate": "Pesa zikifikia nisabu na mwaka kamili wa Hijria ukapita juu yake: 2.5%.",
+    "nisab": "Nisabu ya leo",
+    "needPrices": "Andika bei hapo juu ili kuona nisabu.",
+    "below": "Chini ya nisabu — hakuna zaka.",
+    "fatwas": "Fatwa"
   },
   "settings": {
     "language": "Lugha",

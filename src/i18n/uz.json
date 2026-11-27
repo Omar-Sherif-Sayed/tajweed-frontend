@@ -46,6 +46,7 @@
     "tracker": "Namoz va roʻza hisobi",
     "kids": "Bolalar",
     "settings": "Sozlamalar",
+    "zakat": "Zakot kalkulyatori",
     "home": "Bosh sahifa",
     "about": "Ilova haqida",
     "privacy": "Maxfiylik siyosati"
@@ -237,6 +238,27 @@
     "letters": "Arab harflari",
     "repeat": "Tinglang va qoridan keyin takrorlang",
     "lettersAudio": "Harflar talaffuzi nomi aniq manba tanlangach qoʻshiladi."
+  },
+  "zakat": {
+    "money": "Naqd pul va jamgʻarma",
+    "due": "Toʻlanadigan zakot",
+    "noInheritance": "Meros kalkulyatori yoʻq: meros olimni talab qiladi.",
+    "intro": "Har bir idoraning hukmi o‘z nomi ostida fatvolari bilan ko‘rsatilgan; ilova ular orasidan tanlamaydi.",
+    "scope": "Faqat pul va jamg‘arma uchun; oltin, zargarlik buyumlari, savdo moli va qarzlarning hukmlari fatvolarda.",
+    "prices": "Bugungi narxlarni o‘z valyutangizda yozing — ilova narxlarni olib kelmaydi.",
+    "gold21": "21 karatli oltinning bir grammi",
+    "gold24": "Sof oltinning bir grammi (24 karat)",
+    "silver": "Sof kumushning bir grammi",
+    "egypt": "Misr — Dorul-ifto al-Misriyya",
+    "saudi": "Saudiya Arabistoni — Doimiy qo‘mita va Katta ulamolar kengashi",
+    "egyptRule": "Nisob: 21 karatli 85 gramm oltinning qiymati.",
+    "saudiRule": "Pul nisobi: ikki nisobning kichigi — 85 gramm sof oltin yoki 595 gramm sof kumushning qiymati.",
+    "saudiGrams": "Grammlar Ibn Usaymin va zakotning zamonaviy masalalari seminarlari hisobiga ko‘ra; Shayx Ibn Boz oltin nisobini 92 gramm degan.",
+    "rate": "Pul nisobga yetib, ustidan to‘liq hijriy yil o‘tganda: 2,5 %.",
+    "nisab": "Bugungi nisob",
+    "needPrices": "Nisobni ko‘rish uchun yuqorida narxlarni yozing.",
+    "below": "Nisobdan kam — zakot yo‘q.",
+    "fatwas": "Fatvolar"
   },
   "settings": {
     "language": "Til",

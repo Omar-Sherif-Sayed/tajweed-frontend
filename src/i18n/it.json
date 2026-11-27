@@ -46,6 +46,7 @@
     "tracker": "Registro di preghiera e digiuno",
     "kids": "Bambini",
     "settings": "Impostazioni",
+    "zakat": "Calcolatore della zakat",
     "home": "Home",
     "about": "Informazioni",
     "privacy": "Informativa sulla privacy"
@@ -237,6 +238,27 @@
     "letters": "Le lettere arabe",
     "repeat": "Ascolta e ripeti dopo il recitatore",
     "lettersAudio": "I suoni delle lettere saranno aggiunti quando sarà scelta una fonte indicata per nome."
+  },
+  "zakat": {
+    "money": "Denaro e risparmi",
+    "due": "Zakat dovuta",
+    "noInheritance": "Nessun calcolatore dell'eredità: l'eredità richiede un sapiente.",
+    "intro": "La regola di ciascun ente è mostrata sotto il suo nome, con le sue fatwa; l'app non sceglie tra loro.",
+    "scope": "Solo per denaro e risparmi; oro, gioielli, merci e debiti hanno regole proprie nelle fatwa.",
+    "prices": "Inserisci i prezzi di oggi nella tua valuta: l'app non scarica prezzi.",
+    "gold21": "Un grammo d'oro a 21 carati",
+    "gold24": "Un grammo d'oro puro (24 carati)",
+    "silver": "Un grammo d'argento puro",
+    "egypt": "Egitto — Dar al-Ifta al-Misriyya",
+    "saudi": "Arabia Saudita — il Comitato Permanente e il Consiglio dei Grandi Ulema",
+    "egyptRule": "Nisab: il valore di 85 grammi d'oro a 21 carati.",
+    "saudiRule": "Nisab del denaro: il minore dei due nisab — il valore di 85 g d'oro puro o di 595 g d'argento puro.",
+    "saudiGrams": "I grammi sono quelli di Ibn Uthaymin e dei seminari sulle questioni attuali della zakat; lo shaykh Ibn Baz indicò il nisab dell'oro in 92 grammi.",
+    "rate": "Quando il denaro raggiunge il nisab ed è trascorso un intero anno dell'egira: 2,5%.",
+    "nisab": "Nisab oggi",
+    "needPrices": "Inserisci i prezzi qui sopra per vedere il nisab.",
+    "below": "Sotto il nisab — non è dovuta la zakat.",
+    "fatwas": "Le fatwa"
   },
   "settings": {
     "language": "Lingua",

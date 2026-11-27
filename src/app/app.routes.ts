@@ -45,6 +45,7 @@ export const routes: Routes = [
       { path: 'notes', loadComponent: () => import('@component/notes/notes').then((m) => m.NotesComponent) },
       { path: 'tracker', loadComponent: () => import('@component/tracker/tracker').then((m) => m.TrackerComponent) },
       { path: 'kids', loadComponent: () => import('@component/kids/kids').then((m) => m.KidsComponent) },
+      { path: 'zakat', loadComponent: () => import('@component/zakat/zakat').then((m) => m.ZakatComponent) },
       { path: 'settings', loadComponent: () => import('@component/settings/settings').then((m) => m.SettingsComponent) },
       { path: 'privacy', loadComponent: () => import('@component/privacy/privacy').then((m) => m.PrivacyComponent) },
       { path: '**', component: NotFoundComponent },

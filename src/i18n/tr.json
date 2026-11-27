@@ -46,6 +46,7 @@
     "tracker": "Namaz ve oruç takibi",
     "kids": "Çocuklar",
     "settings": "Ayarlar",
+    "zakat": "Zekât hesaplayıcı",
     "home": "Ana sayfa",
     "about": "Hakkında",
     "privacy": "Gizlilik politikası"
@@ -237,6 +238,27 @@
     "letters": "Arap harfleri",
     "repeat": "Dinle ve kâriden sonra tekrarla",
     "lettersAudio": "Harflerin sesleri, adı belli bir kaynak seçildiğinde eklenecek."
+  },
+  "zakat": {
+    "money": "Nakit ve birikim",
+    "due": "Ödenecek zekât",
+    "noInheritance": "Miras hesaplayıcı yok: miras bir âlim gerektirir.",
+    "intro": "Her kurumun hükmü kendi adı altında fetvalarıyla gösterilir; uygulama aralarında seçim yapmaz.",
+    "scope": "Yalnızca para ve birikim içindir; altın, takı, ticaret malı ve borçların hükümleri fetvalardadır.",
+    "prices": "Bugünün fiyatlarını kendi para biriminizle yazın — uygulama fiyat çekmez.",
+    "gold21": "21 ayar altının gramı",
+    "gold24": "Saf altının gramı (24 ayar)",
+    "silver": "Saf gümüşün gramı",
+    "egypt": "Mısır — Dâru'l-İftâ el-Mısriyye",
+    "saudi": "Suudi Arabistan — Daimî Komite ve Büyük Âlimler Heyeti",
+    "egyptRule": "Nisap: 21 ayar 85 gram altının değeri.",
+    "saudiRule": "Paranın nisabı: iki nisaptan düşük olanı — 85 gram saf altının veya 595 gram saf gümüşün değeri.",
+    "saudiGrams": "Gramlar İbn Useymîn ve çağdaş zekât meseleleri seminerlerinin hesabına göredir; Şeyh İbn Bâz altın nisabını 92 gram olarak belirtmiştir.",
+    "rate": "Para nisaba ulaşıp üzerinden tam bir hicrî yıl geçince: %2,5.",
+    "nisab": "Bugünkü nisap",
+    "needPrices": "Nisabı görmek için yukarıya fiyatları yazın.",
+    "below": "Nisabın altında — zekât gerekmez.",
+    "fatwas": "Fetvalar"
   },
   "settings": {
     "language": "Dil",

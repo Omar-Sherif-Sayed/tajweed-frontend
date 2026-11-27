@@ -9,7 +9,7 @@ no login, no tracking.
 > recitation with the reciter picker and uninterrupted playback (one surah, a range with repeat, or to the end and
 > again from Al-Fatihah); Quran radio; hadith (HadeethEnc); prayer times, the last third of the night, the Qibla and the
 > Hijri calendar, calculated on your device; memorisation, the khatma, notes, sharing an ayah, the prayer and fasting
-> tracker, kids, settings with the settings file — all kept on your device; Sources; About; the privacy policy. Next: the
+> tracker, kids, the Zakat calculator (Egypt's and Saudi Arabia's rulings side by side), settings with the settings file — all kept on your device; Sources; About; the privacy policy. Next: the
 > sections that wait for their sources' permissions.
 
 ## What it is built with
